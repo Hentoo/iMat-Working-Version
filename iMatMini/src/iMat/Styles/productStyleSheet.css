@@ -1,0 +1,41 @@
+.productButton{
+    -fx-border: none;
+    -fx-background-color: #b9d6dd;
+    -fx-background-radius: 30px;
+}
+
+.productButton:hover, #lesserButton:hover, #moreButton:hover{
+    -fx-background-color: #91a9b4;
+}
+
+.productButton:pressed, #lesserButton:pressed, #moreButton:pressed{
+    -fx-border-radius: 30px;
+    -fx-border-color: #000;
+}
+
+#lesserButton{
+
+    -fx-background-color: #b9d6dd;
+}
+
+#moreButton{
+
+    -fx-background-color: #b9d6dd;
+}
+
+#addToCartButton{
+    -fx-background-color: #17ff3b;
+}
+
+#addToCartButton:hover {
+    -fx-background-color: #09d209;
+}
+
+#addToCartButton:pressed {
+    -fx-border-radius: 30px;
+    -fx-border-color: #000;
+}
+
+#infoButton{
+
+}
