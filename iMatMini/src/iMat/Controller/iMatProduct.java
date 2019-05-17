@@ -14,7 +14,7 @@ import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 
-public class iMatProductController extends AnchorPane {
+public class iMatProduct extends AnchorPane {
 
     @FXML
     private ImageView imageField;
@@ -33,11 +33,11 @@ public class iMatProductController extends AnchorPane {
     @FXML
     private Text productText;
 
-    private iMatMainController parentController;
+
     private Product product;
 
-    public iMatProductController(Product product){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("View/iMatProduct.fxml"));
+    public iMatProduct(Product product){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatProduct.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
