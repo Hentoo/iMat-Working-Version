@@ -28,13 +28,10 @@ public class ProductPanel extends AnchorPane {
     private Model model = Model.getInstance();
 
     private Product product;
-    
-    private final static double kImageWidth = 100.0;
-    private final static double kImageRatio = 0.75;
 
     public ProductPanel(Product product) {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatProduct.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Controller/iMatProduct.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

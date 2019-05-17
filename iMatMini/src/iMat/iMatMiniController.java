@@ -1,8 +1,4 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package iMat;
 
 import java.net.URL;
@@ -11,6 +7,8 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+
+/*
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -23,10 +21,6 @@ import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
 
 
-/**
- *
- * @author oloft
- */
 public class iMatMiniController implements Initializable, ShoppingCartListener {
 
 
@@ -95,7 +89,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     private void handleDoneAction(ActionEvent event) {
         closeAccountView();
     }
-      
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -106,7 +100,9 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         
         setupAccountPane();
         
-    }    
+    }
+
+
     
     // Navigation
     public void openAccountView() {
@@ -193,3 +189,4 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
         
     }
 }
+*/
