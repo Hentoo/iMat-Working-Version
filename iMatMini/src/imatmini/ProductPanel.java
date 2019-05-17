@@ -34,7 +34,7 @@ public class ProductPanel extends AnchorPane {
 
     public ProductPanel(Product product) {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProductPanel.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatProduct.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -46,12 +46,6 @@ public class ProductPanel extends AnchorPane {
 
         this.product = product;
 
-        nameLabel.setText(product.getName());
-        prizeLabel.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
-        imageView.setImage(model.getImage(product, kImageWidth, kImageWidth*kImageRatio));
-        if (!product.isEcological()) {
-            ecoLabel.setText("");
-        }
 
     }
 
