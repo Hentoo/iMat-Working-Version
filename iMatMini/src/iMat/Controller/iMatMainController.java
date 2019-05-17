@@ -22,15 +22,19 @@ public class iMatMainController implements Initializable {
     @FXML
     private FlowPane productsFlowPane;
 
+    Product product = dataHandler.getProduct(45);
+
     private void updateProductList(List<Product> products) {
 
         productsFlowPane.getChildren().clear();
 
+        productsFlowPane.getChildren().add(new iMatProduct(product));
+/*
         for (Product product : products) {
 
             productsFlowPane.getChildren().add(new iMatProduct(product));
         }
-
+*/
     }
 
 //   private final iMatModel model = iMatModel.getInstance();
