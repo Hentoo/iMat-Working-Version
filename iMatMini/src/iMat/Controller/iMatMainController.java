@@ -67,55 +67,69 @@ public class iMatMainController implements Initializable {
     @FXML
   private void pressedOnCategory1(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
-  }
-    @FXML
-    private void pressedOnCategory2(){
-        productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BREAD));
-    }
-    @FXML
-    private void pressedOnCategory3(){
-        productsFlowPane.getChildren().clear();
+
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BERRY));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.CITRUS_FRUIT));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.EXOTIC_FRUIT));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.MELONS));
+  }
+    @FXML
+    private void pressedOnCategory2(){
+        productsFlowPane.getChildren().clear();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HERB));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.ROOT_VEGETABLE));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POD));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.NUTS_AND_SEEDS));
+
+    }
+    @FXML
+    private void pressedOnCategory3(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BREAD));
+
+
     }
     @FXML
     private void pressedOnCategory4(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT));
+
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+
     }
     @FXML
     private void pressedOnCategory5(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET));
+
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT));
     }
     @FXML
     private void pressedOnCategory6(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FISH));
+
     }
     @FXML
     private void pressedOnCategory7(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FISH));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FLOUR_SUGAR_SALT));
+
     }
     @FXML
     private void pressedOnCategory8(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA));
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POD));
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS));
+
+
     }
     @FXML
     private void pressedOnCategory9(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET));
     }
     @FXML
     private void pressedOnCategory10(){
