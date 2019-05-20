@@ -1,11 +1,13 @@
 package iMat.Controller;
 
 import iMat.IMat;
+import iMat.Model;
 import javafx.event.ActionEvent;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -32,10 +34,17 @@ public class iMatProduct extends AnchorPane {
     @FXML
     private TextField nrOfItems;
     @FXML
-    private Text productText;
+    private Label productName;
+    @FXML
+    private Label productPrize;
 
 
     private Product product;
+
+    private Model model = Model.getInstance();
+
+    private final static double kImageWidth = 100.0;
+    private final static double kImageRatio = 0.75;
 
     public iMatProduct(Product product){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatProduct.fxml"));
@@ -49,7 +58,9 @@ public class iMatProduct extends AnchorPane {
         }
 
         this.product = product;
-
+        productName.setText(product.getName());
+        productPrize.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
+        imageField.setImage(model.getImage(product, kImageWidth, kImageWidth*kImageRatio));
     }
 }
 
