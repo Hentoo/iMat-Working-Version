@@ -1,12 +1,15 @@
 package iMat.Controller;
 
 
+import iMat.IMat;
+import iMat.ProductPanel;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
@@ -37,23 +40,12 @@ public class iMatMainController implements Initializable {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    Product product = dataHandler.getProduct(45);
     Product test = dataHandler.getProduct(30);
 
 
-    List<Product> dairyProducts = new ArrayList<>();
+
+    List<Product> allItems = IMatDataHandler.getInstance().getProducts();
+
 
 
     void populateFlowPane(Product product){
@@ -62,29 +54,58 @@ public class iMatMainController implements Initializable {
 
     }
 
+    private void initItems(List<Product> products){
+        allItems.clear();
+        allItems = IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE);
+        updateProductList(allItems);
+    }
+
     @FXML
   private void pressedOnCategory1(){
-
         productsFlowPane.getChildren().clear();
-
-      productsFlowPane.getChildren().add(new iMatProduct(test));
-
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
   }
+    @FXML
+    private void pressedOnCategory2(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+    }
+    @FXML
+    private void pressedOnCategory3(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+    }
+    @FXML
+    private void pressedOnCategory4(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+    }
+    @FXML
+    private void pressedOnCategory5(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+    }
+    @FXML
+    private void pressedOnCategory6(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+    }
+    @FXML
+    private void pressedOnCategory7(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+    }
+
 /*
 
 */
     private void updateProductList(List<Product> products) {
 
 
-        productsFlowPane.getChildren().clear();
-
-        productsFlowPane.getChildren().add(new iMatProduct(product));
-/*
-        for (Product product : products) {
-
-            productsFlowPane.getChildren().add(new iMatProduct(product));
+        for (int i = 0; i < 10; i++) {
+            productsFlowPane.getChildren().add(new iMatProduct(products.get(i)));
         }
-*/
+
     }
 
 //   private final iMatModel model = iMatModel.getInstance();
@@ -93,18 +114,6 @@ public class iMatMainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-
-
-/*
-        categoryButton1.cancelButtonProperty().addListener(new ChangeListener<Button>() {
-
-            @Override
-            public void changed(ObservableValue<? extends Button> observable, Button oldValue, Button newValue) {
-                populateFlowPane(test);
-             //   updateRecipeList();
-            }
-        });
-        */
 
         updateProductList(dataHandler.getProducts());
 
