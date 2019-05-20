@@ -13,16 +13,15 @@
     <children>
         <AnchorPane prefHeight="720.0" prefWidth="195.0" style="-fx-background-color: #FFF000;" AnchorPane.leftAnchor="0.0">
             <children>
-                <Button fx:id="categoryButton1" layoutY="75.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory1" prefHeight="60.0" prefWidth="220.0" text="Frukt" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton2" layoutY="140.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory2" prefHeight="60.0" prefWidth="220.0" text="Grönt" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton3" layoutY="205.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory3" prefHeight="60.0" prefWidth="220.0" text="Bröd" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton4" layoutY="270.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory4" prefHeight="60.0" prefWidth="220.0" text="Mejeri" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton5" layoutY="335.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory5" prefHeight="60.0" prefWidth="220.0" text="Kött &amp; chark" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton6" layoutY="400.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory6" prefHeight="60.0" prefWidth="220.0" text="Fisk" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton7" layoutY="465.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory7" prefHeight="60.0" prefWidth="220.0" text="Spannmål" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton8" layoutY="530.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory8" prefHeight="60.0" prefWidth="220.0" text="Dryck" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton9" layoutY="595.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory9" prefHeight="60.0" prefWidth="220.0" text="Godis &amp; Glass" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton10" layoutY="660.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory10" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton1" layoutY="80.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory1" prefHeight="60.0" prefWidth="220.0" text="Frukt" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton2" layoutY="152.5" mnemonicParsing="false" onMousePressed="#pressedOnCategory2" prefHeight="60.0" prefWidth="220.0" text="Grönt" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton3" layoutY="225.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory3" prefHeight="60.0" prefWidth="220.0" text="Bröd" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton4" layoutY="297.5" mnemonicParsing="false" onMousePressed="#pressedOnCategory4" prefHeight="60.0" prefWidth="220.0" text="Mejeri" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton5" layoutY="370.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory5" prefHeight="60.0" prefWidth="220.0" text="Kött &amp; chark" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton6" layoutY="442.5" mnemonicParsing="false" onMousePressed="#pressedOnCategory6" prefHeight="60.0" prefWidth="220.0" text="Fisk" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton7" layoutY="515.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory7" prefHeight="60.0" prefWidth="220.0" text="Spannmål" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton8" layoutY="587.5" mnemonicParsing="false" onMousePressed="#pressedOnCategory8" prefHeight="60.0" prefWidth="220.0" text="Dryck" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton9" layoutY="660.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory9" prefHeight="60.0" prefWidth="220.0" text="Godis &amp; Glass" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             </children>
         </AnchorPane>
         <AnchorPane layoutX="1080.0" prefHeight="720.0" prefWidth="195.0" style="-fx-background-color: #FF0000;" AnchorPane.rightAnchor="0.0">
@@ -33,7 +32,7 @@
                     </image>
                 </ImageView>
             </children></AnchorPane>
-        <AnchorPane layoutX="195.0" prefHeight="75.0" prefWidth="890.0" style="-fx-background-color: #FF00FF;">
+        <AnchorPane layoutX="195.0" prefHeight="80.0" prefWidth="890.0" style="-fx-background-color: #FF00FF;">
             <children>
                 <TextField fx:id="searchField" layoutX="61.0" layoutY="21.0" onAction="#handleSearchAction" prefHeight="32.0" prefWidth="457.0" promptText="Klicka här för att söka i vårt sortiment..." />
                 <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="524.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
@@ -63,7 +62,7 @@
         </AnchorPane>
         <AnchorPane layoutX="195.0" layoutY="75.0" prefHeight="645.0" prefWidth="890.0" style="-fx-background-color: #FA5507;">
             <children>
-                <SplitPane dividerPositions="0.19751166407465007" orientation="VERTICAL" prefHeight="645.0" prefWidth="890.0">
+                <SplitPane dividerPositions="0.2208398133748056" orientation="VERTICAL" prefHeight="645.0" prefWidth="890.0">
                     <items>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
