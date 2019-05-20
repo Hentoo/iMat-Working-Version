@@ -1,3 +1,8 @@
+.productFrame{
+    -fx-background-color: WHITE;
+}
+
+
 .productButton{
     -fx-border: none;
     -fx-background-color: #b9d6dd;

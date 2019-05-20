@@ -1,3 +1,10 @@
+.productFrame{
+    -fx-padding-top: 25px ;
+    -fx-padding-left: 25px ;
+    -fx-background-color: WHITE;
+}
+
+
 .productButton{
     -fx-border: none;
     -fx-background-color: #b9d6dd;
