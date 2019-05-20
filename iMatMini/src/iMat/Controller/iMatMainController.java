@@ -48,6 +48,8 @@ public class iMatMainController implements Initializable {
 
     List<Product> allItems = IMatDataHandler.getInstance().getProducts();
 
+    List<Product> offers = IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES);
+
 
 
     void populateFlowPane(Product product){
@@ -85,33 +87,36 @@ public class iMatMainController implements Initializable {
     @FXML
     private void pressedOnCategory4(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT));
     }
     @FXML
     private void pressedOnCategory5(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET));
     }
     @FXML
     private void pressedOnCategory6(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS));
     }
     @FXML
     private void pressedOnCategory7(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FISH));
     }
     @FXML
     private void pressedOnCategory8(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POD));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
     }
     @FXML
     private void pressedOnCategory9(){
         productsFlowPane.getChildren().clear();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
-    }   
+    }
     @FXML
     private void pressedOnCategory10(){
         productsFlowPane.getChildren().clear();
@@ -131,8 +136,8 @@ public class iMatMainController implements Initializable {
     private void updateProductList(List<Product> products) {
 
 
-        for (int i = 0; i < 10; i++) {
-            productsFlowPane.getChildren().add(new iMatProduct(products.get(i)));
+        for (Product product : products) {
+            productsFlowPane.getChildren().add(new iMatProduct(product));
         }
 
     }
@@ -142,6 +147,7 @@ public class iMatMainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        updateProductList(offers);
 
 
         updateProductList(dataHandler.getProducts());

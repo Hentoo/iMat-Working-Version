@@ -9,20 +9,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.Controller.iMatMainController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@../Styles/MainStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.Controller.iMatMainController">
     <children>
         <AnchorPane prefHeight="720.0" prefWidth="195.0" style="-fx-background-color: #FFF000;" AnchorPane.leftAnchor="0.0">
             <children>
                 <Button fx:id="categoryButton1" layoutY="75.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory1" prefHeight="60.0" prefWidth="220.0" text="Mejeri" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton2" layoutY="140.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton3" layoutY="205.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton4" layoutY="270.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton5" layoutY="335.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton6" layoutY="400.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton7" layoutY="465.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton8" layoutY="530.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton9" layoutY="595.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="categoryButton10" layoutY="660.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton2" layoutY="140.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory2" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton3" layoutY="205.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory3" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton4" layoutY="270.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory4" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton5" layoutY="335.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory5" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton6" layoutY="400.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory6" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton7" layoutY="465.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory7" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton8" layoutY="530.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory8" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton9" layoutY="595.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory9" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton10" layoutY="660.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory10" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             </children>
         </AnchorPane>
         <AnchorPane layoutX="1080.0" prefHeight="720.0" prefWidth="195.0" style="-fx-background-color: #FF0000;" AnchorPane.rightAnchor="0.0">
@@ -65,7 +65,10 @@
             <children>
                 <SplitPane dividerPositions="0.19751166407465007" orientation="VERTICAL" prefHeight="645.0" prefWidth="890.0">
                     <items>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <FlowPane prefHeight="124.0" prefWidth="881.0" />
+                     </children></AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                             <children>
                                 <ScrollBar layoutX="874.0" orientation="VERTICAL" prefHeight="513.0" prefWidth="20.0" AnchorPane.rightAnchor="0.0" />
