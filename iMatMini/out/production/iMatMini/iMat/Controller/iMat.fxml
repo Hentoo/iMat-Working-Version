@@ -13,7 +13,7 @@
     <children>
         <AnchorPane prefHeight="720.0" prefWidth="195.0" style="-fx-background-color: #FFF000;" AnchorPane.leftAnchor="0.0">
             <children>
-                <Button fx:id="categoryButton1" layoutY="75.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Mejeri" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="categoryButton1" layoutY="75.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory1" prefHeight="60.0" prefWidth="220.0" text="Mejeri" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                 <Button fx:id="categoryButton2" layoutY="140.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                 <Button fx:id="categoryButton3" layoutY="205.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                 <Button fx:id="categoryButton4" layoutY="270.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="220.0" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
@@ -35,7 +35,7 @@
             </children></AnchorPane>
         <AnchorPane layoutX="195.0" prefHeight="75.0" prefWidth="890.0" style="-fx-background-color: #FF00FF;">
             <children>
-                <TextField layoutX="118.0" layoutY="21.0" prefHeight="32.0" prefWidth="400.0" />
+                <TextField fx:id="searchField" layoutX="118.0" layoutY="21.0" onAction="#handleSearchAction" prefHeight="32.0" prefWidth="400.0" />
                 <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="524.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../imatresources/images/search.png" />
