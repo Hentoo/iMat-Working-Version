@@ -126,13 +126,6 @@ public class iMatMainController implements Initializable {
 
 
 
-    /*
-
-*/
-    private void updateCategories(List<ProductCategory> productCategories){
-
-    }
-
     private void updateProductList(List<Product> products) {
 
 
@@ -161,7 +154,7 @@ public class iMatMainController implements Initializable {
 
     @FXML
     private void handleSearchAction(ActionEvent event) {
-
+        productsFlowPane.getChildren().clear();
         List<Product> matches = dataHandler.findProducts(searchField.getText());
         updateProductList(matches);
         System.out.println("# matching products: " + matches.size());
