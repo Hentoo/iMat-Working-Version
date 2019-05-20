@@ -30,6 +30,8 @@ public class iMatMainController implements Initializable {
 
     @FXML
     private FlowPane productsFlowPane;
+    @FXML FlowPane categoryFlowPane;
+
     @FXML private Button categoryButton1;
     @FXML
     private ImageView imageField;
@@ -68,12 +70,17 @@ public class iMatMainController implements Initializable {
     @FXML
     private void pressedOnCategory2(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BREAD));
     }
     @FXML
     private void pressedOnCategory3(){
         productsFlowPane.getChildren().clear();
-        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BERRY));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.CITRUS_FRUIT));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.EXOTIC_FRUIT));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HERB));
     }
     @FXML
     private void pressedOnCategory4(){
@@ -95,10 +102,32 @@ public class iMatMainController implements Initializable {
         productsFlowPane.getChildren().clear();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
     }
+    @FXML
+    private void pressedOnCategory8(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+    }
+    @FXML
+    private void pressedOnCategory9(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+    }   
+    @FXML
+    private void pressedOnCategory10(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
+    }
 
-/*
+
+
+
+    /*
 
 */
+    private void updateCategories(List<ProductCategory> productCategories){
+
+    }
+
     private void updateProductList(List<Product> products) {
 
 
