@@ -8,32 +8,36 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="240.0" prefWidth="180.0" styleClass="productFrame" stylesheets="@../Styles/productStyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.211" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="240.0" prefWidth="180.0" styleClass="productFrame" stylesheets="@../Styles/productStyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <ImageView fx:id="imageField" fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <image>
-                <Image url="@../../imatresources/images/product_22.jpg" />
-            </image>
-        </ImageView>
-        <Button id="infoButton" fx:id="infoKnapp" mnemonicParsing="false" styleClass="productButton" text="Mer info" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
-        <Button id="lesserButton" fx:id="lesserButton" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="productButton" text="-" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="5.0" />
-        <Button id="moreButton" fx:id="moreButton" layoutX="10.0" layoutY="10.0" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="productButton" text="+" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="5.0" />
-        <Button id="addToCartButton" fx:id="addToCartButton" maxHeight="30.0" minHeight="30.0" mnemonicParsing="false" prefHeight="30.0" styleClass="productButton" text="Lägg i Varukorg" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
-      <Label fx:id="productName" text="Piggelin" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="5.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="productPrize" layoutX="10.0" layoutY="10.0" text="2250kr" AnchorPane.bottomAnchor="85.0" AnchorPane.rightAnchor="5.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-        <TextField fx:id="nrOfItems" text="1" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" />
-        <ImageView fx:id="favoriteStar" fitHeight="30.0" fitWidth="30.0" layoutX="-5.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
-            <image>
-                <Image url="@../../imatresources/images/empty_star.png" />
-            </image>
-        </ImageView>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="productBack" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+              <ImageView fx:id="imageField" fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <image>
+                      <Image url="@../../imatresources/images/product_22.jpg" />
+                  </image>
+              </ImageView>
+              <Button id="infoButton" fx:id="infoKnapp" mnemonicParsing="false" styleClass="productButton" text="Mer info" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+              <Button id="lesserButton" fx:id="lesserButton" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="productButton" text="-" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="5.0" />
+              <Button id="moreButton" fx:id="moreButton" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="productButton" text="+" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="5.0" />
+              <Button id="addToCartButton" fx:id="addToCartButton" maxHeight="30.0" minHeight="30.0" mnemonicParsing="false" prefHeight="30.0" styleClass="productButton" text="Lägg i Varukorg" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <Label fx:id="productName" styleClass="Label" text="Piggelin" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="5.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="productPrize" styleClass="Label" text="2250kr" AnchorPane.bottomAnchor="85.0" AnchorPane.rightAnchor="5.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+              <TextField fx:id="nrOfItems" text="1" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" />
+              <ImageView fx:id="favoriteStar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                  <image>
+                      <Image url="@../../imatresources/images/empty_star.png" />
+                  </image>
+              </ImageView>
+         </children>
+      </AnchorPane>
     </children>
 </fx:root>

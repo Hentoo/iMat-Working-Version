@@ -1,7 +1,16 @@
 .productFrame{
-    -fx-background-color: WHITE;
+    -fx-padding: 14px;
 }
 
+.productBack{
+    -fx-background-color: WHITE;
+    -fx-padding: 4px;
+}
+
+.Label{
+    -fx-font-family: Verdana;
+    
+}
 
 .productButton{
     -fx-border: none;
