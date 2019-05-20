@@ -1,15 +1,20 @@
 .productFrame{
-    -fx-padding: 14px;
+    -fx-padding: 13px;
 }
 
 .productBack{
     -fx-background-color: WHITE;
     -fx-padding: 4px;
+    -fx-border-style: solid;
+    -fx-border-radius: 5px;
 }
 
-.Label{
+Label{
     -fx-font-family: Verdana;
-    -fx-stroke: 30px, BLUE;
+
+    -fx-border-style: solid;
+    -fx-border-color: WHITE;
+
 }
 
 .productButton{

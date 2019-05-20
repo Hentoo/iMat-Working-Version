@@ -15,7 +15,7 @@
 72;MEAT;Högrev;69.0;kr/kg;product_72.jpg;end
 73;MEAT;Kycklingbröstfilé;139.0;kr/kg;product_73.jpg;end
 74;MEAT;Kycklingklubbor;31.0;kr/kg;product_74.jpg;end
-75;MEAT;Ekologisk kyckling hel;59.0;kr/kg;product_75.jpg;end
+75;MEAT;Kyckling hel;59.0;kr/kg;product_75.jpg;end
 76;MEAT;Köttfärs nöt;50.95;kr/kg;product_76.jpg;end
 97;NUTS_AND_SEEDS;Cashewnöt;39.95;kr/kg;product_97.jpg;end
 98;NUTS_AND_SEEDS;Hasselnöt;80.0;kr/kg;product_98.jpg;end
