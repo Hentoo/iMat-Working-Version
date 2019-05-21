@@ -99,7 +99,7 @@
                       </SplitPane>
                   </children>
             </AnchorPane>
-              <AnchorPane prefHeight="90.0" prefWidth="890.0" style="-fx-background-color: 0;" AnchorPane.rightAnchor="200.0">
+              <AnchorPane prefHeight="90.0" prefWidth="890.0" style="-fx-background-color: #EEEEEE;" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="200.0">
                   <children>
                       <TextField fx:id="searchField" layoutX="61.0" layoutY="21.0" onAction="#handleSearchAction" prefHeight="32.0" prefWidth="457.0" promptText="Klicka här för att söka i vårt sortiment..." />
                       <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="524.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
