@@ -13,6 +13,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
@@ -42,6 +43,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private TextField searchField;
     @FXML
     TextArea shoppingCartArea;
+    @FXML
+     private AnchorPane infoViewPane;
 
 
 
