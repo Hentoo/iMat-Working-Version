@@ -15,26 +15,24 @@
 
 <AnchorPane prefHeight="719.0" prefWidth="1280.0" stylesheets="@../Styles/MainStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.Controller.iMatMainController">
     <children>
-      <AnchorPane fx:id="pastaCategory" layoutX="191.0" layoutY="89.0" prefHeight="139.0" prefWidth="888.0">
-         <children>
-            <Button mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Pasta" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Button layoutX="278.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Mjöl, socker &amp; salt" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="0.0" />
-            <Button layoutX="139.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Potatis &amp; ris" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
-         </children></AnchorPane>
       <AnchorPane fx:id="greenCategory" layoutX="189.0" layoutY="88.0" prefHeight="139.0" prefWidth="888.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Grönsaker" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Button layoutX="130.0" layoutY="1.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Rotfrukter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
-            <Button layoutX="260.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Frön och nötter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="vegetableButton" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Grönsaker" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="rootButton" layoutX="130.0" layoutY="1.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Rotfrukter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="seedButton" layoutX="260.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Frön och nötter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="fruitCategory" layoutX="190.0" layoutY="88.0" prefHeight="139.0" prefWidth="888.0">
+      <AnchorPane fx:id="pastaCategory" layoutX="191.0" layoutY="89.0" prefHeight="139.0" prefWidth="888.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Exotiska frukter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Button layoutX="130.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Citrusfrukter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
-            <Button layoutX="260.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Bär" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="0.0" />
-         </children>
-      </AnchorPane>
+            <Button fx:id="pastaButton" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Pasta" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="flourButton" layoutX="278.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Mjöl, socker &amp; salt" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="potatoButton" layoutX="139.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Potatis &amp; ris" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="drinkCategory" layoutX="189.0" layoutY="90.0" prefHeight="141.0" prefWidth="888.0">
+         <children>
+            <Button fx:id="coldDrinks" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Kalla drycker" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="hotDrinks" layoutX="139.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Varma drycker" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
       <AnchorPane fx:id="mainScreen" prefHeight="200.0" prefWidth="888.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
               <AnchorPane prefHeight="720.0" prefWidth="195.0" style="-fx-background-color: #FFF000;" AnchorPane.leftAnchor="0.0">
@@ -124,15 +122,17 @@
               <ImageView fitHeight="38.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="infoViewAnchor" layoutX="412.0" layoutY="247.0" prefHeight="273.0" prefWidth="421.0">
+      <AnchorPane fx:id="infoViewAnchor" layoutX="412.0" layoutY="247.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <FlowPane fx:id="infoViewPane" prefHeight="273.0" prefWidth="421.0" />
+            <FlowPane fx:id="infoViewPane" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="drinkCategory" layoutX="189.0" layoutY="90.0" prefHeight="141.0" prefWidth="888.0">
+      <AnchorPane fx:id="fruitCategory" layoutX="190.0" layoutY="88.0" prefHeight="139.0" prefWidth="888.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Kalla drycker" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Button layoutX="139.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Varma drycker" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
-         </children></AnchorPane>
+            <Button fx:id="exoticButton" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Exotiska frukter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="citrusButton" layoutX="130.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Citrusfrukter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="berryButton" layoutX="260.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="139.0" text="Bär" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
     </children>
 </AnchorPane>

@@ -122,9 +122,9 @@
               <ImageView fitHeight="38.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="infoViewAnchor" layoutX="412.0" layoutY="247.0" prefHeight="273.0" prefWidth="421.0">
+      <AnchorPane fx:id="infoViewAnchor" layoutX="412.0" layoutY="247.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <FlowPane fx:id="infoViewPane" prefHeight="273.0" prefWidth="421.0" />
+            <FlowPane fx:id="infoViewPane" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="fruitCategory" layoutX="190.0" layoutY="88.0" prefHeight="139.0" prefWidth="888.0">
