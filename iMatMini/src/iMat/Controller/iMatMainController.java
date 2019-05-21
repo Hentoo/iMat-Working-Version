@@ -43,12 +43,22 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     TextArea shoppingCartArea;
     @FXML
     private AnchorPane infoViewPane;
+    @FXML AnchorPane mainScreen;
     @FXML
     private Button logoButton;
     @FXML
     private Label backtoStart;
     @FXML
     private Label infoViewProductName;
+    @FXML AnchorPane fruitCategory;
+    @FXML AnchorPane breadCategory;
+    @FXML AnchorPane dairyCategory;
+    @FXML AnchorPane meatCategory;
+    @FXML AnchorPane fishCategory;
+    @FXML AnchorPane pastaCategory;
+    @FXML AnchorPane candyCategory;
+    @FXML AnchorPane drinkCategory;
+
 
 
 
@@ -102,6 +112,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
   private void pressedOnCategory1(){
         productsFlowPane.getChildren().clear();
+        mainScreen.toFront();
+        fruitCategory.toFront();
 
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BERRY));
@@ -189,6 +201,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        mainScreen.toFront();
         updateProductList(offers);
 
 

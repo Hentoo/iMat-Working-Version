@@ -15,7 +15,35 @@
 
 <AnchorPane prefHeight="719.0" prefWidth="1280.0" stylesheets="@../Styles/MainStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.Controller.iMatMainController">
     <children>
-      <AnchorPane prefHeight="200.0" prefWidth="888.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="fruitCategory" layoutX="190.0" layoutY="88.0" prefHeight="130.0" prefWidth="888.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" text="Exotiska frukter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button layoutX="130.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" text="Citrusfrukter" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button layoutX="260.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" text="Bär" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="breadCategory" prefHeight="172.0" prefWidth="154.0" />
+      <AnchorPane fx:id="dairyCategory" prefHeight="105.0" prefWidth="100.0" />
+      <AnchorPane fx:id="meatCategory" prefHeight="120.0" prefWidth="113.0" />
+      <AnchorPane fx:id="fishCategory" prefHeight="148.0" prefWidth="131.0" />
+      <AnchorPane fx:id="pastaCategory" prefHeight="139.0" prefWidth="131.0" />
+      <AnchorPane fx:id="drinkCategory" prefHeight="105.0" prefWidth="450.0" />
+      <AnchorPane fx:id="candyCategory" prefHeight="96.0" prefWidth="705.0" />
+      <AnchorPane fx:id="infoViewPane" layoutX="304.0" prefHeight="720.0" prefWidth="982.0" style="-fx-background-color: #FF0000;" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="200.0">
+         <children>
+            <Label fx:id="infoViewProductName" layoutX="365.0" layoutY="54.0" prefHeight="212.0" prefWidth="417.0" text="LKAUSHFAJKDFLKAJSHF">
+               <font>
+                  <Font size="60.0" />
+               </font>
+            </Label>
+            <Button layoutX="1155.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="85.0" text="Stäng">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mainScreen" prefHeight="200.0" prefWidth="888.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
               <AnchorPane prefHeight="720.0" prefWidth="195.0" style="-fx-background-color: #FFF000;" AnchorPane.leftAnchor="0.0">
                   <children>
@@ -102,34 +130,12 @@
                   </children>
               </AnchorPane>
               <ImageView fitHeight="38.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
-            <AnchorPane fx:id="fruitCategory" layoutX="196.0" layoutY="89.0" prefHeight="130.0" prefWidth="888.0">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" text="Exotiska frukter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <Button layoutX="130.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" text="Citrusfrukter" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <Button layoutX="260.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" text="Bär" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
-               </children></AnchorPane>
-            <AnchorPane fx:id="greenCategory" prefHeight="105.0" prefWidth="100.0" />
-            <AnchorPane fx:id="breadCategory" prefHeight="172.0" prefWidth="154.0" />
-            <AnchorPane fx:id="dairyCategory" prefHeight="105.0" prefWidth="100.0" />
-            <AnchorPane fx:id="meatCategory" prefHeight="120.0" prefWidth="113.0" />
-            <AnchorPane fx:id="fishCategory" prefHeight="148.0" prefWidth="131.0" />
-            <AnchorPane fx:id="pastaCategory" prefHeight="139.0" prefWidth="131.0" />
-            <AnchorPane fx:id="drinkCategory" prefHeight="105.0" prefWidth="450.0" />
-            <AnchorPane fx:id="candyCategory" prefHeight="96.0" prefWidth="705.0" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="infoViewPane" layoutX="304.0" prefHeight="720.0" prefWidth="982.0" style="-fx-background-color: #FF0000;" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="200.0">
+      <AnchorPane fx:id="greenCategory" layoutX="189.0" layoutY="88.0" prefHeight="130.0" prefWidth="888.0">
          <children>
-            <Label fx:id="infoViewProductName" layoutX="365.0" layoutY="54.0" prefHeight="212.0" prefWidth="417.0" text="LKAUSHFAJKDFLKAJSHF">
-               <font>
-                  <Font size="60.0" />
-               </font>
-            </Label>
-            <Button layoutX="1155.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="85.0" text="Stäng">
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" />
-               </graphic>
-            </Button>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="78.0" text="Button" />
+            <Button layoutX="116.0" layoutY="40.0" mnemonicParsing="false" text="Button" />
          </children>
       </AnchorPane>
     </children>
