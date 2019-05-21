@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
@@ -22,7 +23,7 @@ import java.sql.SQLOutput;
 import java.util.*;
 
 
-public class iMatMainController implements Initializable {
+public class iMatMainController implements Initializable, ShoppingCartListener {
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
 
@@ -39,6 +40,8 @@ public class iMatMainController implements Initializable {
     Text productText;
     @FXML
     private TextField searchField;
+    @FXML
+    TextArea shoppingCartArea;
 
 
 
@@ -52,11 +55,28 @@ public class iMatMainController implements Initializable {
 
 
 
-    void populateFlowPane(Product product){
+    void populateFlowPane(Product product) {
         productText.setText(product.getName());
 
+    }
+
+
+
+    private void updateShoppingCart() {
+
+        ShoppingCart shoppingCart = dataHandler.getShoppingCart();
+
+        shoppingCartArea.setText("Antal varor: " + shoppingCart.getItems().size());
+       // costLabel.setText("Kostnad: " + String.format("%.2f",shoppingCart.getTotal()));
 
     }
+
+    @Override
+    public void shoppingCartChanged(CartEvent evt) {
+        updateShoppingCart();
+        }
+
+
 
     private void initItems(List<Product> products){
         allItems.clear();
@@ -158,6 +178,7 @@ public class iMatMainController implements Initializable {
 
 
         updateProductList(dataHandler.getProducts());
+        updateShoppingCart();
 
 
 
