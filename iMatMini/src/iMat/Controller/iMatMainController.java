@@ -82,6 +82,12 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     }
 
+
+
+
+
+
+
     @Override
     public void shoppingCartChanged(CartEvent evt) {
         updateShoppingCart();
@@ -181,6 +187,74 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         mainScreen.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET));
     }
+
+    @FXML
+    private void pressedOnPasta(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA));
+    }
+    @FXML
+    private void pressedOnPotato(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
+    }
+
+    @FXML
+    private void pressedOnFlour(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FLOUR_SUGAR_SALT));
+    }
+
+    @FXML
+    private void pressedOnRoot(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.ROOT_VEGETABLE));
+    }
+
+    @FXML
+    private void pressedOnSeed(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.NUTS_AND_SEEDS));
+    }
+
+    @FXML
+    private void pressedOnVegetable(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.VEGETABLE_FRUIT));
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HERB));
+    }
+
+    @FXML
+    private void pressedOnHot(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
+    }
+
+    @FXML
+    private void pressedOnCold(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS));
+    }
+
+    @FXML
+    private void pressedOnExotic(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.EXOTIC_FRUIT));
+    }
+    @FXML
+    private void pressedOnCitrus(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.CITRUS_FRUIT));
+    }
+
+    @FXML
+    private void pressedOnBerry(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BERRY));
+    }
+
+
+
 
 
 
