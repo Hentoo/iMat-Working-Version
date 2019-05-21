@@ -69,8 +69,8 @@ public class iMatProduct extends AnchorPane {
     }
     @FXML
     private void createInfoView(){
+
      //   infoView = new iMatInfoViewController(product);
-        infoViewAnchorPane.toFront();
 
     }
 }
