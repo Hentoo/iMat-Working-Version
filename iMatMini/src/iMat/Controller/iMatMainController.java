@@ -8,10 +8,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -34,7 +31,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private FlowPane productsFlowPane;
     @FXML FlowPane categoryFlowPane;
 
-    @FXML private Button categoryButton1;
+    @FXML
+    private Button categoryButton1;
     @FXML
     private ImageView imageField;
     @FXML
@@ -44,7 +42,11 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     TextArea shoppingCartArea;
     @FXML
-     private AnchorPane infoViewPane;
+    private AnchorPane infoViewPane;
+    @FXML
+    private Button logoButton;
+    @FXML
+    private Label backtoStart;
 
 
 
@@ -85,6 +87,14 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         allItems.clear();
         allItems = IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE);
         updateProductList(allItems);
+    }
+
+    @FXML
+    private void pressedOnLogoButton(){
+        infoViewPane.toBack();
+
+        productsFlowPane.getChildren().clear();
+        updateProductList(offers);
     }
 
     @FXML
