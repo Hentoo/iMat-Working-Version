@@ -216,6 +216,12 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         productsFlowPane.getChildren().clear();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.NUTS_AND_SEEDS));
     }
+    
+    @FXML void pressedOnPod(){
+        productsFlowPane.getChildren().clear();
+        updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POD));
+
+    }
 
     @FXML
     private void pressedOnVegetable(){
