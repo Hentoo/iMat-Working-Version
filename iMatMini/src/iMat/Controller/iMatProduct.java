@@ -38,6 +38,8 @@ public class iMatProduct extends AnchorPane {
     @FXML
     private Label productPrize;
 
+    private iMatInfoViewController infoView;
+
 
     private Product product;
 
@@ -61,6 +63,10 @@ public class iMatProduct extends AnchorPane {
         productName.setText(product.getName());
         productPrize.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
         imageField.setImage(model.getImage(product, kImageWidth, kImageWidth*kImageRatio));
+    }
+    @FXML
+    private void createInfoView(Product product){
+        infoView = new iMatInfoViewController(this.product);
     }
 }
 
