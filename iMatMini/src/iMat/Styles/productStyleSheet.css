@@ -9,13 +9,6 @@
     -fx-border-radius: 5px;
 }
 
-Label{
-    -fx-font-family: Verdana;
-
-    -fx-border-style: solid;
-    -fx-border-color: WHITE;
-
-}
 
 .productButton{
     -fx-border: none;
