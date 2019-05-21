@@ -62,7 +62,7 @@ public class IMatMyPages extends AnchorPane{
 
     }
 
-    @Override
+
     public void shoppingCartChanged(CartEvent evt) {
         updateShoppingCart();
     }
@@ -130,9 +130,9 @@ public class IMatMyPages extends AnchorPane{
     private void updateProductList(List<Product> products) {
 
 
-        for (Product product : products) {
-            productsFlowPane.getChildren().add(new iMatProduct(product, product.getController));
-        }
+       // for (Product product : products) {
+       //     productsFlowPane.getChildren().add(new iMatProduct(product, product.getController));
+       // }
 
     }
 
