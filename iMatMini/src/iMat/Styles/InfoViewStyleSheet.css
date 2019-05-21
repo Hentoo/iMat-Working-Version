@@ -1,3 +1,10 @@
 #background{
 -fx-background-color:rgba(100,100,100,0.50);
 }
+#closeInfoButton{
+-fx-background-color:rgba(220,90,90,1);
+-fx-border-radius: 30px;
+}
+#closeInfoButton:hover{
+-fx-background-color:rgba(250,0,0,1);
+}

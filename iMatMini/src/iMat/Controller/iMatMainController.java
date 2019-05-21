@@ -333,8 +333,12 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     public void activateInfoView(Product product){
         infoViewAnchor.toFront();
         infoViewPane.getChildren().clear();
-        infoViewPane.getChildren().add(new iMatInfoViewController(product));
+        infoViewPane.getChildren().add(new iMatInfoViewController(product, this));
 
+    }
+
+    public void mainToFront(){
+        mainScreen.toFront();
     }
 
 

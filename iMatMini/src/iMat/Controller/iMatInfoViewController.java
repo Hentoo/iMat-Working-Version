@@ -3,6 +3,7 @@ package iMat.Controller;
 import iMat.Model;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -18,13 +19,17 @@ public class iMatInfoViewController extends AnchorPane {
     private ImageView infoViewPicture;
     @FXML
     private Label infoViewProductName;
+    @FXML
+    private Button closeInfoButton;
 
     private Product product;
 
     private Model model = Model.getInstance();
 
+    private iMatMainController controller;
 
-    public iMatInfoViewController(Product product){
+
+    public iMatInfoViewController(Product product, iMatMainController controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatInfoView.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -38,9 +43,17 @@ public class iMatInfoViewController extends AnchorPane {
         this.product = product;
         this.infoViewPicture.setImage(model.getImage(product));
         this.infoViewProductName.setText(product.getName());
+        this.controller = controller;
+
 
 
 
     }
+
+    @FXML
+    private void closeInfoView(){
+        controller.mainToFront();
+    }
+
 
 }
