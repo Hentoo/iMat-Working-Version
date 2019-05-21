@@ -29,20 +29,6 @@
       <AnchorPane fx:id="pastaCategory" prefHeight="139.0" prefWidth="131.0" />
       <AnchorPane fx:id="drinkCategory" prefHeight="105.0" prefWidth="450.0" />
       <AnchorPane fx:id="candyCategory" prefHeight="96.0" prefWidth="705.0" />
-      <AnchorPane fx:id="infoViewPane" layoutX="304.0" prefHeight="720.0" prefWidth="982.0" style="-fx-background-color: #FF0000;" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="200.0">
-         <children>
-            <Label fx:id="infoViewProductName" layoutX="365.0" layoutY="54.0" prefHeight="212.0" prefWidth="417.0" text="LKAUSHFAJKDFLKAJSHF">
-               <font>
-                  <Font size="60.0" />
-               </font>
-            </Label>
-            <Button layoutX="1155.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="85.0" text="Stäng">
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" />
-               </graphic>
-            </Button>
-         </children>
-      </AnchorPane>
       <AnchorPane fx:id="mainScreen" prefHeight="200.0" prefWidth="888.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
               <AnchorPane prefHeight="720.0" prefWidth="195.0" style="-fx-background-color: #FFF000;" AnchorPane.leftAnchor="0.0">
@@ -136,6 +122,11 @@
          <children>
             <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="78.0" text="Button" />
             <Button layoutX="116.0" layoutY="40.0" mnemonicParsing="false" text="Button" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="infoViewAnchor" layoutX="412.0" layoutY="247.0" prefHeight="273.0" prefWidth="421.0">
+         <children>
+            <FlowPane fx:id="infoViewPane" prefHeight="273.0" prefWidth="421.0" />
          </children>
       </AnchorPane>
     </children>

@@ -72,9 +72,7 @@ public class iMatProduct extends AnchorPane {
     }
     @FXML
     private void onInfoClick(){
-        controller.setProductName(this.product);
-     controller.infoViewPaneToFront();
-
+        controller.activateInfoView(product);
     }
 
 

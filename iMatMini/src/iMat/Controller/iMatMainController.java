@@ -41,15 +41,11 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private TextField searchField;
     @FXML
     TextArea shoppingCartArea;
-    @FXML
-    private AnchorPane infoViewPane;
     @FXML AnchorPane mainScreen;
     @FXML
     private Button logoButton;
     @FXML
     private Label backtoStart;
-    @FXML
-    private Label infoViewProductName;
     @FXML AnchorPane fruitCategory;
     @FXML AnchorPane breadCategory;
     @FXML AnchorPane dairyCategory;
@@ -58,6 +54,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML AnchorPane pastaCategory;
     @FXML AnchorPane candyCategory;
     @FXML AnchorPane drinkCategory;
+    @FXML FlowPane infoViewPane;
+    @FXML AnchorPane infoViewAnchor;
 
 
 
@@ -257,12 +255,11 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     }
 
-    public void infoViewPaneToFront(){
-        infoViewPane.toFront();
-    }
+    public void activateInfoView(Product product){
+        infoViewAnchor.toFront();
+        infoViewPane.getChildren().clear();
+        infoViewPane.getChildren().add(new iMatInfoViewController(product));
 
-    public void setProductName(Product product){
-        infoViewProductName.setText(product.getName());
     }
 
 
