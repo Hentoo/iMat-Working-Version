@@ -47,6 +47,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private Button logoButton;
     @FXML
     private Label backtoStart;
+    @FXML
+    private Label infoViewProductName;
 
 
 
@@ -177,7 +179,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
 
         for (Product product : products) {
-            productsFlowPane.getChildren().add(new iMatProduct(product));
+            productsFlowPane.getChildren().add(new iMatProduct(product,this));
         }
 
     }
@@ -240,6 +242,14 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         //setNumberOfItems("Antal varor: " + shoppingCart.getItems().size());
         //setTotalCosttLabel("Kostnad: " + String.format("%.2f",shoppingCart.getTotal()));
 
+    }
+
+    public void infoViewPaneToFront(){
+        infoViewPane.toFront();
+    }
+
+    public void setProductName(Product product){
+        infoViewProductName.setText(product.getName());
     }
 
 

@@ -43,6 +43,8 @@ public class iMatProduct extends AnchorPane {
     @FXML
     private AnchorPane infoViewAnchorPane;
 
+    private iMatMainController controller;
+
 
     private Product product;
 
@@ -51,7 +53,7 @@ public class iMatProduct extends AnchorPane {
     private final static double kImageWidth = 100.0;
     private final static double kImageRatio = 0.75;
 
-    public iMatProduct(Product product){
+    public iMatProduct(Product product, iMatMainController controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatProduct.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -66,12 +68,15 @@ public class iMatProduct extends AnchorPane {
         productName.setText(product.getName());
         productPrize.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
         imageField.setImage(model.getImage(product, kImageWidth, kImageWidth*kImageRatio));
+        this.controller = controller;
     }
     @FXML
-    private void createInfoView(){
-
-     //   infoView = new iMatInfoViewController(product);
+    private void onInfoClick(){
+        controller.setProductName(this.product);
+     controller.infoViewPaneToFront();
 
     }
+
+
 }
 
