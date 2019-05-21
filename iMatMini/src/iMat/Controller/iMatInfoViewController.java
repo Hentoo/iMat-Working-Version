@@ -38,7 +38,7 @@ public class iMatInfoViewController extends AnchorPane {
         this.product = product;
         this.infoViewPicture.setImage(model.getImage(product));
         this.infoViewProductName.setText(product.getName());
-        infoViewAnchorPane.toFront();
+
 
 
     }

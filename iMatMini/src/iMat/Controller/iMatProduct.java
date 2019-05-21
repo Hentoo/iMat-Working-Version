@@ -40,6 +40,9 @@ public class iMatProduct extends AnchorPane {
 
     private iMatInfoViewController infoView;
 
+    @FXML
+    private AnchorPane infoViewAnchorPane;
+
 
     private Product product;
 
@@ -65,8 +68,10 @@ public class iMatProduct extends AnchorPane {
         imageField.setImage(model.getImage(product, kImageWidth, kImageWidth*kImageRatio));
     }
     @FXML
-    private void createInfoView(Product product){
-        infoView = new iMatInfoViewController(this.product);
+    private void createInfoView(){
+     //   infoView = new iMatInfoViewController(product);
+        infoViewAnchorPane.toFront();
+
     }
 }
 
