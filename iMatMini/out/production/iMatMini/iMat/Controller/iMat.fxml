@@ -70,7 +70,7 @@
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Label>
-              <AnchorPane prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: #FF0000;" AnchorPane.rightAnchor="0.0">
+              <AnchorPane prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: WHITE;" AnchorPane.rightAnchor="0.0">
                   <children>
                   <TextArea fx:id="shoppingCartArea" layoutY="90.0" prefHeight="454.0" prefWidth="200.0" />
                   <ListView layoutY="80.0" prefHeight="565.0" prefWidth="200.0" AnchorPane.topAnchor="90.0" />
@@ -81,9 +81,9 @@
                       </ImageView>
                   </children>
             </AnchorPane>
-              <AnchorPane prefHeight="645.0" prefWidth="890.0" style="-fx-background-color: #FA5507;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="200.0">
+              <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
                   <children>
-                      <SplitPane dividerPositions="0.22929936305732485" layoutY="14.0" orientation="VERTICAL" prefHeight="630.0" prefWidth="890.0" AnchorPane.topAnchor="10.0">
+                      <SplitPane dividerPositions="0.22929936305732485" layoutY="14.0" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <items>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
@@ -99,7 +99,7 @@
                       </SplitPane>
                   </children>
             </AnchorPane>
-              <AnchorPane prefHeight="90.0" prefWidth="890.0" style="-fx-background-color: #FF00FF;" AnchorPane.rightAnchor="200.0">
+              <AnchorPane prefHeight="90.0" prefWidth="890.0" style="-fx-background-color: 0;" AnchorPane.rightAnchor="200.0">
                   <children>
                       <TextField fx:id="searchField" layoutX="61.0" layoutY="21.0" onAction="#handleSearchAction" prefHeight="32.0" prefWidth="457.0" promptText="Klicka här för att söka i vårt sortiment..." />
                       <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="524.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
@@ -130,9 +130,9 @@
               <ImageView fitHeight="38.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="infoViewAnchor" layoutX="412.0" layoutY="247.0" prefHeight="273.0" prefWidth="421.0">
+      <AnchorPane fx:id="infoViewAnchor" layoutX="412.0" layoutY="247.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <FlowPane fx:id="infoViewPane" prefHeight="273.0" prefWidth="421.0" />
+            <FlowPane fx:id="infoViewPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
     </children>
