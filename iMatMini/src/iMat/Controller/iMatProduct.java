@@ -92,10 +92,30 @@ public class iMatProduct extends AnchorPane {
         controller.shoppingCartArea.clear();
 
         int i = 0;
-        int index = 0;
         ShoppingItem checkCopy = null;
 
-        for (ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+        for (int j = 0; j < IMatDataHandler.getInstance().getShoppingCart().getItems().size(); j++){
+            if (IMatDataHandler.getInstance().getShoppingCart().getItems().get(j).getProduct().getName() == product.getName()){
+                checkCopy = IMatDataHandler.getInstance().getShoppingCart().getItems().get(j);
+                i = j;
+            }
+        }
+
+        if(i == 0 && checkCopy == null){
+            IMatDataHandler.getInstance().getShoppingCart().getItems().add(new ShoppingItem(product, 1));
+        }
+
+        if (checkCopy != null){
+            IMatDataHandler.getInstance().getShoppingCart().getItems().add(new ShoppingItem(checkCopy.getProduct(), checkCopy.getAmount()+1));
+            IMatDataHandler.getInstance().getShoppingCart().getItems().remove(i);
+        }
+
+
+        for(ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+            controller.shoppingCartArea.appendText(shoppingItem.getProduct().getName() + " " + shoppingItem.getAmount() + "\n");
+        }
+
+      /*  for (ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){
             index++;
             if (shoppingItem.getProduct().getName().equals(product.getName())){
                 i++;
@@ -117,6 +137,8 @@ public class iMatProduct extends AnchorPane {
         for(ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){
             controller.shoppingCartArea.appendText(shoppingItem.getProduct().getName() + " " + shoppingItem.getAmount() + "\n");
         }
+
+       */
 
 
 
