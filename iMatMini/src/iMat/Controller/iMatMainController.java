@@ -60,6 +60,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
 
 
+
+
     List<Product> allItems = IMatDataHandler.getInstance().getProducts();
 
     List<Product> offers = IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES);
@@ -77,7 +79,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
         ShoppingCart shoppingCart = dataHandler.getShoppingCart();
 
-        shoppingCartArea.setText("Antal varor: " + shoppingCart.getItems().size());
+       // shoppingCartArea.setText("Antal varor: " + shoppingCart.getItems().size());
        // costLabel.setText("Kostnad: " + String.format("%.2f",shoppingCart.getTotal()));
 
     }

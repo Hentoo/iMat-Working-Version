@@ -21,7 +21,7 @@
               <Button id="infoButton" fx:id="infoKnapp" mnemonicParsing="false" onMousePressed="#onInfoClick" styleClass="productButton" text="Mer info" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
               <Button id="lesserButton" fx:id="lesserButton" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="productButton" text="-" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="5.0" />
               <Button id="moreButton" fx:id="moreButton" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="productButton" text="+" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="5.0" />
-              <Button id="addToCartButton" fx:id="addToCartButton" maxHeight="30.0" minHeight="30.0" mnemonicParsing="false" prefHeight="30.0" styleClass="productButton" text="Lägg i Varukorg" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+              <Button id="addToCartButton" fx:id="addToCartButton" layoutX="28.0" layoutY="191.0" maxHeight="30.0" minHeight="30.0" mnemonicParsing="false" onMousePressed="#handleAddAction" prefHeight="30.0" styleClass="productButton" text="Lägg i Varukorg" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="12.0" />
             <Label fx:id="productName" maxWidth="180.0" styleClass="Label" text="Piggelin" wrapText="true" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="5.0">
                <font>
                   <Font name="Arial Black" size="18.0" />

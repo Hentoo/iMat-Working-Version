@@ -8,14 +8,20 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class iMatProduct extends AnchorPane {
 
@@ -48,6 +54,10 @@ public class iMatProduct extends AnchorPane {
 
     private Product product;
 
+
+    List<ShoppingItem> products = new ArrayList<>();
+
+
     private Model model = Model.getInstance();
 
     private final static double kImageWidth = 100.0;
@@ -73,6 +83,53 @@ public class iMatProduct extends AnchorPane {
     @FXML
     private void onInfoClick(){
         controller.activateInfoView(product);
+    }
+
+    @FXML
+    private void handleAddAction() {
+
+        IMatDataHandler.getInstance().getShoppingCart().clear();
+
+        model.addToShoppingCart(product);
+
+
+        controller.shoppingCartArea.clear();
+        System.out.println("Add " + product.getName());
+
+
+
+        for(int i = 0; i < IMatDataHandler.getInstance().getShoppingCart().getItems().size(); i++) {
+
+            /*
+            products.add(IMatDataHandler.getInstance().getShoppingCart().getItems().get(i));
+            controller.shoppingCartArea.appendText(products.get(i).getProduct().getName() + "\n");
+
+            System.out.println(products.size());
+            */
+
+             if(products.isEmpty()){
+                products.add(IMatDataHandler.getInstance().getShoppingCart().getItems().get(i));
+                System.out.println("hejhej");
+            } else if(products.contains(products.get(i))){
+                 System.out.println(products.get(i) + "fler");
+                products.get(i).setAmount(products.get(i).getAmount() + 1);
+                System.out.println(products.get(i).getAmount());
+            } else {
+                System.out.println(products.get(i).getProduct().getName() + "tillagd");
+                products.add(IMatDataHandler.getInstance().getShoppingCart().getItems().get(i));
+
+            }
+
+
+        }
+        for(int i = 0; i < products.size(); i++){
+            System.out.println(products.toString());
+            controller.shoppingCartArea.appendText(products.get(i).getProduct().getName() + " " + (int) products.get(i).getAmount() + " st" + "\n");
+        }
+
+
+
+
     }
 
 
