@@ -24,6 +24,7 @@ import java.util.*;
 public class iMatMainController implements Initializable, ShoppingCartListener {
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
+    ListIterator<ShoppingItem> list;
 
 
 

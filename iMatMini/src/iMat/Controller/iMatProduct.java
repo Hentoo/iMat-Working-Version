@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.ListIterator;
 
 public class iMatProduct extends AnchorPane {
 
@@ -86,6 +87,81 @@ public class iMatProduct extends AnchorPane {
     }
 
     @FXML
+    private void handleAddAction(){
+
+        controller.shoppingCartArea.clear();
+
+        int i = 0;
+        int index = 0;
+        ShoppingItem checkCopy = null;
+
+        for (ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+            index++;
+            if (shoppingItem.getProduct().getName().equals(product.getName())){
+                i++;
+                checkCopy = shoppingItem;
+            }
+
+        }
+
+        if (i == 0){
+            IMatDataHandler.getInstance().getShoppingCart().getItems().add(new ShoppingItem(product, 1));
+        }
+
+        if (i !=0){
+            IMatDataHandler.getInstance().getShoppingCart().getItems().add(new ShoppingItem(product, checkCopy.getAmount() + 1));
+            IMatDataHandler.getInstance().getShoppingCart().getItems().remove(index-1);
+
+        }
+
+        for(ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+            controller.shoppingCartArea.appendText(shoppingItem.getProduct().getName() + " " + shoppingItem.getAmount() + "\n");
+        }
+
+
+
+    /*    controller.list = IMatDataHandler.getInstance().getShoppingCart().getItems().listIterator();
+        int i = 0;
+        ShoppingItem checkCopy = new ShoppingItem(product, 0);
+
+
+        while (controller.list.hasNext()){
+            ShoppingItem check = controller.list.next();
+            if (check.getProduct().getName() == product.getName()){
+                checkCopy = check;
+                controller.list.remove();
+                i++;
+            }
+
+        }
+
+        if (i == 0){
+            controller.list.add(new ShoppingItem(product, 1));
+            System.out.println("item addade i är 0");
+        }
+        if (i == 1){
+            controller.list.add(new ShoppingItem(product, checkCopy.getAmount() + 1));
+            System.out.println("item addade i är 1");
+        }
+
+       /* IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
+
+        while(controller.list.hasNext()){
+            IMatDataHandler.getInstance().getShoppingCart().getItems().add(controller.list.next());
+        }*/
+
+
+     /*  while(controller.list.hasNext()){
+           System.out.println(controller.list.next().getProduct().getName());
+        }
+
+        while (controller.list.hasNext()){
+            controller.shoppingCartArea.appendText(controller.list.next().getProduct().getName() + " " + (int) controller.list.next().getAmount() + " \n");
+        } */
+
+    }
+
+   /* @FXML
     private void handleAddAction() {
 
         IMatDataHandler.getInstance().getShoppingCart().clear();
@@ -107,7 +183,7 @@ public class iMatProduct extends AnchorPane {
             System.out.println(products.size());
             */
 
-             if(products.isEmpty()){
+     /*        if(products.isEmpty()){
                 products.add(IMatDataHandler.getInstance().getShoppingCart().getItems().get(i));
                 System.out.println("hejhej");
             } else if(products.contains(products.get(i))){
@@ -130,7 +206,7 @@ public class iMatProduct extends AnchorPane {
 
 
 
-    }
+    } */
 
 
 }
