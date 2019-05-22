@@ -31,7 +31,7 @@ public class iMatProduct extends AnchorPane {
     @FXML
     private ImageView favoriteStar;
     @FXML
-    private Button lesserButon;
+    private Button lesserButton;
     @FXML
     private Button moreButton;
     @FXML
@@ -54,6 +54,8 @@ public class iMatProduct extends AnchorPane {
 
 
     private Product product;
+
+    int chosenAmount = 1;
 
 
     List<ShoppingItem> products = new ArrayList<>();
@@ -87,9 +89,32 @@ public class iMatProduct extends AnchorPane {
     }
 
     @FXML
+    private void lesserButtonAction(){
+        if(chosenAmount > 1){
+            nrOfItems.clear();
+            chosenAmount--;
+            updateAmountBar();
+        }
+
+    }
+
+    @FXML
+    private void moreButtonAction(){
+        nrOfItems.clear();
+        chosenAmount++;
+        updateAmountBar();
+    }
+
+    private void updateAmountBar(){
+        nrOfItems.clear();
+        nrOfItems.appendText(Integer.toString(chosenAmount));
+    }
+
+    @FXML
     private void handleAddAction(){
 
         controller.shoppingCartArea.clear();
+        double totalPrice = 0;
 
         int i = 0;
         ShoppingItem checkCopy = null;
@@ -102,18 +127,27 @@ public class iMatProduct extends AnchorPane {
         }
 
         if(i == 0 && checkCopy == null){
-            IMatDataHandler.getInstance().getShoppingCart().getItems().add(new ShoppingItem(product, 1));
+            IMatDataHandler.getInstance().getShoppingCart().getItems().add(new ShoppingItem(product, chosenAmount));
         }
 
         if (checkCopy != null){
-            IMatDataHandler.getInstance().getShoppingCart().getItems().add(new ShoppingItem(checkCopy.getProduct(), checkCopy.getAmount()+1));
+            IMatDataHandler.getInstance().getShoppingCart().getItems().add(new ShoppingItem(checkCopy.getProduct(), checkCopy.getAmount()+chosenAmount));
             IMatDataHandler.getInstance().getShoppingCart().getItems().remove(i);
         }
 
 
         for(ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){
-            controller.shoppingCartArea.appendText(shoppingItem.getProduct().getName() + " " + shoppingItem.getAmount() + "\n");
+            controller.shoppingCartArea.appendText(shoppingItem.getProduct().getName() + "           " + (int)shoppingItem.getAmount() + " st." + "\n");
         }
+
+        for(ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+            totalPrice = totalPrice + (shoppingItem.getProduct().getPrice() * shoppingItem.getAmount());
+        }
+        controller.totalPriceLabel.setText("TOTALPRIS: " + Integer.toString((int)totalPrice) + " SEK");
+
+        chosenAmount = 1;
+        updateAmountBar();
+
 
       /*  for (ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){
             index++;

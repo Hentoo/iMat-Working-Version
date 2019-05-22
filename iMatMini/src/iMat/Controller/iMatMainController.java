@@ -53,6 +53,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML AnchorPane drinkCategory;
     @FXML FlowPane infoViewPane;
     @FXML AnchorPane infoViewAnchor;
+    @FXML Label totalPriceLabel;
 
 
 
