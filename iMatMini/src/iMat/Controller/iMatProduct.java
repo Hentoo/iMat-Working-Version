@@ -164,7 +164,6 @@ public class iMatProduct extends AnchorPane {
    /* @FXML
     private void handleAddAction() {
 
-        IMatDataHandler.getInstance().getShoppingCart().clear();
 
         model.addToShoppingCart(product);
 
@@ -174,7 +173,7 @@ public class iMatProduct extends AnchorPane {
 
 
 
-        for(int i = 0; i < IMatDataHandler.getInstance().getShoppingCart().getItems().size(); i++) {
+        for(int i = 0; i < products.size(); i++) {
 
             /*
             products.add(IMatDataHandler.getInstance().getShoppingCart().getItems().get(i));
@@ -186,20 +185,22 @@ public class iMatProduct extends AnchorPane {
      /*        if(products.isEmpty()){
                 products.add(IMatDataHandler.getInstance().getShoppingCart().getItems().get(i));
                 System.out.println("hejhej");
-            } else if(products.contains(products.get(i))){
+            } else if(listContainingItem(products, product.getName())){
                  System.out.println(products.get(i) + "fler");
                 products.get(i).setAmount(products.get(i).getAmount() + 1);
                 System.out.println(products.get(i).getAmount());
-            } else {
-                System.out.println(products.get(i).getProduct().getName() + "tillagd");
-                products.add(IMatDataHandler.getInstance().getShoppingCart().getItems().get(i));
-
-            }
+            } else if(!listContainingItem(products, product.getName())){
+                 System.out.println(products.get(i).getProduct().getName() + "tillagd");
+                 products.add(new ShoppingItem(product));
+             }
 
 
         }
+
+
+
         for(int i = 0; i < products.size(); i++){
-            System.out.println(products.toString());
+          //  controller.shoppingCartArea.appendText(IMatDataHandler.getInstance().getShoppingCart().getItems().get(i).getProduct().getName() +  " " + (int) IMatDataHandler.getInstance().getShoppingCart().getItems().get(i).getAmount() + " st" + "\n");
             controller.shoppingCartArea.appendText(products.get(i).getProduct().getName() + " " + (int) products.get(i).getAmount() + " st" + "\n");
         }
 
@@ -207,6 +208,15 @@ public class iMatProduct extends AnchorPane {
 
 
     } */
+
+    private boolean listContainingItem(List<ShoppingItem> products, String string){
+        for(int i = 0; i < products.size(); i++){
+            if(products.get(i).getProduct().getName().equals(string)){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 }
