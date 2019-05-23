@@ -41,7 +41,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private TextField searchField;
     @FXML
-    TextArea shoppingCartArea;
+    FlowPane shoppingCartArea;
     @FXML AnchorPane mainScreen;
     @FXML
     private Button logoButton;
@@ -56,6 +56,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML Label totalPriceLabel;
 
     @FXML FlowPane checkoutFlowPane;
+
+
 
 
 
@@ -90,8 +92,6 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
        // costLabel.setText("Kostnad: " + String.format("%.2f",shoppingCart.getTotal()));
 
     }
-
-
 
 
 
