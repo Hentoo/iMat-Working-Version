@@ -99,7 +99,6 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private void pressedOnCheckout(){
         checkoutFlowPane.getChildren().add(new iMatFirstCheckout());
-
     }
 
     @Override
