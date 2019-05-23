@@ -59,7 +59,7 @@ public class iMatCartItemController extends AnchorPane {
     }
 
     private void setCartTotalPrice(){
-        cartTotalPrice.setText("Total: " + Integer.toString((int) shoppingItem.getProduct().getPrice() * (int) shoppingItem.getAmount()) + "kr");
+        cartTotalPrice.setText("Tot: " + Integer.toString((int) shoppingItem.getProduct().getPrice() * (int) shoppingItem.getAmount()) + "kr");
     }
 
     private void setCartAmount(){
