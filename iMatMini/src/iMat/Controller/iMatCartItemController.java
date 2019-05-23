@@ -88,4 +88,54 @@ public class iMatCartItemController extends AnchorPane {
 
     }
 
+    @FXML
+    private void lessCartButtonAction(){
+        int index = 0;
+
+        for (int i = 0; i < IMatDataHandler.getInstance().getShoppingCart().getItems().size(); i++){
+
+            if (shoppingItem.getProduct().getName() == IMatDataHandler.getInstance().getShoppingCart().getItems().get(i).getProduct().getName()){
+                index = i;
+            }
+
+        }
+
+        if (IMatDataHandler.getInstance().getShoppingCart().getItems().get(index).getAmount() > 1){
+
+            IMatDataHandler.getInstance().getShoppingCart().getItems().get(index).setAmount(IMatDataHandler.getInstance().getShoppingCart().getItems().get(index).getAmount()-1);
+
+        }
+
+        controller.updateTotalPrice();
+        setCartAmount();
+        setCartTotalPrice();
+
+
+
+    }
+
+
+    @FXML
+    private void moreCartButtonAction(){
+        int index = 0;
+
+        for (int i = 0; i < IMatDataHandler.getInstance().getShoppingCart().getItems().size(); i++){
+
+            if (shoppingItem.getProduct().getName() == IMatDataHandler.getInstance().getShoppingCart().getItems().get(i).getProduct().getName()){
+                index = i;
+            }
+
+        }
+
+        IMatDataHandler.getInstance().getShoppingCart().getItems().get(index).setAmount(IMatDataHandler.getInstance().getShoppingCart().getItems().get(index).getAmount()+1);
+
+
+        controller.updateTotalPrice();
+        setCartAmount();
+        setCartTotalPrice();
+
+
+
+    }
+
 }

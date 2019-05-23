@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="59.0" prefWidth="200.0" style="-fx-border-width: 1px; -fx-border-color: #CCC;" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="59.0" prefWidth="200.0" style="-fx-border-width: 1px; -fx-border-color: #CCC;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="cartItemPrice" layoutX="85.0" layoutY="70.0" prefHeight="27.0" prefWidth="33.0" text="Label" AnchorPane.bottomAnchor="3.0">
          <font>
@@ -21,8 +20,8 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button fx:id="cartButtonLess" layoutX="3.0" layoutY="32.0" mnemonicParsing="false" text="-" AnchorPane.bottomAnchor="2.0" />
-      <Button fx:id="cartButtonMore" layoutX="23.0" layoutY="72.0" mnemonicParsing="false" text="+" AnchorPane.bottomAnchor="2.0" />
+      <Button fx:id="cartButtonLess" layoutX="3.0" layoutY="32.0" mnemonicParsing="false" onMousePressed="#lessCartButtonAction" text="-" AnchorPane.bottomAnchor="2.0" />
+      <Button fx:id="cartButtonMore" layoutX="23.0" layoutY="72.0" mnemonicParsing="false" onMousePressed="#moreCartButtonAction" text="+" AnchorPane.bottomAnchor="2.0" />
       <TextField fx:id="cartAmount" layoutX="50.0" layoutY="31.0" prefHeight="25.0" prefWidth="33.0" AnchorPane.bottomAnchor="2.0" />
       <TextField fx:id="cartTotalPrice" layoutX="118.0" layoutY="71.0" prefHeight="25.0" prefWidth="80.0" AnchorPane.bottomAnchor="3.0" />
       <Button fx:id="cartRemoveItem" layoutX="128.0" layoutY="3.0" mnemonicParsing="false" onMousePressed="#removeItemAction" prefHeight="26.0" prefWidth="80.0" text="Ta bort" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">

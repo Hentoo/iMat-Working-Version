@@ -131,8 +131,8 @@ public class iMatProduct extends AnchorPane {
         }
 
         if (checkCopy != null){
-            IMatDataHandler.getInstance().getShoppingCart().getItems().add(new ShoppingItem(checkCopy.getProduct(), checkCopy.getAmount()+chosenAmount));
-            IMatDataHandler.getInstance().getShoppingCart().getItems().remove(i);
+            IMatDataHandler.getInstance().getShoppingCart().getItems().add(i, new ShoppingItem(checkCopy.getProduct(), checkCopy.getAmount()+chosenAmount));
+            IMatDataHandler.getInstance().getShoppingCart().getItems().remove(i+1);
         }
 
 
