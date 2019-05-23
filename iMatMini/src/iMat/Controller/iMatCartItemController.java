@@ -85,6 +85,9 @@ public class iMatCartItemController extends AnchorPane {
         controller.shoppingCartArea.getChildren().remove(index);
         IMatDataHandler.getInstance().getShoppingCart().getItems().remove(index);
         controller.updateTotalPrice();
+        controller.firstCheckout.firstCheckoutFlowPane.getChildren().clear();
+        controller.firstCheckout.fillTotalPrice();
+        controller.firstCheckout.fillCheckoutPane();
 
     }
 
@@ -109,6 +112,9 @@ public class iMatCartItemController extends AnchorPane {
         controller.updateTotalPrice();
         setCartAmount();
         setCartTotalPrice();
+        controller.firstCheckout.firstCheckoutFlowPane.getChildren().clear();
+        controller.firstCheckout.fillTotalPrice();
+        controller.firstCheckout.fillCheckoutPane();
 
 
 
@@ -133,6 +139,9 @@ public class iMatCartItemController extends AnchorPane {
         controller.updateTotalPrice();
         setCartAmount();
         setCartTotalPrice();
+        controller.firstCheckout.firstCheckoutFlowPane.getChildren().clear();
+        controller.firstCheckout.fillTotalPrice();
+        controller.firstCheckout.fillCheckoutPane();
 
 
 

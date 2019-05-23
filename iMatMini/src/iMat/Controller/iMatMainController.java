@@ -56,6 +56,10 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML Label totalPriceLabel;
 
     @FXML FlowPane checkoutFlowPane;
+    @FXML AnchorPane firstCheckoutAnchor;
+    @FXML FlowPane firstCheckoutPane;
+
+    iMatFirstCheckout firstCheckout;
 
 
 
@@ -98,7 +102,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnCheckout(){
-        checkoutFlowPane.getChildren().add(new iMatFirstCheckout());
+        activateFirstCheckout();
     }
 
     @Override
@@ -354,6 +358,13 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         infoViewAnchor.toFront();
         infoViewPane.getChildren().clear();
         infoViewPane.getChildren().add(new iMatInfoViewController(product, this));
+
+    }
+
+    public void activateFirstCheckout(){
+        firstCheckoutAnchor.toFront();
+        firstCheckoutPane.getChildren().clear();
+        firstCheckoutPane.getChildren().add(firstCheckout = new iMatFirstCheckout(this));
 
     }
 
