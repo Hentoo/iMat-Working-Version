@@ -31,7 +31,7 @@
                   <Font size="28.0" />
                </font>
             </Label>
-            <Button layoutX="610.0" layoutY="570.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="0.0" text="Nästa" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="610.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="571.0" />
+            <Button layoutX="610.0" layoutY="570.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="0.0" text="Nästa - Leverans" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="610.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="571.0" />
             <FlowPane fx:id="firstCheckoutFlowPane" layoutX="183.0" layoutY="59.0" prefHeight="512.0" prefWidth="200.0" AnchorPane.leftAnchor="250.0" />
             <Button fx:id="backToMainButton" layoutX="14.0" layoutY="571.0" mnemonicParsing="false" onMousePressed="#backToMainButtonAction" text="Avbryt" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="610.0" AnchorPane.topAnchor="571.0" />
          </children>

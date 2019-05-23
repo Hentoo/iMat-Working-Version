@@ -62,6 +62,10 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     iMatFirstCheckout firstCheckout;
 
 
+    @FXML Spinner daySpinner;
+    @FXML Spinner monthSpinner;
+
+
 
 
 
@@ -292,8 +296,16 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     }
 
+    private int days;
 //   private final iMatModel model = iMatModel.getInstance();
+public void setDays(int days) {
+    if (days > 0) {
+        this.days = days;
+    } else {
+        this.days = 0;
+    }
 
+}
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -302,6 +314,23 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
 
 
+        /*
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 31, 1, 1);
+        daySpinner.setValueFactory(valueFactory);
+
+        daySpinner.valueProperty().addListener(new ChangeListener<Integer>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Integer> observable, Integer oldValue, Integer newValue) {
+
+                if (daySpinner.getValueFactory() != null) {
+                    int selected = valueFactory.getValue();
+                    setDays(selected);
+                }
+            }
+        });
+
+*/
         updateProductList(dataHandler.getProducts());
         updateShoppingCart();
 
