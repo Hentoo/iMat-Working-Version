@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -90,7 +89,6 @@
               <AnchorPane prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: WHITE;" AnchorPane.rightAnchor="0.0">
                   <children>
                   <Button fx:id="checkoutButton" layoutX="5.0" layoutY="635.0" mnemonicParsing="false" onMousePressed="#pressedOnCheckout" prefHeight="90.0" prefWidth="195.0" text="Till kassan" />
-                  <TextArea fx:id="shoppingCartArea" editable="false" layoutY="90.0" prefHeight="454.0" prefWidth="200.0" />
                       <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                           <image>
                               <Image url="@../../imatresources/images/shopping_cart.png" />
@@ -101,6 +99,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
+                  <FlowPane fx:id="shoppingCartArea" layoutY="91.0" prefHeight="422.0" prefWidth="200.0" />
                   </children>
             </AnchorPane>
               <AnchorPane prefHeight="90.0" prefWidth="890.0" style="-fx-background-color: #EEEEEE;" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="200.0">

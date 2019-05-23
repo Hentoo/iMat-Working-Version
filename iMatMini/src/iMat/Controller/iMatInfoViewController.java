@@ -96,7 +96,7 @@ public class iMatInfoViewController extends AnchorPane {
     @FXML
     private void setAddToCartAction() {
 
-        controller.shoppingCartArea.clear();
+       controller.shoppingCartArea.getChildren().clear();
         double totalPrice = 0;
 
         int i = 0;
@@ -120,7 +120,7 @@ public class iMatInfoViewController extends AnchorPane {
 
 
         for (ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()) {
-            controller.shoppingCartArea.appendText(shoppingItem.getProduct().getName() + "           " + (int) shoppingItem.getAmount() + " st." + "\n");
+            controller.shoppingCartArea.getChildren().add(new iMatCartItemController(shoppingItem, controller));
         }
 
         for (ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()) {

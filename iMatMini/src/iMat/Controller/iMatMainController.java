@@ -362,6 +362,16 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         mainScreen.toFront();
     }
 
+    public void updateTotalPrice(){
+        double totalPrice = 0;
+
+        for (ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+           totalPrice = totalPrice + (shoppingItem.getProduct().getPrice() * shoppingItem.getAmount());
+        }
+
+        totalPriceLabel.setText("TOTALPRIS: " + Integer.toString((int) totalPrice) + " SEK");
+    }
+
 
 }
 
