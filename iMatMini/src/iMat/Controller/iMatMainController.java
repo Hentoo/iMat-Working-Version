@@ -407,6 +407,11 @@ public void setDays(int days) {
 
     }
 
+    public void activateThirdCheckout(){
+    thirdCheckoutFlowPane.toFront();
+    firstCheckoutPane.getChildren().add(new iMatThirdCheckout(this));
+    }
+
     public void mainToFront(){
         mainScreen.toFront();
     }
