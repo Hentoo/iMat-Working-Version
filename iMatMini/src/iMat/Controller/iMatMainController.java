@@ -60,6 +60,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML FlowPane firstCheckoutPane;
     @FXML AnchorPane secondCheckoutAnchor;
     @FXML FlowPane secondCheckoutFlowp;
+    @FXML AnchorPane thirdCheckoutAnchor;
+    @FXML FlowPane thirdCheckoutFlowPane;
 
 
     iMatFirstCheckout firstCheckout;
