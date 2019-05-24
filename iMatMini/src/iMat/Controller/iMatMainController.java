@@ -62,6 +62,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML FlowPane secondCheckoutFlowp;
     @FXML AnchorPane thirdCheckoutAnchor;
     @FXML FlowPane thirdCheckoutFlowPane;
+    @FXML AnchorPane startingPage;
 
 
     iMatFirstCheckout firstCheckout;
@@ -98,6 +99,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         mainScreen.toFront();
+        startingPage.toFront();
 
         IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
 
@@ -160,7 +162,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private void pressedOnLogoButton(){
         infoViewPane.toBack();
-
+        mainScreen.toFront();
+        startingPage.toFront();
         productsFlowPane.getChildren().clear();
         updateProductList(offers);
     }
@@ -169,6 +172,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
   private void pressedOnCategory1(){
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
+        startingPage.toBack();
         fruitCategory.toFront();
 
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT));
@@ -181,6 +185,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnCategory2(){
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
+        startingPage.toBack();
         greenCategory.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HERB));
@@ -193,6 +198,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnCategory3(){
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
+        startingPage.toBack();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BREAD));
 
 
@@ -201,6 +207,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnCategory4(){
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
+        startingPage.toBack();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
 
     }
@@ -208,12 +215,14 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnCategory5(){
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
+        startingPage.toBack();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT));
     }
     @FXML
     private void pressedOnCategory6(){
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
+        startingPage.toBack();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FISH));
 
     }
@@ -221,6 +230,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnCategory7(){
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
+        startingPage.toBack();
         pastaCategory.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
@@ -231,6 +241,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnCategory8(){
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
+        startingPage.toBack();
         drinkCategory.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS));
@@ -241,6 +252,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnCategory9(){
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
+        startingPage.toBack();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET));
     }
 
