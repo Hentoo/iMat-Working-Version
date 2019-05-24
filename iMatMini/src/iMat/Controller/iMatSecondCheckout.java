@@ -61,6 +61,13 @@ public class iMatSecondCheckout extends AnchorPane {
     @FXML
     private void backToFirst(){
         controller.activateFirstCheckout();
+        postcodeError.toBack();
+        cityError.toBack();
+        adressError.toBack();
+        phoneError.toBack();
+        surnameError.toBack();
+        firstNameError.toBack();
+        mailError.toBack();
     }
 
     @FXML
