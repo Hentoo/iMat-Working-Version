@@ -95,6 +95,36 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        mainScreen.toFront();
+
+        IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
+
+
+        /*
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 31, 1, 1);
+        daySpinner.setValueFactory(valueFactory);
+
+        daySpinner.valueProperty().addListener(new ChangeListener<Integer>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Integer> observable, Integer oldValue, Integer newValue) {
+
+                if (daySpinner.getValueFactory() != null) {
+                    int selected = valueFactory.getValue();
+                    setDays(selected);
+                }
+            }
+        });
+
+*/
+        
+        updateShoppingCart();
+
+
+    }
+
 
 
     private void updateShoppingCart() {
@@ -318,38 +348,7 @@ public void setDays(int days) {
 
 }
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        mainScreen.toFront();
-        updateProductList(offers);
-        IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
 
-
-        /*
-        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 31, 1, 1);
-        daySpinner.setValueFactory(valueFactory);
-
-        daySpinner.valueProperty().addListener(new ChangeListener<Integer>() {
-
-            @Override
-            public void changed(ObservableValue<? extends Integer> observable, Integer oldValue, Integer newValue) {
-
-                if (daySpinner.getValueFactory() != null) {
-                    int selected = valueFactory.getValue();
-                    setDays(selected);
-                }
-            }
-        });
-
-*/
-        updateProductList(dataHandler.getProducts());
-        updateShoppingCart();
-
-
-
-
-
-    }
 
 
     @FXML
