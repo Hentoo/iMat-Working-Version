@@ -285,6 +285,12 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BERRY));
     }
 
+    @FXML
+    public void activateSecondCheckout(){
+        secondCheckoutAnchor.toFront();
+        secondCheckoutFlowp.getChildren().add(new iMatSecondCheckout(this));
+    }
+
 
 
 

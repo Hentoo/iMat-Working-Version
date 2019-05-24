@@ -25,6 +25,7 @@ public class iMatFirstCheckout extends AnchorPane {
     Button backToMainButton;
     @FXML
     Label totalPrice;
+    @FXML Button firstCheckoutNextButton;
 
     iMatMainController controller;
 
@@ -59,6 +60,11 @@ public class iMatFirstCheckout extends AnchorPane {
         }
 
         totalPrice.setText(Integer.toString((int) totalPrices) + " SEK");
+    }
+
+    @FXML
+    private void firstCheckoutNextButtonAction(){
+        controller.activateSecondCheckout();
     }
 
 
