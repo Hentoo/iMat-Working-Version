@@ -1,17 +1,16 @@
 package iMat.Controller;
 
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class iMatSecondCheckout extends AnchorPane {
+public class iMatThirdCheckout extends AnchorPane {
 
     iMatMainController controller;
 
-    public iMatSecondCheckout(iMatMainController controller) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatSecondCheckout.fxml"));
+    public iMatThirdCheckout(iMatMainController controller) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatThirdCheckout.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -26,13 +25,4 @@ public class iMatSecondCheckout extends AnchorPane {
 
     }
 
-    @FXML
-    private void backToFirst(){
-        controller.activateFirstCheckout();
-    }
-
-    @FXML
-    private void toThirdCheckout(){
-        controller.activateThirdCheckout();
-    }
 }
