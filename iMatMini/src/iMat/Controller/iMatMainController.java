@@ -27,7 +27,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     ListIterator<ShoppingItem> list;
 
 
-
+    private String difficulty;
     @FXML
     private FlowPane productsFlowPane;
     @FXML FlowPane categoryFlowPane;
@@ -67,9 +67,9 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     iMatFirstCheckout firstCheckout;
 
+    private List<String> difficultyList = Arrays.asList("14:00", "14:30", "15:00","15:30","16:00");
 
-    @FXML Spinner daySpinner;
-    @FXML Spinner monthSpinner;
+
 
 
 
@@ -96,6 +96,21 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     }
 
+
+
+    public void setDifficulty(String difficulty){
+        for (String s: difficultyList) {
+            if (difficulty.equals(s)) {
+                this.difficulty = difficulty;
+                break;
+            }
+            else {
+                this.difficulty = null;
+            }
+        }
+
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         mainScreen.toFront();
@@ -104,23 +119,9 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
 
 
-        /*
-        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 31, 1, 1);
-        daySpinner.setValueFactory(valueFactory);
 
-        daySpinner.valueProperty().addListener(new ChangeListener<Integer>() {
 
-            @Override
-            public void changed(ObservableValue<? extends Integer> observable, Integer oldValue, Integer newValue) {
 
-                if (daySpinner.getValueFactory() != null) {
-                    int selected = valueFactory.getValue();
-                    setDays(selected);
-                }
-            }
-        });
-
-*/
         
         updateShoppingCart();
 

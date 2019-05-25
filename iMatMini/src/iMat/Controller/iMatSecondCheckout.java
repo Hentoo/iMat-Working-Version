@@ -1,15 +1,21 @@
 package iMat.Controller;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 import java.awt.*;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class iMatSecondCheckout extends AnchorPane {
+public class iMatSecondCheckout extends AnchorPane implements Initializable {
 
     iMatMainController controller;
 
@@ -41,6 +47,18 @@ public class iMatSecondCheckout extends AnchorPane {
     private TextField postcodeContainer;
     @FXML
     private Text postcodeError;
+    @FXML
+    Spinner daySpinner;
+    @FXML Spinner monthSpinner;
+
+    @FXML RadioButton radioButton1;
+    @FXML RadioButton radioButton2;
+    @FXML RadioButton radioButton3;
+    @FXML RadioButton radioButton4;
+    @FXML RadioButton radioButton5;
+
+
+    private ToggleGroup timeToggleGroup;
 
     public iMatSecondCheckout(iMatMainController controller) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatSecondCheckout.fxml"));
@@ -126,16 +144,98 @@ public class iMatSecondCheckout extends AnchorPane {
         }
 
 
-
-
-
-
         if (fieldChecker == 0){
             controller.activateThirdCheckout();
         }
 
 
 
+
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 31, 1, 1);
+        daySpinner.setValueFactory(valueFactory);
+
+        daySpinner.valueProperty().addListener(new ChangeListener<Integer>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Integer> observable, Integer oldValue, Integer newValue) {
+
+                if (daySpinner.getValueFactory() != null) {
+                    int selected = valueFactory.getValue();
+                    controller.setDays(selected);
+                }
+            }
+        });
+
+        daySpinner.focusedProperty().addListener(new ChangeListener<Boolean>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+
+                if (newValue) {
+                    //focusgained - do nothing
+                } else {
+                    Integer value = Integer.valueOf(daySpinner.getEditor().getText());
+                    controller.setDays(value);
+                }
+
+            }
+        });
+
+        SpinnerValueFactory<Integer> valueFactoryMonth = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 1, 1);
+        monthSpinner.setValueFactory(valueFactoryMonth);
+
+        monthSpinner.valueProperty().addListener(new ChangeListener<Integer>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Integer> observable, Integer oldValue, Integer newValue) {
+
+                if (monthSpinner.getValueFactory() != null) {
+                    int selected = valueFactory.getValue();
+                    controller.setDays(selected);
+                }
+            }
+        });
+
+        monthSpinner.focusedProperty().addListener(new ChangeListener<Boolean>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+
+                if (newValue) {
+                    //focusgained - do nothing
+                } else {
+                    Integer value = Integer.valueOf(monthSpinner.getEditor().getText());
+                    controller.setDays(value);
+                }
+
+            }
+        });
+
+        timeToggleGroup = new ToggleGroup();
+        radioButton1.setToggleGroup(timeToggleGroup);
+        radioButton2.setToggleGroup(timeToggleGroup);
+        radioButton3.setToggleGroup(timeToggleGroup);
+        radioButton4.setToggleGroup(timeToggleGroup);
+        radioButton5.setToggleGroup(timeToggleGroup);
+
+        radioButton1.setSelected(true);
+
+        timeToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
+
+                if (timeToggleGroup.getSelectedToggle() != null) {
+                    RadioButton selected = (RadioButton) timeToggleGroup.getSelectedToggle();
+                    controller.setDifficulty(selected.getText());
+                }
+            }
+        });
 
     }
 

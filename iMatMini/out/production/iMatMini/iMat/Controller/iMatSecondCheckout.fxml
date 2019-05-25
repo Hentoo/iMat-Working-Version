@@ -143,27 +143,27 @@
                   <Font size="22.0" />
                </font>
             </Label>
-            <RadioButton layoutX="195.0" layoutY="387.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="71.0" selected="true" text="14:00">
+            <RadioButton fx:id="radioButton1" layoutX="195.0" layoutY="387.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="71.0" selected="true" text="14:00">
                <font>
                   <Font size="14.0" />
                </font>
             </RadioButton>
-            <RadioButton layoutX="195.0" layoutY="420.0" mnemonicParsing="false" text="14:30">
+            <RadioButton fx:id="radioButton2" layoutX="195.0" layoutY="420.0" mnemonicParsing="false" text="14:30">
                <font>
                   <Font size="14.0" />
                </font>
             </RadioButton>
-            <RadioButton layoutX="195.0" layoutY="486.0" mnemonicParsing="false" text="15:30">
+            <RadioButton fx:id="radioButton3" layoutX="195.0" layoutY="486.0" mnemonicParsing="false" text="15:30">
                <font>
                   <Font size="14.0" />
                </font>
             </RadioButton>
-            <RadioButton layoutX="195.0" layoutY="453.0" mnemonicParsing="false" text="15:00">
+            <RadioButton fx:id="radioButton4" layoutX="195.0" layoutY="453.0" mnemonicParsing="false" text="15:00">
                <font>
                   <Font size="14.0" />
                </font>
             </RadioButton>
-            <RadioButton layoutX="195.0" layoutY="519.0" mnemonicParsing="false" text="16:00">
+            <RadioButton fx:id="radioButton5" layoutX="195.0" layoutY="519.0" mnemonicParsing="false" text="16:00">
                <font>
                   <Font size="14.0" />
                </font>
