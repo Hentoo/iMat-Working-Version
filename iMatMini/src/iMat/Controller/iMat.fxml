@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="715.0" prefWidth="1280.0" stylesheets="@../Styles/MainStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.Controller.iMatMainController">
+<AnchorPane prefHeight="715.0" prefWidth="1280.0" stylesheets="@../Styles/MainStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.Controller.iMatMainController">
     <children>
       <AnchorPane fx:id="secondCheckoutAnchor" prefHeight="672.0" prefWidth="1280.0">
          <children>
@@ -66,16 +66,16 @@
          <children>
               <AnchorPane prefHeight="720.0" prefWidth="195.0" style="-fx-background-color: #FFF000;" AnchorPane.leftAnchor="0.0">
                   <children>
-                      <Button fx:id="categoryButton1" layoutY="90.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory1" prefHeight="70.0" prefWidth="220.0" text="Frukt" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0" />
-                      <Button fx:id="categoryButton2" layoutY="160.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory2" prefHeight="70.0" prefWidth="220.0" text="Grönt" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                      <Button fx:id="categoryButton3" layoutY="230.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory3" prefHeight="70.0" prefWidth="220.0" text="Bröd" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                      <Button fx:id="categoryButton4" layoutY="300.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory4" prefHeight="70.0" prefWidth="220.0" text="Mejeri" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                      <Button fx:id="categoryButton5" layoutY="370.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory5" prefHeight="70.0" prefWidth="220.0" text="Kött &amp; chark" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                      <Button fx:id="categoryButton6" layoutY="440.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory6" prefHeight="70.0" prefWidth="220.0" text="Fisk" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                      <Button fx:id="categoryButton7" layoutY="510.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory7" prefHeight="70.0" prefWidth="220.0" text="Torrvaror" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                      <Button fx:id="categoryButton8" layoutY="580.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory8" prefHeight="70.0" prefWidth="220.0" text="Dryck" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                      <Button fx:id="categoryButton9" layoutY="650.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory9" prefHeight="70.0" prefWidth="220.0" text="Godis &amp; Glass" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <Button maxWidth="195.0" minHeight="90.0" mnemonicParsing="false" onMousePressed="#pressedOnLogoButton" prefHeight="70.0" prefWidth="195.0" wrapText="true">
+                      <Button fx:id="categoryButton1" layoutY="90.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory1" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Frukt" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0" />
+                      <Button fx:id="categoryButton2" layoutY="160.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory2" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Grönt" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                      <Button fx:id="categoryButton3" layoutY="230.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory3" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Bröd" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                      <Button fx:id="categoryButton4" layoutY="300.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory4" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Mejeri" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                      <Button fx:id="categoryButton5" layoutY="370.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory5" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Kött &amp; chark" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                      <Button fx:id="categoryButton6" layoutY="440.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory6" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Fisk" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                      <Button fx:id="categoryButton7" layoutY="510.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory7" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Torrvaror" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                      <Button fx:id="categoryButton8" layoutY="580.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory8" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Dryck" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                      <Button fx:id="categoryButton9" layoutY="650.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory9" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Godis &amp; Glass" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Button maxWidth="195.0" minHeight="90.0" mnemonicParsing="false" onMousePressed="#pressedOnLogoButton" prefHeight="70.0" prefWidth="195.0" styleClass="sideButt" wrapText="true">
                      <graphic>
                         <ImageView id="logo" fx:id="logo" fitHeight="70.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
                            <image>

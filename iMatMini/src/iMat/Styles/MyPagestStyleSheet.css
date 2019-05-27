@@ -1,11 +1,11 @@
-.productList{
+Button{
+    -fx-font-size: 20px;
 }
 
 .sideButt{
     -fx-background-color: rgba(93, 255, 84, 0.34);
     -fx-border-bottom: 2px;
     -fx-border-color: WHITE;
-    -fx-font-size: 20px;
 }
 
 .sideButt:hover{
