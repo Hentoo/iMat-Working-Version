@@ -6,6 +6,7 @@
     -fx-border-bottom: 2px;
     -fx-border-color: WHITE;
     -fx-font-size: 20px;
+    -fx-font-style: bold;
 }
 
 .sideButt:hover{
