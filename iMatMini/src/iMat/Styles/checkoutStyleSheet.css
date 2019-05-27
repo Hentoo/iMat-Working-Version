@@ -1,0 +1,14 @@
+.backButton{
+    -fx-background-color: #f55;
+    -fx-font-size: 24px;
+}
+.backButton:hover{
+    -fx-background-color: #ad3d3d;
+}
+.nextButton{
+    -fx-background-color:  #1db954;
+    -fx-font-size: 24px;
+}
+.nextButton:hover{
+    -fx-background-color: #1d9148;
+}
