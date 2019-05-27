@@ -23,6 +23,10 @@ public class IMatMyPages extends AnchorPane{
 
     iMatMainController main;
 
+    IMatMyPages(){
+
+    }
+
     @FXML
     private FlowPane productsFlowPane;
     @FXML
@@ -333,9 +337,17 @@ public class IMatMyPages extends AnchorPane{
         infoViewProductName.setText(product.getName());
     }
 
+    /**
+     * sets the view to start with favorites
+     */
+    public void setFavorites() {
+    }
 
-
-
+    /**
+     * set the view to start with
+     */
+    public void setStart() {
+    }
 }
 
 
