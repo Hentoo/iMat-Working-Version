@@ -5,7 +5,6 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -15,16 +14,11 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <fx:root prefHeight="719.0" prefWidth="1280.0" stylesheets="@../Styles/MyPagestStyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-      <AnchorPane fx:id="helpMyPages" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0" />
-            <Separator prefWidth="200.0" style="-fx-background-color: #ccc;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-         </children>
-      </AnchorPane>
       <AnchorPane layoutY="93.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
          <children>
             <Label layoutX="87.0" layoutY="46.0" style="-fx-background-color: #eee;" text="Köphistorik/Tidigare köp OMG WOW">
@@ -83,62 +77,19 @@
                 </AnchorPane>
                 <AnchorPane prefHeight="90.0" prefWidth="890.0" style="-fx-background-color: #EEE;" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <TextField fx:id="lastNameContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="firstNameContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" />
-                  <TextField fx:id="phonenumberContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="mailContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField fx:id="adressContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <TextField fx:id="cityContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <TextField fx:id="postcodeContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                  <TextField fx:id="coContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                  <Label text="Förnamn:">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label text="Efternamn:" GridPane.rowIndex="1">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label text="Telefonnummer:" GridPane.rowIndex="2">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label text="Mailadress:" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label text="Adress:" GridPane.rowIndex="4">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label text="Stad:" GridPane.rowIndex="5">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label text="Postnummer:" GridPane.rowIndex="6">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label text="c/o:" GridPane.rowIndex="7">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Mina sidor" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Arial Black" size="60.0" />
+                     </font>
                   </Label>
                </children>
                 </AnchorPane>
                 <ImageView fitHeight="38.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Line endY="90.0" startX="1080.0" startY="89.99999237060547" />
             </children>
         </AnchorPane>
       <AnchorPane fx:id="personUppgifter" style="-fx-background-color: #EEEEEE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
          <children>
-            <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#savePersonalInfo" prefWidth="160.0" styleClass="saveButt" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0" />
             <GridPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="190.0">
               <columnConstraints>
                   <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -214,7 +165,7 @@
                   <Font name="Arial" size="14.0" />
                </font>
             </Label>
-            <Separator prefWidth="200.0" style="-fx-background-color: #ccc;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#savePersonalInfo" prefWidth="160.0" styleClass="saveButt" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="10.0" layoutY="103.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
@@ -244,7 +195,6 @@
       </AnchorPane>
       <AnchorPane fx:id="paymentAnchorPane" style="-fx-background-color: #EEE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
          <children>
-            <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#saveCardInfo" prefWidth="160.0" styleClass="saveButt" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0" />
             <GridPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="190.0">
                <columnConstraints>
                   <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -319,6 +269,12 @@
                   <Font name="Arial" size="14.0" />
                </font>
             </Label>
+            <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#saveCardInfo" prefWidth="160.0" styleClass="saveButt" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0" />
          </children></AnchorPane>
+      <AnchorPane fx:id="helpMyPages" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0" />
+         </children>
+      </AnchorPane>
     </children>
 </fx:root>
