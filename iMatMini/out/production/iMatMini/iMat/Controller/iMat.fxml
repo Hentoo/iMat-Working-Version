@@ -142,16 +142,20 @@
               <ImageView fitHeight="38.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
               <AnchorPane prefHeight="635.0" prefWidth="885.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
                <children>
-                  <SplitPane dividerPositions="0.2211690363349131" orientation="VERTICAL" prefHeight="635.0" prefWidth="885.0">
-                    <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                           <children>
-                              <FlowPane fx:id="productsFlowPane" prefHeight="490.0" prefWidth="883.0" />
-                           </children>
-                        </AnchorPane>
-                    </items>
-                  </SplitPane>
+                  <ScrollPane prefHeight="635.0" prefWidth="888.0">
+                     <content>
+                        <SplitPane dividerPositions="0.2211690363349131" orientation="VERTICAL" prefHeight="635.0" prefWidth="885.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <FlowPane fx:id="productsFlowPane" prefHeight="490.0" prefWidth="883.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </content>
+                  </ScrollPane>
                   <AnchorPane fx:id="startingPage" prefHeight="626.0" prefWidth="885.0" style="-fx-background-color: #FFF;">
                      <children>
                         <GridPane prefHeight="635.0" prefWidth="883.0">
