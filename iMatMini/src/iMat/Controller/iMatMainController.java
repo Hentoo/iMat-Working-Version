@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
@@ -63,6 +64,9 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML AnchorPane thirdCheckoutAnchor;
     @FXML FlowPane thirdCheckoutFlowPane;
     @FXML AnchorPane startingPage;
+
+    @FXML
+    Line lineLine;
 
 
     iMatFirstCheckout firstCheckout;
@@ -165,6 +169,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         infoViewPane.toBack();
         mainScreen.toFront();
         startingPage.toFront();
+        lineLine.toFront();
         productsFlowPane.getChildren().clear();
         updateProductList(offers);
     }
@@ -172,8 +177,10 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
   private void pressedOnCategory1(){
         productsFlowPane.getChildren().clear();
+        lineLine.toFront();
         mainScreen.toFront();
         startingPage.toBack();
+
         fruitCategory.toFront();
 
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT));
@@ -367,6 +374,8 @@ public void setDays(int days) {
     @FXML
     private void handleSearchAction(ActionEvent event) {
         productsFlowPane.getChildren().clear();
+        startingPage.toBack();
+        lineLine.toFront();
         List<Product> matches = dataHandler.findProducts(searchField.getText());
         updateProductList(matches);
         System.out.println("# matching products: " + matches.size());
