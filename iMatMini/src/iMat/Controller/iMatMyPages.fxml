@@ -138,7 +138,7 @@
         </AnchorPane>
       <AnchorPane fx:id="personUppgifter" style="-fx-background-color: #EEEEEE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
          <children>
-            <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#savePersonalInfo" prefWidth="160.0" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0" />
+            <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#savePersonalInfo" prefWidth="160.0" styleClass="saveButt" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0" />
             <GridPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="190.0">
               <columnConstraints>
                   <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -244,7 +244,7 @@
       </AnchorPane>
       <AnchorPane fx:id="paymentAnchorPane" style="-fx-background-color: #EEE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
          <children>
-            <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#saveCardInfo" prefWidth="160.0" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0" />
+            <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#saveCardInfo" prefWidth="160.0" styleClass="saveButt" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0" />
             <GridPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="190.0">
                <columnConstraints>
                   <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

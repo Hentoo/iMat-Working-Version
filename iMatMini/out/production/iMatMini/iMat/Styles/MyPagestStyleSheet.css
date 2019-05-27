@@ -19,3 +19,15 @@ Button{
     -fx-border-bottom: 2px;
     -fx-border-color: #929292;
 }
+.saveButt{
+    -fx-background-color: #7fc97c;
+    -fx-border-color: #929292;
+}
+
+.saveButt:hover{
+    -fx-border-radius: 2px;
+    -fx-border-color: GREY;
+}
+.saveButt:pressed{
+    -fx-background-color: rgba(33, 191, 55, 1);
+}
