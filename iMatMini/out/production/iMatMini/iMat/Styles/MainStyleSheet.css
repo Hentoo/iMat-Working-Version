@@ -1,2 +1,21 @@
 .productList{
 }
+
+.sideButt{
+    -fx-background-color: rgba(93, 255, 84, 0.34);
+    -fx-border-bottom: 2px;
+    -fx-border-color: WHITE;
+    -fx-font-size: 20px;
+}
+
+.sideButt:hover{
+    -fx-background-color: rgba(95, 255, 85, 0.55);
+    -fx-border-bottom: 2px;
+    -fx-border-color: WHITE;
+}
+
+.sideButt:pressed{
+    -fx-background-color: rgba(21, 144, 24, 0.55);
+    -fx-border-bottom: 2px;
+    -fx-border-color: WHITE;
+}
