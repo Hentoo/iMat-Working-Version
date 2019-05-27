@@ -1,11 +1,11 @@
 package iMat.Controller;
 
+import iMat.Model;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -39,131 +39,276 @@ public class IMatMyPages extends AnchorPane{
     private Label backtoStart;
     @FXML
     private Label infoViewProductName;
+    @FXML
+    private FlowPane favoritesFlowPane;
+    @FXML
+    private AnchorPane MainMyPagesFlowPAne;
+    @FXML
+    private AnchorPane helpMyPages;
+    @FXML
+    private AnchorPane paymentAnchorPane;
+    @FXML
+    private AnchorPane personUppgifter;
+    @FXML
+    private TextField cardNumberTextField;
+    @FXML
+    private TextField nameCardHolder;
+    @FXML
+    private TextField cvcField;
+    @FXML
+    private TextField firstNameContainer;
+    @FXML
+    private TextField lastNameContainer;
+    @FXML
+    private TextField phonenumberContainer;
+    @FXML
+    private TextField mailContainer;
+    @FXML
+    private TextField adressContainer;
+    @FXML
+    private TextField postcodeContainer;
+    @FXML
+    private ComboBox cardTypeComboBox;
+    @FXML
+    private ComboBox monthComboBox;
+    @FXML
+    private ComboBox yearComboBox;
 
-    List<Product> allItems = IMatDataHandler.getInstance().getProducts();
+    String[] years = {"2019", "2020", "2021", "2022", "2023", "2024", "2025"};
+    String[] months = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
+
+
+    @FXML
+    private Button categoryButton6; //TODO 6 HJÄLP
+    @FXML
+    private Button categoryButton4; //TODO 4 Favoriter
+    @FXML
+    private Button categoryButton3; //TODO 3 KöpHistorik
+    @FXML
+    private Button categoryButton2; //TODO 2 Personliga uppgifter -
+    @FXML
+    private Button categoryButton1; //TODO 1 Betalningssätt -
+
+
+
+    List<Object> purchases; //TODO Fixa denna så den innehåller alla tidigare köps rutor.
 
     List<Product> favorites = IMatDataHandler.getInstance().favorites();
 
+    Model model = Model.getInstance();
 
+    int hasBeenDone = 0;
+    int hasBeenDone2 = 0;
 
-    void populateFlowPane(Product product) {
-        productText.setText(product.getName());
-
-    }
-
-
-
-    private void updateShoppingCart() {
-
-        ShoppingCart shoppingCart = dataHandler.getShoppingCart();
-
-        shoppingCartArea.setText("Antal varor: " + shoppingCart.getItems().size());
-        // costLabel.setText("Kostnad: " + String.format("%.2f",shoppingCart.getTotal()));
-
-    }
-
-
-    public void shoppingCartChanged(CartEvent evt) {
-        updateShoppingCart();
-    }
-
-
-
-    private void initItems(List<Product> products){
-        allItems.clear();
-        allItems = IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE);
-        updateProductList(allItems);
-    }
 
     @FXML
     private void pressedOnLogoButton(){
         //TODO
+
+        MainMyPagesFlowPAne.toFront();
+        helpMyPages.toFront();
+
       /*  infoViewPane.toBack();
 
         productsFlowPane.getChildren().clear();
         updateProductList(offers);*/
     }
 
+    /**
+     * Lägger fram en sida där användaren kan redigera kortinfo
+     * denna knapp ska även uppdatera det som står i rutorna med information från backend så de slipper fylla i det varje gång
+     */
     @FXML
     private void pressedOnCategory1(){
-        productsFlowPane.getChildren().clear();
+        paymentAnchorPane.toFront();
 
-        updateProductList(favorites);
+        fillCardInfoTextFields();
+        //TODO Lägger fram en sida där användaren kan redigera kortinfo
+
     }
+
+    /**
+     * Lägger fram en sida där användaren kan redigera Personuppgifter och leveransadress
+     * denna knapp ska även kalla på en metod som ska uppdatera det som står i rutorna med information från backend så de slipper fylla i det varje gång
+     */
     @FXML
     private void pressedOnCategory2(){
-        productsFlowPane.getChildren().clear();
-        //TODO uppdatera med vad knappen ska gö
+        personUppgifter.toFront();
+
+        fillPersonalInfoTextFields();
+        //TODO Lägger fram en anchorPane där användaren akn skriva in sina personuppgifter
 
     }
+
     @FXML
     private void pressedOnCategory3(){
-        productsFlowPane.getChildren().clear();
-        //TODO uppdatera med vad knappen ska gö
-
+        MainMyPagesFlowPAne.toFront();
+        updateHistoryList();
+        //TODO lägger fram hela mainsidan som ska visa de tidigare köpen samt uppdaterar listan med eventuell ny information
 
     }
+
+    /**
+     * läggerFavorit-sidan överst samt laddar de favoritmarkerade articklarna till den
+     */
     @FXML
     private void pressedOnCategory4(){
-        productsFlowPane.getChildren().clear();
-
-        //TODO uppdatera med vad knappen ska gö            Om den ens ska göra något
-
+        favorites = IMatDataHandler.getInstance().favorites();
+        updateFavoriteProductList();
+        favoritesFlowPane.toFront();
     }
-    @FXML
-    private void pressedOnCategory5(){
-        productsFlowPane.getChildren().clear();
 
-        //TODO uppdatera med vad knappen ska gö       Om den ens ska göra något
-    }
     @FXML
     private void pressedOnCategory6(){
-        productsFlowPane.getChildren().clear();
-        //TODO uppdatera med vad knappen ska gö         Om den ens ska göra något
+
+        helpMyPages.toFront();
+        //TODO visar "startsida" för denna vy, med andra ord hjälpen med vad vyn är till för
 
     }
 
 
-
-
-
-    private void updateProductList(List<Product> products) {
-
-
-       // for (Product product : products) {
-       //     productsFlowPane.getChildren().add(new iMatProduct(product, product.getController));
-       // }
-
-    }
-
-
-
+    /**
+     * När man klickar på spara knappen inom kort-info sidan ska denna spara det i backenden.
+     */
     @FXML
-    private void handleSearchAction(ActionEvent event) {
-        productsFlowPane.getChildren().clear();
-        List<Product> matches = dataHandler.findProducts(searchField.getText());
-        updateProductList(matches);
-        System.out.println("# matching products: " + matches.size());
-
+    private void saveCardInfo(){
+        updateCreditCard();
     }
+
+    /**
+     * När man klickar på spara knappen på person-info sidan ska denna spara det i backenden.
+     */
+    @FXML
+    private void savePersonalInfo(){
+        updatePersonalInfo();
+    }
+
+    /**
+     * saves the users data to the backend
+     */
+    private void updatePersonalInfo() {
+        Customer customer = model.getCustomer();
+
+        customer.setAddress(adressContainer.getText());
+        customer.setEmail(mailContainer.getText());
+        customer.setFirstName(firstNameContainer.getText());
+        customer.setLastName(lastNameContainer.getText());
+        customer.setMobilePhoneNumber(phonenumberContainer.getText());
+        customer.setPostAddress(adressContainer.getText());
+        customer.setPostCode(postcodeContainer.getText());
+    }
+
+
+    private void updateHistoryList() {
+        productsFlowPane.getChildren().clear();
+
+        for (Product product : favorites) {
+            favoritesFlowPane.getChildren().add(new iMatProduct(product, main));
+        }
+    }
+
+    private void updateFavoriteProductList() {
+        favoritesFlowPane.getChildren().clear();
+
+        for (Product product : favorites) {
+            favoritesFlowPane.getChildren().add(new iMatProduct(product, main));
+        }
+    }
+
+    /**
+     * Fyller i rutorna med personlig information och leveransinformation.
+     */
+    private void fillPersonalInfoTextFields() {
+        Customer customer = model.getCustomer();
+
+        if (hasBeenDone2 == 0){
+            setTeextfieldToIntOnly(phonenumberContainer);
+            setTeextfieldToIntOnly(postcodeContainer);
+
+            hasBeenDone2++;
+        }
+
+        phonenumberContainer.clear();
+        phonenumberContainer.appendText(customer.getPhoneNumber());
+        postcodeContainer.clear();
+        postcodeContainer.appendText(customer.getPostCode());
+
+        firstNameContainer.clear();
+        firstNameContainer.appendText(customer.getFirstName());
+        lastNameContainer.clear();
+        lastNameContainer.appendText(customer.getLastName());
+        mailContainer.clear();
+        mailContainer.appendText(customer.getEmail());
+        adressContainer.clear();
+        adressContainer.appendText(customer.getEmail());
+    }
+
+    /**
+     * fyller i rutorna för kreditkorten så at man kan se det som tidigare har skrivigts och man slipper skriva i det varje gång
+     */
+    private void fillCardInfoTextFields() {
+        CreditCard card = model.getCreditCard();
+
+
+
+        if (hasBeenDone == 0){
+            setTeextfieldToIntOnly(cardNumberTextField);
+            setTeextfieldToIntOnly(cvcField);
+            hasBeenDone++;
+        }
+
+        cardNumberTextField.clear();
+        cardNumberTextField.appendText(card.getCardNumber());
+        nameCardHolder.clear();
+        nameCardHolder.appendText(card.getHoldersName());
+
+        cardTypeComboBox.getItems().addAll("Mastercard", "Maestro", "Visa");  //oklart om dessa rader kommer att fungera
+        cardTypeComboBox.getSelectionModel().select(card.getCardType());
+        monthComboBox.getItems().addAll(months);
+        monthComboBox.getSelectionModel().select(card.getValidMonth());
+        yearComboBox.getItems().addAll(years);
+        yearComboBox.getSelectionModel().select(card.getValidYear());
+
+        int cvc = card.getVerificationCode();
+        cvcField.clear();
+        cvcField.appendText(Integer.toString(cvc));
+    }
+
+    /**
+     * Supposedly sets the TextField to be an int only textField
+     * @param textField the text field to set as an int only TextField
+     */
+    private void setTeextfieldToIntOnly(TextField textField){   //TODO Testa så detta fungerar, ska egentligen fixa så att man bara kan skriva integers =========
+        textField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    textField.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+            }
+        });
+    }
+
+    /**
+     * Uppdaterar backend med kortinformationen
+     */
     private void updateCreditCard() {
+        CreditCard card = model.getCreditCard();
 
-        //   CreditCard card = model.getCreditCard();
+        card.setCardNumber(cardNumberTextField.getText());
+        card.setHoldersName(nameCardHolder.getText());
 
-        /*card.setCardNumber(numberTextField.getText());
-        card.setHoldersName(nameTextField.getText());
-
-        String selectedValue = (String) cardTypeCombo.getSelectionModel().getSelectedItem();
+        String selectedValue = (String) cardTypeComboBox.getSelectionModel().getSelectedItem();
         card.setCardType(selectedValue);
 
-        selectedValue = (String) monthCombo.getSelectionModel().getSelectedItem();
+        selectedValue = (String) monthComboBox.getSelectionModel().getSelectedItem();
         card.setValidMonth(Integer.parseInt(selectedValue));
 
-        selectedValue = (String) yearCombo.getSelectionModel().getSelectedItem();
+        selectedValue = (String) yearComboBox.getSelectionModel().getSelectedItem();
         card.setValidYear(Integer.parseInt(selectedValue));
 
-        card.setVerificationCode(Integer.parseInt(cvcField.getText()));*/
-
+        card.setVerificationCode(Integer.parseInt(cvcField.getText()));
     }
 
 
@@ -187,6 +332,8 @@ public class IMatMyPages extends AnchorPane{
     public void setProductName(Product product){
         infoViewProductName.setText(product.getName());
     }
+
+
 
 
 }
