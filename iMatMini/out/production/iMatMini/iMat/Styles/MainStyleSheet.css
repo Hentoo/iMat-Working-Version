@@ -44,4 +44,10 @@
     -fx-font-size: 20px;
     -fx-font-style: bold;
 }
+.categoryButt:hover{
+    -fx-background-color: DARKBLUE;
+    -fx-border-bottom: 2px;
+    -fx-border-color: #929292;
+}
+}
 
