@@ -26,6 +26,7 @@ public class iMatFirstCheckout extends AnchorPane {
     @FXML
     Label totalPrice;
     @FXML Button firstCheckoutNextButton;
+    @FXML Button checkoutOneBack;
 
     iMatMainController controller;
 
@@ -45,6 +46,12 @@ public class iMatFirstCheckout extends AnchorPane {
         fillTotalPrice();
 
     }
+
+    @FXML
+    public void toStart(){
+        controller.mainScreen.toFront();
+}
+
 
     public void fillCheckoutPane(){
         for(ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){

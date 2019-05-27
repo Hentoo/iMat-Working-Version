@@ -120,7 +120,7 @@ public class IMatMyPages extends AnchorPane{
     private void pressedOnLogoButton(){
         //TODO
 
-        controller.mainAnchorPane.toFront();
+        controller.mainScreen.toFront();
         mainAnchorPane.toBack();
       /*  infoViewPane.toBack();
 

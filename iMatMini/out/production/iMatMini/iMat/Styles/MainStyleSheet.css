@@ -28,8 +28,15 @@
     -fx-border-color: #929292;
 }
 
-.sideButt:focused{
+/*.sideButt:focused{
     -fx-background-color: DARKGREY;
+}*/
+.nextButton{
+    -fx-background-color:  #1db954;
+    -fx-font-size: 24px;
+}
+.nextButton:hover{
+    -fx-background-color: #1d9148;
 }
 
 .sideButt:pressed{

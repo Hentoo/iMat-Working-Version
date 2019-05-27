@@ -188,6 +188,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         startingPage.toBack();
         fruitCategory.toFront();
         lineLine.toFront();
+        categoryButton1.setStyle("-fx-background-color: DARKGREY;");
 
 
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT));
