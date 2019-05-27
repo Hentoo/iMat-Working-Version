@@ -3,27 +3,36 @@ package iMat.Controller;
 import iMat.Model;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
-import java.net.URL;
+import java.io.IOException;
 import java.util.List;
-import java.util.ResourceBundle;
 
 public class IMatMyPages extends AnchorPane{
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
 
-    iMatMainController main;
+    iMatMainController controller;
 
-    IMatMyPages(){
+    IMatMyPages(iMatMainController controller){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatMyPages.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
+
+        try {
+            fxmlLoader.load();
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
+
+        this.controller = controller;
+
 
     }
 
@@ -207,7 +216,7 @@ public class IMatMyPages extends AnchorPane{
         productsFlowPane.getChildren().clear();
 
         for (Product product : favorites) {
-            favoritesFlowPane.getChildren().add(new iMatProduct(product, main));
+            favoritesFlowPane.getChildren().add(new iMatProduct(product, controller));
         }
     }
 
@@ -215,7 +224,7 @@ public class IMatMyPages extends AnchorPane{
         favoritesFlowPane.getChildren().clear();
 
         for (Product product : favorites) {
-            favoritesFlowPane.getChildren().add(new iMatProduct(product, main));
+            favoritesFlowPane.getChildren().add(new iMatProduct(product, controller));
         }
     }
 
@@ -341,12 +350,16 @@ public class IMatMyPages extends AnchorPane{
      * sets the view to start with favorites
      */
     public void setFavorites() {
+        favoritesFlowPane.toFront();
+        updateFavoriteProductList();
     }
 
     /**
      * set the view to start with
      */
     public void setStart() {
+        MainMyPagesFlowPAne.toFront();
+        helpMyPages.toFront();
     }
 }
 

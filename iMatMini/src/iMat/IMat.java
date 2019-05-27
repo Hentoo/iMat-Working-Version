@@ -29,7 +29,7 @@ public class IMat extends Application {
         Scene scene = new Scene(root, 1280, 720);
         stage.setScene(scene);
 
-        stage.setTitle("Hello World");
+        stage.setTitle("iMat, the one and only");
         stage.show();
     }
 

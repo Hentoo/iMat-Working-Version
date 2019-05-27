@@ -26,6 +26,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
     ListIterator<ShoppingItem> list;
+    IMatMyPages mypages = new IMatMyPages(this);
 
 
     private String difficulty;
@@ -64,6 +65,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML AnchorPane thirdCheckoutAnchor;
     @FXML FlowPane thirdCheckoutFlowPane;
     @FXML AnchorPane startingPage;
+    @FXML private AnchorPane myPagesAnchorPane;
+    @FXML private FlowPane myPagesFlowPane;
 
     @FXML
     Line lineLine;
@@ -361,9 +364,21 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         secondCheckoutFlowp.getChildren().add(new iMatSecondCheckout(this));
     }
 
+    @FXML
+    private void gotoFavorites(){
+        myPagesAnchorPane.toFront();
+        myPagesFlowPane.getChildren().clear();
+        myPagesFlowPane.getChildren().add(mypages);
+        mypages.setFavorites();
+    }
 
-
-
+    @FXML
+    private void gotomyPages(){
+        myPagesAnchorPane.toFront();
+        myPagesFlowPane.getChildren().clear();
+        myPagesFlowPane.getChildren().add(mypages);
+        mypages.setStart();
+    }
 
 
 

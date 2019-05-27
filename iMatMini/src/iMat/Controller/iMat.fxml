@@ -15,8 +15,13 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="715.0" prefWidth="1280.0" stylesheets="@../Styles/MainStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.Controller.iMatMainController">
+<AnchorPane prefHeight="715.0" prefWidth="1280.0" stylesheets="@../Styles/MainStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.Controller.iMatMainController">
     <children>
+      <AnchorPane fx:id="myPagesAnchorPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <FlowPane fx:id="myPagesFlowPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
       <AnchorPane fx:id="secondCheckoutAnchor" prefHeight="672.0" prefWidth="1280.0">
          <children>
             <FlowPane fx:id="secondCheckoutFlowp" prefHeight="720.0" prefWidth="1280.0" />
@@ -132,7 +137,7 @@
                               <Image url="@../../imatresources/images/search.png" />
                           </image>
                       </ImageView>
-                      <Button layoutX="741.0" layoutY="-1.0" maxHeight="44.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="147.0" styleClass="sideButt" text="Min sida">
+                      <Button layoutX="741.0" layoutY="-1.0" maxHeight="44.0" mnemonicParsing="false" onMousePressed="#gotoFavorites" prefHeight="44.0" prefWidth="147.0" styleClass="sideButt" text="Min sida">
                           <graphic>
                               <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -141,7 +146,7 @@
                               </ImageView>
                           </graphic>
                       </Button>
-                      <Button layoutX="741.0" layoutY="43.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="147.0" styleClass="sideButt" text="Favoriter">
+                      <Button layoutX="741.0" layoutY="43.0" mnemonicParsing="false" onMousePressed="#gotoFavorites" prefHeight="44.0" prefWidth="147.0" styleClass="sideButt" text="Favoriter">
                           <graphic>
                               <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
