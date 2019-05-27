@@ -119,6 +119,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     public void initialize(URL url, ResourceBundle rb) {
         mainScreen.toFront();
         startingPage.toFront();
+        lineLine.toFront();
 
         IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
 
@@ -177,11 +178,11 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
   private void pressedOnCategory1(){
         productsFlowPane.getChildren().clear();
-        lineLine.toFront();
         mainScreen.toFront();
         startingPage.toBack();
-
         fruitCategory.toFront();
+        lineLine.toFront();
+
 
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BERRY));
@@ -195,6 +196,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         mainScreen.toFront();
         startingPage.toBack();
         greenCategory.toFront();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HERB));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.ROOT_VEGETABLE));
@@ -207,6 +209,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BREAD));
 
 
@@ -216,6 +219,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
 
     }
@@ -224,6 +228,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT));
     }
     @FXML
@@ -231,6 +236,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FISH));
 
     }
@@ -240,6 +246,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         mainScreen.toFront();
         startingPage.toBack();
         pastaCategory.toFront();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FLOUR_SUGAR_SALT));
@@ -251,6 +258,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         mainScreen.toFront();
         startingPage.toBack();
         drinkCategory.toFront();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS));
 
@@ -261,29 +269,34 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET));
     }
 
     @FXML
     private void pressedOnPasta(){
         productsFlowPane.getChildren().clear();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA));
     }
     @FXML
     private void pressedOnPotato(){
         productsFlowPane.getChildren().clear();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
     }
 
     @FXML
     private void pressedOnFlour(){
         productsFlowPane.getChildren().clear();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FLOUR_SUGAR_SALT));
     }
 
     @FXML
     private void pressedOnRoot(){
         productsFlowPane.getChildren().clear();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.ROOT_VEGETABLE));
     }
 
@@ -295,6 +308,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     
     @FXML void pressedOnPod(){
         productsFlowPane.getChildren().clear();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POD));
 
     }
@@ -302,6 +316,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private void pressedOnVegetable(){
         productsFlowPane.getChildren().clear();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.VEGETABLE_FRUIT));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HERB));
     }
@@ -309,29 +324,34 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private void pressedOnHot(){
         productsFlowPane.getChildren().clear();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
     }
 
     @FXML
     private void pressedOnCold(){
         productsFlowPane.getChildren().clear();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS));
     }
 
     @FXML
     private void pressedOnExotic(){
         productsFlowPane.getChildren().clear();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.EXOTIC_FRUIT));
     }
     @FXML
     private void pressedOnCitrus(){
         productsFlowPane.getChildren().clear();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.CITRUS_FRUIT));
     }
 
     @FXML
     private void pressedOnBerry(){
         productsFlowPane.getChildren().clear();
+        lineLine.toFront();
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BERRY));
     }
 
@@ -435,8 +455,11 @@ public void setDays(int days) {
     }
 
     public void mainToFront(){
+
         mainScreen.toFront();
+        lineLine.toFront();
     }
+
 
     public void updateTotalPrice(){
         double totalPrice = 0;

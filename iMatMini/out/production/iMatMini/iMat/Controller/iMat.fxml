@@ -39,29 +39,29 @@
       </AnchorPane>
       <AnchorPane fx:id="greenCategory" layoutX="189.0" layoutY="88.0" prefHeight="139.0" prefWidth="888.0" AnchorPane.leftAnchor="195.0" AnchorPane.topAnchor="90.0">
          <children>
-            <Button fx:id="vegetableButton" mnemonicParsing="false" onMousePressed="#pressedOnVegetable" prefHeight="139.0" prefWidth="139.0" text="Grönsaker" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Button fx:id="rootButton" layoutX="130.0" layoutY="1.0" mnemonicParsing="false" onMousePressed="#pressedOnRoot" prefHeight="139.0" prefWidth="139.0" text="Rotfrukter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
-            <Button fx:id="seedButton" layoutX="260.0" mnemonicParsing="false" onMousePressed="#pressedOnSeed" prefHeight="139.0" prefWidth="139.0" text="Frön och nötter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="0.0" />
-            <Button fx:id="podButton" layoutX="417.0" mnemonicParsing="false" onMousePressed="#pressedOnPod" prefHeight="139.0" prefWidth="139.0" text="Baljväxter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="417.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="vegetableButton" mnemonicParsing="false" onMousePressed="#pressedOnVegetable" prefHeight="139.0" prefWidth="139.0" styleClass="categoryButt" text="Grönsaker" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="rootButton" layoutX="130.0" layoutY="1.0" mnemonicParsing="false" onMousePressed="#pressedOnRoot" prefHeight="139.0" prefWidth="139.0" styleClass="categoryButt" text="Rotfrukter" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="seedButton" layoutX="260.0" mnemonicParsing="false" onMousePressed="#pressedOnSeed" prefHeight="139.0" prefWidth="139.0" styleClass="categoryButt" text="Frön och nötter" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="podButton" layoutX="417.0" mnemonicParsing="false" onMousePressed="#pressedOnPod" prefHeight="139.0" prefWidth="139.0" styleClass="categoryButt" text="Baljväxter" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="417.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="fruitCategory" layoutX="190.0" layoutY="88.0" prefHeight="139.0" prefWidth="888.0" AnchorPane.leftAnchor="195.0" AnchorPane.topAnchor="90.0">
          <children>
-            <Button fx:id="exoticButton" mnemonicParsing="false" onKeyPressed="#pressedOnExotic" onMousePressed="#pressedOnExotic" prefHeight="139.0" prefWidth="139.0" text="Exotiska frukter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Button fx:id="citrusButton" layoutX="130.0" layoutY="-1.0" mnemonicParsing="false" onMousePressed="#pressedOnCitrus" prefHeight="139.0" prefWidth="139.0" text="Citrusfrukter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
-            <Button fx:id="berryButton" layoutX="260.0" mnemonicParsing="false" onMousePressed="#pressedOnBerry" prefHeight="139.0" prefWidth="139.0" text="Bär" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="exoticButton" mnemonicParsing="false" onKeyPressed="#pressedOnExotic" onMousePressed="#pressedOnExotic" prefHeight="139.0" prefWidth="139.0" styleClass="categoryButt" text="Exotiska frukter" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="citrusButton" layoutX="130.0" layoutY="-1.0" mnemonicParsing="false" onMousePressed="#pressedOnCitrus" prefHeight="139.0" prefWidth="139.0" styleClass="categoryButt" text="Citrus frukter" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="berryButton" layoutX="260.0" mnemonicParsing="false" onMousePressed="#pressedOnBerry" prefHeight="139.0" prefWidth="139.0" styleClass="categoryButt" text="Bär" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="pastaCategory" layoutX="191.0" layoutY="89.0" prefHeight="139.0" prefWidth="888.0" AnchorPane.leftAnchor="195.0" AnchorPane.topAnchor="90.0">
          <children>
-            <Button fx:id="pastaButton" mnemonicParsing="false" onMousePressed="#pressedOnPasta" prefHeight="139.0" prefWidth="139.0" text="Pasta" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Button fx:id="flourButton" layoutX="278.0" mnemonicParsing="false" onMousePressed="#pressedOnFlour" prefHeight="139.0" prefWidth="139.0" text="Mjöl, socker &amp; salt" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="0.0" />
-            <Button fx:id="potatoButton" layoutX="139.0" mnemonicParsing="false" onMousePressed="#pressedOnPotato" prefHeight="139.0" prefWidth="139.0" text="Potatis &amp; ris" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="pastaButton" mnemonicParsing="false" onMousePressed="#pressedOnPasta" prefHeight="139.0" prefWidth="139.0" styleClass="categoryButt" text="Pasta" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="flourButton" layoutX="278.0" mnemonicParsing="false" onMousePressed="#pressedOnFlour" prefHeight="139.0" prefWidth="139.0" styleClass="categoryButt" text="Mjöl, socker &amp; salt" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="potatoButton" layoutX="139.0" mnemonicParsing="false" onMousePressed="#pressedOnPotato" prefHeight="139.0" prefWidth="139.0" styleClass="categoryButt" text="Potatis &amp; ris" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
          </children></AnchorPane>
-      <AnchorPane fx:id="drinkCategory" layoutX="189.0" layoutY="90.0" prefHeight="141.0" prefWidth="888.0" AnchorPane.leftAnchor="195.0">
+      <AnchorPane fx:id="drinkCategory" layoutX="189.0" layoutY="90.0" prefHeight="139.0" prefWidth="888.0" AnchorPane.leftAnchor="195.0">
          <children>
-            <Button fx:id="coldDrinks" mnemonicParsing="false" onMousePressed="#pressedOnCold" prefHeight="139.0" prefWidth="139.0" text="Kalla drycker" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Button fx:id="hotDrinks" layoutX="139.0" mnemonicParsing="false" onMousePressed="#pressedOnHot" prefHeight="139.0" prefWidth="139.0" text="Varma drycker" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="coldDrinks" mnemonicParsing="false" onMousePressed="#pressedOnCold" prefHeight="139.0" prefWidth="139.0" styleClass="categoryButt" text="Kalla drycker" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="hotDrinks" layoutX="139.0" mnemonicParsing="false" onMousePressed="#pressedOnHot" prefHeight="139.0" prefWidth="139.0" styleClass="categoryButt" text="Varma drycker" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="0.0" />
          </children></AnchorPane>
       <AnchorPane fx:id="mainScreen" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -94,7 +94,10 @@
             </Label>
               <AnchorPane prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: WHITE;" AnchorPane.rightAnchor="0.0">
                   <children>
-                  <Button fx:id="checkoutButton" layoutX="5.0" layoutY="626.0" mnemonicParsing="false" onMousePressed="#pressedOnCheckout" prefHeight="90.0" prefWidth="195.0" text="Till kassan" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Button fx:id="checkoutButton" layoutX="5.0" layoutY="626.0" mnemonicParsing="false" onMousePressed="#pressedOnCheckout" prefHeight="90.0" prefWidth="195.0" style="-fx-background-color: #1db954;" text="Till kassan" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
                   <Label fx:id="totalPriceLabel" layoutX="3.0" layoutY="559.0" prefHeight="53.0" prefWidth="195.0" text="Totalpris:">
                      <font>
                         <Font name="System Bold" size="24.0" />
@@ -152,9 +155,9 @@
               <ImageView fitHeight="38.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
               <AnchorPane prefHeight="635.0" prefWidth="885.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
                <children>
-                  <ScrollPane prefHeight="635.0" prefWidth="888.0">
+                  <ScrollPane prefHeight="635.0" prefWidth="888.0" AnchorPane.topAnchor="0.0">
                      <content>
-                        <SplitPane dividerPositions="0.2211690363349131" orientation="VERTICAL" prefHeight="635.0" prefWidth="885.0">
+                        <SplitPane dividerPositions="0.2211690363349131" orientation="VERTICAL" prefHeight="639.0" prefWidth="885.0">
                           <items>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">

@@ -31,9 +31,15 @@
                   <Font size="28.0" />
                </font>
             </Label>
-            <Button fx:id="firstCheckoutNextButton" layoutX="610.0" layoutY="570.0" mnemonicParsing="false" onMousePressed="#firstCheckoutNextButtonAction" prefHeight="54.0" prefWidth="0.0" text="Nästa - Leverans" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="610.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="571.0" />
+            <Button fx:id="firstCheckoutNextButton" layoutX="567.0" layoutY="570.0" mnemonicParsing="false" onMousePressed="#firstCheckoutNextButtonAction" prefHeight="54.0" prefWidth="208.0" style="-fx-background-color: #1db954;" text="Nästa - Leverans" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="567.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="571.0">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
             <FlowPane fx:id="firstCheckoutFlowPane" layoutX="183.0" layoutY="59.0" prefHeight="512.0" prefWidth="200.0" AnchorPane.leftAnchor="250.0" />
-            <Button fx:id="backToMainButton" layoutX="14.0" layoutY="571.0" mnemonicParsing="false" onMousePressed="#backToMainButtonAction" text="Avbryt" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="610.0" AnchorPane.topAnchor="571.0" />
+            <Button fx:id="backToMainButton" layoutX="14.0" layoutY="571.0" mnemonicParsing="false" onMousePressed="#backToMainButtonAction" style="-fx-background-color: #f55;" text="Avbryt" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="610.0" AnchorPane.topAnchor="571.0">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="260.0" prefHeight="148.0" prefWidth="200.0" style="-fx-background-color: #DDD;" AnchorPane.bottomAnchor="630.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
