@@ -31,3 +31,10 @@ Button{
 .saveButt:pressed{
     -fx-background-color: rgba(33, 191, 55, 1);
 }
+#topTop{
+    -fx-background-color: #5277ff;
+}
+
+#logoButt{
+    -fx-background-color: #5277ff;
+}

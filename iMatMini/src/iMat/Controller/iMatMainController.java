@@ -34,7 +34,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private FlowPane productsFlowPane;
     @FXML FlowPane categoryFlowPane;
     @FXML
-    private AnchorPane mainAnchorPane;
+    public AnchorPane mainAnchorPane;
 
     @FXML
     private Button categoryButton1;
