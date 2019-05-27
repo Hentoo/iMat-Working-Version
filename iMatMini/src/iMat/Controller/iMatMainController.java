@@ -33,6 +33,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private FlowPane productsFlowPane;
     @FXML FlowPane categoryFlowPane;
+    @FXML
+    private AnchorPane mainAnchorPane;
 
     @FXML
     private Button categoryButton1;
@@ -487,6 +489,9 @@ public void setDays(int days) {
     }
 
 
+    public void goToFront() {
+        mainAnchorPane.toFront();
+    }
 }
 
 

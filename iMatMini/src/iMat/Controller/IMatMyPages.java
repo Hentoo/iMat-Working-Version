@@ -37,6 +37,8 @@ public class IMatMyPages extends AnchorPane{
     }
 
     @FXML
+    private AnchorPane mainAnchorPane;
+    @FXML
     private FlowPane productsFlowPane;
     @FXML
     Text productText;
@@ -118,9 +120,8 @@ public class IMatMyPages extends AnchorPane{
     private void pressedOnLogoButton(){
         //TODO
 
-        MainMyPagesFlowPAne.toFront();
-        helpMyPages.toFront();
-
+        controller.goToFront();
+        mainAnchorPane.toBack();
       /*  infoViewPane.toBack();
 
         productsFlowPane.getChildren().clear();

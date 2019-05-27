@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="719.0" prefWidth="1280.0" stylesheets="@../Styles/MyPagestStyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="mainAnchorPane" prefHeight="719.0" prefWidth="1280.0" stylesheets="@../Styles/MyPagestStyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
       <AnchorPane layoutY="93.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
          <children>
