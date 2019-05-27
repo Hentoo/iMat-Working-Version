@@ -49,9 +49,13 @@
     -fx-border-bottom: 2px;
     -fx-border-color: #929292;
 }
+
 .categoryButt:focused{
     -fx-background-color: #7a94a2;
 }
+
+
+
 
 
 

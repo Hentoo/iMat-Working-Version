@@ -37,6 +37,8 @@ public class IMatMyPages extends AnchorPane{
     }
 
     @FXML
+    private AnchorPane mainAnchorPane;
+    @FXML
     private FlowPane productsFlowPane;
     @FXML
     Text productText;
@@ -118,9 +120,8 @@ public class IMatMyPages extends AnchorPane{
     private void pressedOnLogoButton(){
         //TODO
 
-        MainMyPagesFlowPAne.toFront();
-        helpMyPages.toFront();
-
+        controller.goToFront();
+        mainAnchorPane.toBack();
       /*  infoViewPane.toBack();
 
         productsFlowPane.getChildren().clear();
@@ -275,10 +276,13 @@ public class IMatMyPages extends AnchorPane{
         nameCardHolder.clear();
         nameCardHolder.appendText(card.getHoldersName());
 
+        cardTypeComboBox.getItems().clear();
         cardTypeComboBox.getItems().addAll("Mastercard", "Maestro", "Visa");  //oklart om dessa rader kommer att fungera
         cardTypeComboBox.getSelectionModel().select(card.getCardType());
+        monthComboBox.getItems().clear();
         monthComboBox.getItems().addAll(months);
         monthComboBox.getSelectionModel().select(card.getValidMonth());
+        yearComboBox.getItems().clear();
         yearComboBox.getItems().addAll(years);
         yearComboBox.getSelectionModel().select(card.getValidYear());
 
