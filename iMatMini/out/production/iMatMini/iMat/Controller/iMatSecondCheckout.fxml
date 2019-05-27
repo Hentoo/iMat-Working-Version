@@ -18,7 +18,7 @@
 
 <fx:root fx:id="firstCheckout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #DDD;" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text fx:id="postcodeError" fill="RED" layoutX="774.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Du måste skriva in ditt postnummer!" wrappingWidth="253.0000114440918">
+      <Text fx:id="postcodeError" fill="RED" layoutX="774.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Du måste skriva in ditt postnummer!" wrappingWidth="253.0000114440918">
          <font>
             <Font size="15.0" />
          </font>
@@ -98,9 +98,7 @@
                   <TextField fx:id="phonenumberContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <TextField fx:id="mailContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <TextField fx:id="adressContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <TextField fx:id="cityContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <TextField fx:id="postcodeContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                  <TextField fx:id="coContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="postcodeContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                   <Label text="Förnamn:">
                      <GridPane.margin>
                         <Insets right="5.0" />
@@ -126,17 +124,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="Stad:" GridPane.rowIndex="5">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label text="Postnummer:" GridPane.rowIndex="6">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label text="c/o:" GridPane.rowIndex="7">
+                  <Label text="Postnummer:" GridPane.rowIndex="5">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>

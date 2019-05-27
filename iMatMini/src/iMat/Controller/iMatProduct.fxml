@@ -13,6 +13,8 @@
     <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="productBack" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
+            <AnchorPane fx:id="addedProduct" opacity="0.46" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LIGHTGREEN;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane fx:id="backProduct" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
               <ImageView fx:id="imageField" fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                   <image>
                       <Image url="@../../imatresources/images/product_22.jpg" />

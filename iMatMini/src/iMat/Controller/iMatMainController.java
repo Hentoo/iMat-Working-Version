@@ -150,6 +150,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
 
 
+
     @FXML
     private void pressedOnCheckout(){
         activateFirstCheckout();

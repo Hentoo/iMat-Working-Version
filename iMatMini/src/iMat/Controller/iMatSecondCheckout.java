@@ -91,7 +91,7 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
     @FXML
     private void toThirdCheckout(){
 
-        int fieldChecker = 7;
+        int fieldChecker = 6;
 
         if (firstNameContainer.getText().isEmpty()){
             firstNameError.toFront();
@@ -128,6 +128,7 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
             adressError.toBack();
             fieldChecker--;
         }
+        /*
         if (cityContainer.getText().isEmpty()){
             cityError.toFront();
         }
@@ -135,6 +136,7 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
             cityError.toBack();
             fieldChecker--;
         }
+        */
         if(postcodeContainer.getText().isEmpty()){
             postcodeError.toFront();
         }

@@ -45,10 +45,13 @@ public class iMatProduct extends AnchorPane {
     @FXML
     private Label productPrize;
 
+    @FXML
+    AnchorPane backProduct;
     private iMatInfoViewController infoView;
 
     @FXML
     private AnchorPane infoViewAnchorPane;
+    @FXML AnchorPane addedProduct;
 
     private iMatMainController controller;
 
@@ -114,6 +117,10 @@ public class iMatProduct extends AnchorPane {
     private void handleAddAction(){
 
         controller.shoppingCartArea.getChildren().clear();
+        imageField.toBack();
+        backProduct.toBack();
+
+
         double totalPrice = 0;
 
         int i = 0;
@@ -143,7 +150,7 @@ public class iMatProduct extends AnchorPane {
         for(ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){
             totalPrice = totalPrice + (shoppingItem.getProduct().getPrice() * shoppingItem.getAmount());
         }
-        controller.totalPriceLabel.setText("TOTALPRIS: " + Integer.toString((int)totalPrice) + " SEK");
+        controller.totalPriceLabel.setText("Total: " + Integer.toString((int)totalPrice) + " SEK");
 
         chosenAmount = 1;
         updateAmountBar();

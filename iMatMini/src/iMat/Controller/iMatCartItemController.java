@@ -31,6 +31,7 @@ public class iMatCartItemController extends AnchorPane {
 
     private iMatMainController controller;
     private ShoppingItem shoppingItem;
+    private iMatProduct iMatProduct;
 
 
 
@@ -88,6 +89,7 @@ public class iMatCartItemController extends AnchorPane {
         controller.firstCheckout.firstCheckoutFlowPane.getChildren().clear();
         controller.firstCheckout.fillTotalPrice();
         controller.firstCheckout.fillCheckoutPane();
+
 
     }
 
