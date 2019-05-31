@@ -40,6 +40,6 @@
             <Font size="9.0" />
          </font>
       </Button>
-      <Label fx:id="cartTotalPrice" layoutX="110.0" layoutY="35.0" text="Label" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="29.0" />
+      <Label fx:id="cartTotalPrice" layoutX="110.0" layoutY="35.0" text="350kr" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="29.0" />
    </children>
 </fx:root>
