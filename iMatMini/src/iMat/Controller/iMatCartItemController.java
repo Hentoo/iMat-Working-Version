@@ -22,10 +22,14 @@ public class iMatCartItemController extends AnchorPane {
     private Button cartButtonLess;
     @FXML
     private Button cartButtonMore;
+    //@FXML
+    //private TextField cartAmount;
+    //@FXML
+    //private TextField cartTotalPrice;
     @FXML
-    private TextField cartAmount;
+    private Label cartAmount;
     @FXML
-    private TextField cartTotalPrice;
+    private Label cartTotalPrice;
     @FXML
     private Button cartRemoveItem;
 
