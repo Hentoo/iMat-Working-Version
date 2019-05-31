@@ -37,7 +37,7 @@ public class IMatMyPages extends AnchorPane{
 
     }
     @FXML
-    private AnchorPane favoritesAnchorPane;
+    public AnchorPane favoritesAnchorPane;
 
     @FXML
     private AnchorPane mainAnchorPane;
