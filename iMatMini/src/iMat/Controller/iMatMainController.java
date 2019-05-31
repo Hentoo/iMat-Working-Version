@@ -30,6 +30,9 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     IMatMyPages mypages = new IMatMyPages(this);
     public List<iMatProduct> favourites = new ArrayList<>();
 
+    private iMatSecondCheckout secondCheckout = new iMatSecondCheckout(this);
+
+
 
     private String difficulty;
     @FXML
@@ -369,7 +372,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     public void activateSecondCheckout(){
         secondCheckoutAnchor.toFront();
-        secondCheckoutFlowp.getChildren().add(new iMatSecondCheckout(this));
+        secondCheckout.fillPersonalInfoTextFields();
+        secondCheckoutFlowp.getChildren().add(secondCheckout);
     }
 
     @FXML
@@ -392,18 +396,47 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     }
 
+    private boolean checkIfInFavourites(Product product){
 
+        for(iMatProduct favorit : favourites){
+            if (favorit.getProduct().getName().equals(product.getName())){
+                return true;
+            }
 
+        }
+        return false;
+    }
 
-    private void updateProductList(List<Product> products) {
-
+    private void updateProductList(List<Product> products){
         String iconPath;
+
+
+        for (Product product : products){
+            if (checkIfInFavourites(product)){
+                iMatProduct productWithFavourite = new iMatProduct(product, this);
+                productWithFavourite.setFavourite(true);
+                iconPath = "imatresources/images/favourites.png";
+                productWithFavourite.getFavoriteStar().setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
+                productsFlowPane.getChildren().add(productWithFavourite);
+
+            }
+            else {
+                productsFlowPane.getChildren().add(new iMatProduct(product, this));
+            }
+        }
+    }
+
+
+
+
+  /*  private void updateProductList(List<Product> products) {
+
+         String iconPath;
         int checkIfFound = 0;
 
         for (Product product : products) {
             if (favourites.isEmpty()){
                 productsFlowPane.getChildren().add(new iMatProduct(product,this));   //DETTA HAR PAJAT HELA VÅR KOD
-                checkIfFound = 1;
             }
             for (iMatProduct favouriteCheck : favourites){
                 if (favouriteCheck.getProduct().getName() == product.getName()){
@@ -423,7 +456,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
 
 
-    }
+    } */
 
     private int days;
 //   private final iMatModel model = iMatModel.getInstance();
