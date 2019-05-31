@@ -41,7 +41,7 @@
                </effect>
             </Label>
               <TextField fx:id="nrOfItems" text="1" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" />
-              <ImageView fx:id="favoriteStar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+              <ImageView fx:id="favoriteStar" fitHeight="30.0" fitWidth="30.0" onMousePressed="#addToFavourites" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
                   <image>
                       <Image url="@../../imatresources/images/empty_star.png" />
                   </image>

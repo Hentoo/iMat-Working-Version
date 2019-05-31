@@ -27,6 +27,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
     ListIterator<ShoppingItem> list;
     IMatMyPages mypages = new IMatMyPages(this);
+    public List<iMatProduct> favourites = new ArrayList<>();
 
 
     private String difficulty;
@@ -391,7 +392,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
 
         for (Product product : products) {
-            productsFlowPane.getChildren().add(new iMatProduct(product,this));
+            productsFlowPane.getChildren().add(new iMatProduct(product,this));   //DETTA HAR PAJAT HELA VÅR KOD
         }
 
     }

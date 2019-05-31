@@ -12,6 +12,7 @@ import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class IMatMyPages extends AnchorPane{
@@ -35,6 +36,8 @@ public class IMatMyPages extends AnchorPane{
 
 
     }
+    @FXML
+    private AnchorPane favoritesAnchorPane;
 
     @FXML
     private AnchorPane mainAnchorPane;
@@ -108,7 +111,7 @@ public class IMatMyPages extends AnchorPane{
 
     List<Object> purchases; //TODO Fixa denna så den innehåller alla tidigare köps rutor.
 
-    List<Product> favorites = IMatDataHandler.getInstance().favorites();
+    List<iMatProduct> favorites = new ArrayList<>();
 
     Model model = Model.getInstance();
 
@@ -167,9 +170,9 @@ public class IMatMyPages extends AnchorPane{
      */
     @FXML
     private void pressedOnCategory4(){
-        favorites = IMatDataHandler.getInstance().favorites();
+        favorites = controller.favourites;
         updateFavoriteProductList();
-        favoritesFlowPane.toFront();
+        favoritesAnchorPane.toFront();
     }
 
     @FXML
@@ -216,16 +219,16 @@ public class IMatMyPages extends AnchorPane{
     private void updateHistoryList() {
         productsFlowPane.getChildren().clear();
 
-        for (Product product : favorites) {
-            favoritesFlowPane.getChildren().add(new iMatProduct(product, controller));
+        for (iMatProduct product : favorites) {
+            favoritesFlowPane.getChildren().add(product);
         }
     }
 
     private void updateFavoriteProductList() {
         favoritesFlowPane.getChildren().clear();
 
-        for (Product product : favorites) {
-            favoritesFlowPane.getChildren().add(new iMatProduct(product, controller));
+        for (iMatProduct product : favorites) {
+            favoritesFlowPane.getChildren().add(product);
         }
     }
 
