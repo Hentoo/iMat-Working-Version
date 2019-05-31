@@ -29,6 +29,11 @@ public class iMatProduct extends AnchorPane {
 
     @FXML
     private ImageView imageField;
+
+    public ImageView getFavoriteStar() {
+        return favoriteStar;
+    }
+
     @FXML
     private ImageView favoriteStar;
     @FXML
@@ -56,6 +61,10 @@ public class iMatProduct extends AnchorPane {
 
     private iMatMainController controller;
 
+
+    public Product getProduct() {
+        return product;
+    }
 
     private Product product;
 
