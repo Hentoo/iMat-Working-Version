@@ -6,12 +6,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
-public class OrderHistoryProductView {
+public class OrderHistoryProductView extends AnchorPane {
 
     ShoppingItem product;
 
@@ -24,14 +25,14 @@ public class OrderHistoryProductView {
     @FXML
     private ImageView imageField;
     @FXML
-    private TextField nrOfItems;
+    private Label nrOfItems;
     @FXML
     private Label productName;
     @FXML
     private Label productPrize;
 
     public OrderHistoryProductView(ShoppingItem product, iMatMainController controller){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatProduct.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("orderHistoryProductView.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

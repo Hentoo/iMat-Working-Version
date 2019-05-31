@@ -102,6 +102,7 @@ public class iMatProduct extends AnchorPane {
         imageField.setImage(model.getImage(product, kImageWidth, kImageWidth*kImageRatio));
         this.controller = controller;
     }
+
     @FXML
     private void onInfoClick(){
         controller.activateInfoView(product);

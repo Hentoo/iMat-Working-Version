@@ -158,6 +158,8 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
 
 
 
+
+
     }
 
     private void setTeextfieldToIntOnly(TextField textField){   //TODO Testa så detta fungerar, ska egentligen fixa så att man bara kan skriva integers =========

@@ -1,9 +1,11 @@
 package iMat.Controller;
 
+import iMat.IMat;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
@@ -16,9 +18,11 @@ import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Date;
+import java.util.ResourceBundle;
 
-public class iMatThirdCheckout extends AnchorPane {
+public class iMatThirdCheckout extends AnchorPane implements Initializable {
 
     int hasBeenDone = 0;
 
@@ -80,9 +84,21 @@ public class iMatThirdCheckout extends AnchorPane {
         lineLine.toFront();
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
+        fillSummaryCheckout();
+    }
+
     @FXML
     private void goBackToSecondCheckout(){
         controller.activateSecondCheckout();
+    }
+
+    public void fillSummaryCheckout(){
+        summaryFlowPane.getChildren().clear();
+        for(ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+            summaryFlowPane.getChildren().add(new OrderHistoryProductView(shoppingItem, this.controller));
+        }
     }
 
     @FXML
