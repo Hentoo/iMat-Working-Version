@@ -22,7 +22,7 @@ import java.net.URL;
 import java.util.Date;
 import java.util.ResourceBundle;
 
-public class iMatThirdCheckout extends AnchorPane implements Initializable {
+public class iMatThirdCheckout extends AnchorPane {
 
     int hasBeenDone = 0;
 
@@ -84,10 +84,10 @@ public class iMatThirdCheckout extends AnchorPane implements Initializable {
         lineLine.toFront();
     }
 
-    @Override
+   /* @Override
     public void initialize(URL url, ResourceBundle rb){
         fillSummaryCheckout();
-    }
+    }*/
 
     @FXML
     private void goBackToSecondCheckout(){
@@ -109,9 +109,7 @@ public class iMatThirdCheckout extends AnchorPane implements Initializable {
 
     private void fillOrderList(Order order){
 
-        for(ShoppingItem item : IMatDataHandler.getInstance().getShoppingCart().getItems()){
-            order.getItems().add(item);
-        }
+        order.setItems(IMatDataHandler.getInstance().getShoppingCart().getItems());
 
     }
 

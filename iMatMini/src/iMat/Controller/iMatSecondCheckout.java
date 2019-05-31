@@ -95,6 +95,7 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
     @FXML
     private void toThirdCheckout(){
         updatePersonalInfo();
+        controller.thirdCheckout.fillSummaryCheckout();
 
         int fieldChecker = 6;
 
