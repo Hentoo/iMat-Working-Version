@@ -118,7 +118,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                   <Label text="Efternamn:" GridPane.rowIndex="1">
@@ -126,7 +126,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                   <Label text="Telefonnummer:" GridPane.rowIndex="2">
@@ -134,7 +134,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                   <Label text="Mailadress:" GridPane.rowIndex="3">
@@ -142,7 +142,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                   <Label text="Adress:" GridPane.rowIndex="4">
@@ -150,7 +150,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                   <Label text="Postnummer:" GridPane.rowIndex="5">
@@ -158,7 +158,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                </children>
@@ -236,7 +236,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                   <Label text="Namn på kortinnehavare:" GridPane.rowIndex="4">
@@ -244,7 +244,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                   <Label text="Månad och År" GridPane.rowIndex="5">
@@ -252,7 +252,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                   <Label text="Korttyp" GridPane.rowIndex="6">
@@ -260,7 +260,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                   <Label text="CVC/CVV" GridPane.rowIndex="7">
@@ -268,7 +268,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                   <ComboBox fx:id="cardTypeComboBox" prefWidth="215.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
