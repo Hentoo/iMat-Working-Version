@@ -8,3 +8,26 @@
 #closeInfoButton:hover{
 -fx-background-color:rgba(250,0,0,1);
 }
+
+#morer, #lesserButton{
+    -fx-border-radius: 3000px;
+    -fx-background-color: rgb(198, 198, 198);
+}
+
+#morer:hover, #lesserButton:hover{
+    -fx-background-color: rgb(154, 154, 154);
+}
+
+#morer:pressed, #lesserButton:pressed{
+    -fx-background-color: rgb(119, 119, 119);
+}
+
+#add{
+    -fx-background-color: #1edd5b;
+    -fx-border-radius: 30px;
+    -fx-border-style: none;
+}
+
+#add:hover{
+    -fx-background-color: #189243;
+}
