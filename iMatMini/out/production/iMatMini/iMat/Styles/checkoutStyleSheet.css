@@ -16,3 +16,7 @@
 .topTop{
     -fx-background-color: #5277ff;
 }
+.topTop:hover{
+    -fx-background-color: #3454a4;
+}
+
