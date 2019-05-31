@@ -247,7 +247,7 @@ public class IMatMyPages extends AnchorPane{
         }
 
         phonenumberContainer.clear();
-        phonenumberContainer.appendText(customer.getPhoneNumber());
+        phonenumberContainer.appendText(customer.getMobilePhoneNumber());
         postcodeContainer.clear();
         postcodeContainer.appendText(customer.getPostCode());
 

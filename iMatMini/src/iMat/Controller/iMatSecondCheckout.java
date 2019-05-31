@@ -9,6 +9,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import se.chalmers.cse.dat216.project.Customer;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 import java.awt.*;
 import java.io.IOException;
@@ -57,6 +59,8 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
     @FXML RadioButton radioButton4;
     @FXML RadioButton radioButton5;
 
+    private int hasBeenDone2 = 0;
+
 
     private ToggleGroup timeToggleGroup;
 
@@ -72,12 +76,11 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
         }
 
         this.controller = controller;
-
-
     }
 
     @FXML
     private void backToFirst(){
+        updatePersonalInfo();
         controller.activateFirstCheckout();
         postcodeError.toBack();
         cityError.toBack();
@@ -90,6 +93,7 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
 
     @FXML
     private void toThirdCheckout(){
+        updatePersonalInfo();
 
         int fieldChecker = 6;
 
@@ -153,6 +157,55 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
 
 
 
+    }
+
+    private void setTeextfieldToIntOnly(TextField textField){   //TODO Testa så detta fungerar, ska egentligen fixa så att man bara kan skriva integers =========
+        textField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    textField.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+            }
+        });
+    }
+
+    public void fillPersonalInfoTextFields() {
+        Customer customer = IMatDataHandler.getInstance().getCustomer();
+
+        if (hasBeenDone2 == 0){
+            setTeextfieldToIntOnly(phonenumberContainer);
+            setTeextfieldToIntOnly(postcodeContainer);
+
+            hasBeenDone2++;
+        }
+
+        phonenumberContainer.clear();
+        phonenumberContainer.appendText(customer.getMobilePhoneNumber());
+        postcodeContainer.clear();
+        postcodeContainer.appendText(customer.getPostCode());
+
+        firstNameContainer.clear();
+        firstNameContainer.appendText(customer.getFirstName());
+        lastNameContainer.clear();
+        lastNameContainer.appendText(customer.getLastName());
+        mailContainer.clear();
+        mailContainer.appendText(customer.getEmail());
+        adressContainer.clear();
+        adressContainer.appendText(customer.getEmail());
+    }
+
+    private void updatePersonalInfo() {
+        Customer customer = IMatDataHandler.getInstance().getCustomer();
+
+        customer.setAddress(adressContainer.getText());
+        customer.setEmail(mailContainer.getText());
+        customer.setFirstName(firstNameContainer.getText());
+        customer.setLastName(lastNameContainer.getText());
+        customer.setMobilePhoneNumber(phonenumberContainer.getText());
+        customer.setPostAddress(adressContainer.getText());
+        customer.setPostCode(postcodeContainer.getText());
     }
 
     @Override
