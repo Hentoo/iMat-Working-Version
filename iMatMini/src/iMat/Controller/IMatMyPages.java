@@ -124,6 +124,7 @@ public class IMatMyPages extends AnchorPane{
         //TODO
 
         controller.mainScreen.toFront();
+        controller.lineLine.toFront();
         mainAnchorPane.toBack();
 
       /*  infoViewPane.toBack();
