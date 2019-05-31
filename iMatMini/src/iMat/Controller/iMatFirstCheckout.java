@@ -54,8 +54,10 @@ public class iMatFirstCheckout extends AnchorPane {
 
 
     public void fillCheckoutPane(){
+        controller.shoppingCartArea.getChildren().clear();
         for(ShoppingItem shoppingItem : IMatDataHandler.getInstance().getShoppingCart().getItems()){
             firstCheckoutFlowPane.getChildren().add(new iMatCartItemController(shoppingItem, controller));
+            controller.shoppingCartArea.getChildren().add(new iMatCartItemController(shoppingItem, controller));
         }
     }
 
@@ -67,6 +69,7 @@ public class iMatFirstCheckout extends AnchorPane {
         }
 
         totalPrice.setText(Integer.toString((int) totalPrices) + " SEK");
+        controller.totalPriceLabel.setText("Total: " + Integer.toString((int) totalPrices) + " SEK");
     }
 
     iMatSecondCheckout iMatSecondCheckout;
@@ -79,6 +82,10 @@ public class iMatFirstCheckout extends AnchorPane {
 
     @FXML
     private void backToMainButtonAction() {
+
+
+
+
         controller.mainToFront();
     }
 }

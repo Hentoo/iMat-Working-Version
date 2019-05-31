@@ -540,6 +540,10 @@ public void setDays(int days) {
 
     }
 
+    private void fillSummaryPane(){
+
+    }
+
     public void activateThirdCheckout(){
     thirdCheckoutAnchor.toFront();
     thirdCheckout.fillCardInfoTextFields();
@@ -560,7 +564,7 @@ public void setDays(int days) {
            totalPrice = totalPrice + (shoppingItem.getProduct().getPrice() * shoppingItem.getAmount());
         }
 
-        totalPriceLabel.setText("TOTALPRIS: " + Integer.toString((int) totalPrice) + " SEK");
+        totalPriceLabel.setText("Total: " + Integer.toString((int) totalPrice) + " SEK");
     }
 
 

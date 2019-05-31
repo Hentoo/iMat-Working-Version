@@ -148,26 +148,41 @@
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                   </Label>
                   <Label text="Namn på kortinnehavare:" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                   </Label>
-                  <Label text="Månad och År" GridPane.rowIndex="3">
+                  <Label text="Månad och År:" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                   </Label>
-                  <Label text="Korttyp" GridPane.rowIndex="4">
+                  <Label text="Korttyp:" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                   </Label>
                   <Label text="CVC/CVV" GridPane.rowIndex="5">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                   </Label>
                   <ComboBox fx:id="cardTypeText" prefWidth="215.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <TextField fx:id="cardNumberText" prefHeight="27.0" prefWidth="264.0" promptText="Skriv in kortnummer här" GridPane.columnIndex="1" GridPane.rowIndex="1" />

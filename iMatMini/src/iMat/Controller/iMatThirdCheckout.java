@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.CreditCard;
 import javafx.scene.shape.Line;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -44,6 +45,8 @@ public class iMatThirdCheckout extends AnchorPane {
     private ComboBox cardTypeText;
     @FXML
     private TextField cvcText;
+    @FXML
+    public FlowPane summaryFlowPane;
 
     String[] years = {"2019", "2020", "2021", "2022", "2023", "2024", "2025"};
     String[] months = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
