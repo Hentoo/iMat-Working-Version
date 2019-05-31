@@ -37,7 +37,7 @@ public class IMatMyPages extends AnchorPane{
 
     }
     @FXML
-    private AnchorPane favoritesAnchorPane;
+    public AnchorPane favoritesAnchorPane;
 
     @FXML
     private AnchorPane mainAnchorPane;
@@ -247,7 +247,7 @@ public class IMatMyPages extends AnchorPane{
         }
 
         phonenumberContainer.clear();
-        phonenumberContainer.appendText(customer.getPhoneNumber());
+        phonenumberContainer.appendText(customer.getMobilePhoneNumber());
         postcodeContainer.clear();
         postcodeContainer.appendText(customer.getPostCode());
 

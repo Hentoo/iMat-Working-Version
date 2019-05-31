@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Line;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 import java.io.IOException;
@@ -21,6 +22,12 @@ public class iMatThirdCheckout extends AnchorPane {
     private Button closeProgram;
     @FXML
     private Button finalizeButton;
+    @FXML
+    private AnchorPane orderPane;
+    @FXML
+    private AnchorPane sequencePane;
+    @FXML
+    private Line lineLine;
 
     public iMatThirdCheckout(iMatMainController controller) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatThirdCheckout.fxml"));
@@ -37,6 +44,13 @@ public class iMatThirdCheckout extends AnchorPane {
 
 
     }
+    @FXML
+    private void goBackToPayment(){
+
+        sequencePane.toFront();
+        orderPane.toFront();
+        lineLine.toFront();
+    }
 
     @FXML
     private void goBackToSecondCheckout(){
@@ -45,7 +59,9 @@ public class iMatThirdCheckout extends AnchorPane {
 
     @FXML
     private void finalizeButtonAction(){
+
         summaryAnchorPane.toFront();
+        lineLine.toFront();
     }
 
     @FXML

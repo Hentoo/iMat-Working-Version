@@ -9,6 +9,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import se.chalmers.cse.dat216.project.CreditCard;
+import se.chalmers.cse.dat216.project.Customer;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 import java.awt.*;
 import java.io.IOException;
@@ -47,15 +50,17 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
     private TextField postcodeContainer;
     @FXML
     private Text postcodeError;
-    @FXML
-    Spinner daySpinner;
-    @FXML Spinner monthSpinner;
 
     @FXML RadioButton radioButton1;
     @FXML RadioButton radioButton2;
     @FXML RadioButton radioButton3;
     @FXML RadioButton radioButton4;
     @FXML RadioButton radioButton5;
+
+    @FXML ComboBox dayDate;
+    @FXML ComboBox monthDate;
+
+    private int hasBeenDone2 = 0;
 
 
     private ToggleGroup timeToggleGroup;
@@ -72,12 +77,11 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
         }
 
         this.controller = controller;
-
-
     }
 
     @FXML
     private void backToFirst(){
+        updatePersonalInfo();
         controller.activateFirstCheckout();
         postcodeError.toBack();
         cityError.toBack();
@@ -90,6 +94,7 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
 
     @FXML
     private void toThirdCheckout(){
+        updatePersonalInfo();
 
         int fieldChecker = 6;
 
@@ -155,10 +160,63 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
 
     }
 
+    private void setTeextfieldToIntOnly(TextField textField){   //TODO Testa så detta fungerar, ska egentligen fixa så att man bara kan skriva integers =========
+        textField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    textField.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+            }
+        });
+    }
+
+    public void fillPersonalInfoTextFields() {
+        Customer customer = IMatDataHandler.getInstance().getCustomer();
+
+        if (hasBeenDone2 == 0){
+            setTeextfieldToIntOnly(phonenumberContainer);
+            setTeextfieldToIntOnly(postcodeContainer);
+
+            hasBeenDone2++;
+        }
+
+        phonenumberContainer.clear();
+        phonenumberContainer.appendText(customer.getMobilePhoneNumber());
+        postcodeContainer.clear();
+        postcodeContainer.appendText(customer.getPostCode());
+
+        firstNameContainer.clear();
+        firstNameContainer.appendText(customer.getFirstName());
+        lastNameContainer.clear();
+        lastNameContainer.appendText(customer.getLastName());
+        mailContainer.clear();
+        mailContainer.appendText(customer.getEmail());
+        adressContainer.clear();
+        adressContainer.appendText(customer.getEmail());
+    }
+
+    private void updatePersonalInfo() {
+        Customer customer = IMatDataHandler.getInstance().getCustomer();
+
+        customer.setAddress(adressContainer.getText());
+        customer.setEmail(mailContainer.getText());
+        customer.setFirstName(firstNameContainer.getText());
+        customer.setLastName(lastNameContainer.getText());
+        customer.setMobilePhoneNumber(phonenumberContainer.getText());
+        customer.setPostAddress(adressContainer.getText());
+        customer.setPostCode(postcodeContainer.getText());
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        fillCardInfoTextFields();
 
-        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 31, 1, 1);
+    }
+/*
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 31, 3, 1);
         daySpinner.setValueFactory(valueFactory);
 
         daySpinner.valueProperty().addListener(new ChangeListener<Integer>() {
@@ -188,7 +246,7 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
             }
         });
 
-        SpinnerValueFactory<Integer> valueFactoryMonth = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 1, 1);
+        SpinnerValueFactory<Integer> valueFactoryMonth = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 6, 1);
         monthSpinner.setValueFactory(valueFactoryMonth);
 
         monthSpinner.valueProperty().addListener(new ChangeListener<Integer>() {
@@ -240,6 +298,18 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
         });
 
     }
+    */
+    String[] days = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12","13","14","15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26","27","28","29","30","31"};
+    String[] months = {"januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"};
+    public void fillCardInfoTextFields(){
+        dayDate.getItems().clear();
+        dayDate.getItems().addAll(days);
+        dayDate.getSelectionModel().select("03");
+        monthDate.getItems().clear();
+        monthDate.getItems().addAll(months);
+        monthDate.getSelectionModel().select("juni");
+    }
+
 
 
 }
