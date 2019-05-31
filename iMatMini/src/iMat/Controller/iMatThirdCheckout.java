@@ -11,8 +11,11 @@ import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.CreditCard;
 import javafx.scene.shape.Line;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.Order;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class iMatThirdCheckout extends AnchorPane {
 
@@ -44,7 +47,7 @@ public class iMatThirdCheckout extends AnchorPane {
 
     String[] years = {"2019", "2020", "2021", "2022", "2023", "2024", "2025"};
     String[] months = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
-
+    @FXML
     private AnchorPane orderPane;
     @FXML
     private AnchorPane sequencePane;
@@ -68,7 +71,7 @@ public class iMatThirdCheckout extends AnchorPane {
     }
     @FXML
     private void goBackToPayment(){
-        updateCreditCard();
+        summaryAnchorPane.toBack();
         sequencePane.toFront();
         orderPane.toFront();
         lineLine.toFront();
@@ -81,13 +84,26 @@ public class iMatThirdCheckout extends AnchorPane {
 
     @FXML
     private void finalizeButtonAction(){
-        updateCreditCard();
         summaryAnchorPane.toFront();
         lineLine.toFront();
     }
 
+    private void fillOrderList(Order order){
+
+        for(ShoppingItem item : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+            order.getItems().add(item);
+        }
+
+    }
+
     @FXML
     private void endPurchaseButton(){
+        controller.currentOrder = new Order();
+        controller.currentOrder.setOrderNumber(controller.currentOrderNumber);
+        controller.currentOrderNumber++;
+        fillOrderList(controller.currentOrder);
+        controller.orders.add(controller.currentOrder);
+        controller.currentOrder.setDate(new Date(2019, 06, 03));
         buyDoneAnchor.toFront();
     }
 
@@ -159,7 +175,7 @@ public class iMatThirdCheckout extends AnchorPane {
 
         int selectedValue1 = (int) monthCardText.getSelectionModel().getSelectedItem();
         card.setValidMonth(selectedValue1);
-        
+
 
         selectedValue1 = (int) yearCardText.getSelectionModel().getSelectedItem();
         card.setValidYear(selectedValue1);

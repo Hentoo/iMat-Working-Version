@@ -32,6 +32,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     private iMatSecondCheckout secondCheckout = new iMatSecondCheckout(this);
     private iMatThirdCheckout thirdCheckout = new iMatThirdCheckout(this);
+    public int currentOrderNumber = 1;
+    public List<Order> orders = new ArrayList<>();
 
 
 
@@ -86,6 +88,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     iMatFirstCheckout firstCheckout;
 
     private List<String> difficultyList = Arrays.asList("14:00", "14:30", "15:00","15:30","16:00");
+
+    Order currentOrder;
 
 
 
@@ -386,15 +390,18 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         myPagesFlowPane.getChildren().add(mypages);
         mypages.setFavorites();
         mypages.favoritesAnchorPane.toFront();
+        lineLine.toFront();
     }
 
     @FXML
     private void gotomyPages(){
-        lineLine.toFront();
+
         myPagesAnchorPane.toFront();
         myPagesFlowPane.getChildren().clear();
         myPagesFlowPane.getChildren().add(mypages);
+
         mypages.setStart();
+        lineLine.toFront();
 
 
     }
