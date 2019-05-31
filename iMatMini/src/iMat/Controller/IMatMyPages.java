@@ -91,6 +91,9 @@ public class IMatMyPages extends AnchorPane{
     private ComboBox monthComboBox;
     @FXML
     private ComboBox yearComboBox;
+    @FXML FlowPane shoppingHistoryFlowPane;
+
+    @FXML AnchorPane purchaseHistory;
 
     String[] years = {"2019", "2020", "2021", "2022", "2023", "2024", "2025"};
     String[] months = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
@@ -159,10 +162,18 @@ public class IMatMyPages extends AnchorPane{
 
     }
 
+    private void fillHistoryWithHistory(){
+        for(int i = 0; i < controller.orders.size(); i++){
+            shoppingHistoryFlowPane.getChildren().add(new iMatHistory(controller.orders.get(i), controller));
+        }
+    }
+
     @FXML
     private void pressedOnCategory3(){
         MainMyPagesFlowPAne.toFront();
-        updateHistoryList();
+        purchaseHistory.toFront();
+        fillHistoryWithHistory();
+        //updateHistoryList();
         //TODO lägger fram hela mainsidan som ska visa de tidigare köpen samt uppdaterar listan med eventuell ny information
 
     }

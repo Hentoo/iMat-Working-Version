@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="854.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="854.0" style="-fx-background-color: white;" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="14.0" layoutY="9.0" text="Ordernummer:">
          <font>
@@ -30,4 +30,4 @@
       </Label>
       <FlowPane fx:id="itemsFlowPane" layoutY="57.0" prefHeight="245.0" prefWidth="854.0" />
    </children>
-</AnchorPane>
+</fx:root>

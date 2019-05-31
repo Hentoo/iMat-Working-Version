@@ -17,21 +17,8 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="mainAnchorPane" prefHeight="719.0" prefWidth="1280.0" stylesheets="@../Styles/MyPagestStyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="mainAnchorPane" prefHeight="719.0" prefWidth="1280.0" stylesheets="@../Styles/MyPagestStyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-      <AnchorPane layoutY="93.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
-         <children>
-            <Label layoutX="87.0" layoutY="46.0" style="-fx-background-color: #eee;" text="Köphistorik/Tidigare köp OMG WOW">
-               <font>
-                  <Font size="39.0" />
-               </font>
-            </Label>
-            <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0">
-               <content>
-                  <FlowPane fx:id="shoppingHistoryFlowPane" prefHeight="630.0" prefWidth="872.0" style="-fx-background-color: #eee;" />
-               </content>
-            </ScrollPane>
-         </children></AnchorPane>
         <AnchorPane fx:id="MainMyPagesFlowPAne" prefHeight="200.0" prefWidth="888.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <AnchorPane prefHeight="720.0" prefWidth="190.0" style="-fx-background-color: #DDD;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -117,49 +104,31 @@
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
                   </Label>
                   <Label text="Efternamn:" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
                   </Label>
                   <Label text="Telefonnummer:" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
                   </Label>
                   <Label text="Mailadress:" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
                   </Label>
                   <Label text="Adress:" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
                   </Label>
                   <Label text="Postnummer:" GridPane.rowIndex="5">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
                   </Label>
                </children>
             </GridPane>
@@ -235,41 +204,26 @@
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
                   </Label>
                   <Label text="Namn på kortinnehavare:" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
                   </Label>
                   <Label text="Månad och År" GridPane.rowIndex="5">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
                   </Label>
                   <Label text="Korttyp" GridPane.rowIndex="6">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
                   </Label>
                   <Label text="CVC/CVV" GridPane.rowIndex="7">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
                   </Label>
                   <ComboBox fx:id="cardTypeComboBox" prefWidth="215.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                   <TextField fx:id="cardNumberTextField" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
@@ -302,15 +256,25 @@
                   <Font name="Arial" size="14.0" />
                </font>
             </Label>
-            <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#saveCardInfo" prefWidth="160.0" styleClass="saveButt" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0">
-               <font>
-                  <Font size="14.0" />
-               </font></Button>
+            <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#saveCardInfo" prefWidth="160.0" styleClass="saveButt" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0" />
          </children></AnchorPane>
       <AnchorPane fx:id="helpMyPages" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0" />
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="purchaseHistory" layoutY="93.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <Label layoutX="87.0" layoutY="46.0" style="-fx-background-color: #eee;" text="Köphistorik/Tidigare köp OMG WOW">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0">
+               <content>
+                  <FlowPane fx:id="shoppingHistoryFlowPane" prefHeight="630.0" prefWidth="874.0" style="-fx-background-color: #eee;" />
+               </content>
+            </ScrollPane>
+         </children></AnchorPane>
     </children>
 </fx:root>
