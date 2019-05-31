@@ -12,7 +12,7 @@
 
 .productButton{
     -fx-border: none;
-    -fx-background-color: #b9d6dd;
+    -fx-background-color: rgb(198, 198, 198);
     -fx-background-radius: 30px;
 }
 
@@ -27,13 +27,13 @@
 
 #lesserButton{
 
-    -fx-background-color: #b9d6dd;
+    -fx-background-color: rgb(198, 198, 198);
 }
 
 
 #moreButton{
 
-    -fx-background-color: #b9d6dd;
+    -fx-background-color: rgb(198, 198, 198);
 }
 
 #addToCartButton{

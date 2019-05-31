@@ -9,6 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import se.chalmers.cse.dat216.project.CreditCard;
 import se.chalmers.cse.dat216.project.Customer;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
@@ -49,15 +50,15 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
     private TextField postcodeContainer;
     @FXML
     private Text postcodeError;
-    @FXML
-    Spinner daySpinner;
-    @FXML Spinner monthSpinner;
 
     @FXML RadioButton radioButton1;
     @FXML RadioButton radioButton2;
     @FXML RadioButton radioButton3;
     @FXML RadioButton radioButton4;
     @FXML RadioButton radioButton5;
+
+    @FXML ComboBox dayDate;
+    @FXML ComboBox monthDate;
 
     private int hasBeenDone2 = 0;
 
@@ -208,9 +209,13 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
         customer.setPostCode(postcodeContainer.getText());
     }
 
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        fillCardInfoTextFields();
 
+    }
+/*
         SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 31, 3, 1);
         daySpinner.setValueFactory(valueFactory);
 
@@ -293,6 +298,18 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
         });
 
     }
+    */
+    String[] days = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12","13","14","15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26","27","28","29","30","31"};
+    String[] months = {"januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"};
+    public void fillCardInfoTextFields(){
+        dayDate.getItems().clear();
+        dayDate.getItems().addAll(days);
+        dayDate.getSelectionModel().select("03");
+        monthDate.getItems().clear();
+        monthDate.getItems().addAll(months);
+        monthDate.getSelectionModel().select("juni");
+    }
+
 
 
 }

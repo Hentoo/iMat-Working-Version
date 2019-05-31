@@ -69,8 +69,10 @@ public class iMatFirstCheckout extends AnchorPane {
         totalPrice.setText(Integer.toString((int) totalPrices) + " SEK");
     }
 
+    iMatSecondCheckout iMatSecondCheckout;
     @FXML
     private void firstCheckoutNextButtonAction(){
+
         controller.activateSecondCheckout();
     }
 
