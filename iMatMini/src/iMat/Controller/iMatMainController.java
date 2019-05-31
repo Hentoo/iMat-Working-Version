@@ -380,6 +380,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void gotoFavorites(){
+        mypages.pressedOnCategory4();
         myPagesAnchorPane.toFront();
         myPagesFlowPane.getChildren().clear();
         myPagesFlowPane.getChildren().add(mypages);

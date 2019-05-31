@@ -170,7 +170,7 @@ public class IMatMyPages extends AnchorPane{
      * läggerFavorit-sidan överst samt laddar de favoritmarkerade articklarna till den
      */
     @FXML
-    private void pressedOnCategory4(){
+    public void pressedOnCategory4(){
         favorites = controller.favourites;
         updateFavoriteProductList();
         favoritesAnchorPane.toFront();
@@ -225,7 +225,7 @@ public class IMatMyPages extends AnchorPane{
         }
     }
 
-    private void updateFavoriteProductList() {
+    public void updateFavoriteProductList() {
         favoritesFlowPane.getChildren().clear();
 
         for (iMatProduct product : favorites) {

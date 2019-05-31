@@ -68,7 +68,7 @@ public class iMatThirdCheckout extends AnchorPane {
     }
     @FXML
     private void goBackToPayment(){
-
+        updateCreditCard();
         sequencePane.toFront();
         orderPane.toFront();
         lineLine.toFront();
@@ -156,11 +156,14 @@ public class iMatThirdCheckout extends AnchorPane {
         String selectedValue = (String) cardTypeText.getSelectionModel().getSelectedItem();
         card.setCardType(selectedValue);
 
+
         int selectedValue1 = (int) monthCardText.getSelectionModel().getSelectedItem();
         card.setValidMonth(selectedValue1);
+        
 
         selectedValue1 = (int) yearCardText.getSelectionModel().getSelectedItem();
         card.setValidYear(selectedValue1);
+
 
         card.setVerificationCode(Integer.parseInt(cvcText.getText()));
     }
