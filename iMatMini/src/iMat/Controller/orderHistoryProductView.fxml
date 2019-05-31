@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="productImage" maxHeight="90.0" maxWidth="170.0" minHeight="90.0" minWidth="170.0" prefHeight="100.0" prefWidth="170.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.Controller.OrderHistoryProductView">
+   <children>
+      <ImageView fx:id="imageField" fitHeight="67.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../imatresources/images/product_94.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="productPrize" alignment="CENTER_RIGHT" layoutX="96.0" layoutY="24.0" text="Totalt: 250 kr" textAlignment="RIGHT" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="3.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nrOfItems" layoutX="7.0" layoutY="76.0" text="4x40kr" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="110.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="productName" ellipsisString="" layoutX="95.0" layoutY="5.0" maxHeight="60.0" text="Potatisgratäng med sylt och rötter" wrapText="true" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
