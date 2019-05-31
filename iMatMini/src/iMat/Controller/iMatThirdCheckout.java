@@ -11,8 +11,11 @@ import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.CreditCard;
 import javafx.scene.shape.Line;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.Order;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class iMatThirdCheckout extends AnchorPane {
 
@@ -86,8 +89,22 @@ public class iMatThirdCheckout extends AnchorPane {
         lineLine.toFront();
     }
 
+    private void fillOrderList(Order order){
+
+        for(ShoppingItem item : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+            order.getItems().add(item);
+        }
+
+    }
+
     @FXML
     private void endPurchaseButton(){
+        controller.currentOrder = new Order();
+        controller.currentOrder.setOrderNumber(controller.currentOrderNumber);
+        controller.currentOrderNumber++;
+        fillOrderList(controller.currentOrder);
+        controller.orders.add(controller.currentOrder);
+        controller.currentOrder.setDate(new Date(2019, 06, 03));
         buyDoneAnchor.toFront();
     }
 
