@@ -7,16 +7,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
 public class OrderHistoryProductView {
 
-    public Product getProduct() {
-        return product;
-    }
-
-    private Product product;
+    ShoppingItem product;
 
     private iMatMainController controller;
 
@@ -33,7 +30,7 @@ public class OrderHistoryProductView {
     @FXML
     private Label productPrize;
 
-    public OrderHistoryProductView(Product product, iMatMainController controller){
+    public OrderHistoryProductView(ShoppingItem product, iMatMainController controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatProduct.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -45,17 +42,11 @@ public class OrderHistoryProductView {
         }
 
         this.product = product;
-        productName.setText(product.getName());
-        imageField.setImage(model.getImage(product, kImageWidth, kImageWidth*kImageRatio));
+        productName.setText(product.getProduct().getName());
+        imageField.setImage(model.getImage(product.getProduct(), kImageWidth, kImageWidth*kImageRatio));
         this.controller = controller;
+        nrOfItems.setText(product.getAmount() + "x" + product.getProduct().getPrice());
+        productPrize.setText("Totalt: " + product.getAmount()*product.getProduct().getPrice());
     }
 
-
-    public void setTotPrize(String prize){
-        productPrize.setText(prize);
-    }
-
-    public void setAmmount(int ammount){
-        nrOfItems.setText(ammount + "x" + product.getPrice());
-    }
 }
