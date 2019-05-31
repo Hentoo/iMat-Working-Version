@@ -37,12 +37,14 @@ public class iMatHistory extends AnchorPane {
         this.order = order;
         orderNumberLabel.setText(Integer.toString(order.getOrderNumber()));
         fillHistory();
+        itemsFlowPane.toFront();
 
     }
 
     private void fillHistory(){
+        itemsFlowPane.getChildren().clear();
         for(ShoppingItem shoppingItem : order.getItems()){
-            itemsFlowPane.getChildren().add(new OrderHistoryProductView(shoppingItem, this.controller));
+            itemsFlowPane.getChildren().add(new OrderHistoryProductView(shoppingItem, controller));
         }
 
     }
