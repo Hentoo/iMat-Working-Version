@@ -207,7 +207,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <TextField fx:id="lastNameContainer1" prefHeight="27.0" prefWidth="264.0" promptText="Skriv in namnet på kortinnehavare här" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="cardNameText" prefHeight="27.0" prefWidth="264.0" promptText="Skriv förnamn och efternamn" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label text="Kortnummer:" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets right="5.0" />
@@ -233,11 +233,11 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <ComboBox prefWidth="215.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <TextField fx:id="lastNameContainer11" prefHeight="27.0" prefWidth="264.0" promptText="Skriv in kortnummer här" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="lastNameContainer12" prefHeight="27.0" prefWidth="264.0" promptText="Skriv in CVC här (ex. 030)" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <ComboBox prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <ComboBox prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                  <ComboBox fx:id="cardTypeText" prefWidth="215.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="cardNumberText" prefHeight="27.0" prefWidth="264.0" promptText="Skriv in kortnummer här" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="cvcText" prefHeight="27.0" prefWidth="264.0" promptText="Skriv in CVC här (ex. 030)" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="monthCardText" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="yearCardText" prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="115.0" />
                      </GridPane.margin>
