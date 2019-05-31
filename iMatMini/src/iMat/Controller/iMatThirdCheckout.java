@@ -9,6 +9,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.CreditCard;
+import javafx.scene.shape.Line;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 import java.io.IOException;
@@ -44,6 +45,11 @@ public class iMatThirdCheckout extends AnchorPane {
     String[] years = {"2019", "2020", "2021", "2022", "2023", "2024", "2025"};
     String[] months = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
 
+    private AnchorPane orderPane;
+    @FXML
+    private AnchorPane sequencePane;
+    @FXML
+    private Line lineLine;
 
     public iMatThirdCheckout(iMatMainController controller) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatThirdCheckout.fxml"));
@@ -60,6 +66,13 @@ public class iMatThirdCheckout extends AnchorPane {
 
 
     }
+    @FXML
+    private void goBackToPayment(){
+
+        sequencePane.toFront();
+        orderPane.toFront();
+        lineLine.toFront();
+    }
 
     @FXML
     private void goBackToSecondCheckout(){
@@ -68,9 +81,9 @@ public class iMatThirdCheckout extends AnchorPane {
 
     @FXML
     private void finalizeButtonAction(){
-
         updateCreditCard();
         summaryAnchorPane.toFront();
+        lineLine.toFront();
     }
 
     @FXML
