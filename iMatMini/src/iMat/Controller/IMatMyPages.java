@@ -284,10 +284,10 @@ public class IMatMyPages extends AnchorPane{
         cardTypeComboBox.getItems().addAll("Mastercard", "Maestro", "Visa");  //oklart om dessa rader kommer att fungera
         cardTypeComboBox.getSelectionModel().select(card.getCardType());
         monthComboBox.getItems().clear();
-        monthComboBox.getItems().addAll(months);
+        monthComboBox.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
         monthComboBox.getSelectionModel().select(card.getValidMonth());
         yearComboBox.getItems().clear();
-        yearComboBox.getItems().addAll(years);
+        yearComboBox.getItems().addAll(2019, 2020, 2021, 2022, 2023, 2024, 2025);
         yearComboBox.getSelectionModel().select(card.getValidYear());
 
         int cvc = card.getVerificationCode();
@@ -323,11 +323,11 @@ public class IMatMyPages extends AnchorPane{
         String selectedValue = (String) cardTypeComboBox.getSelectionModel().getSelectedItem();
         card.setCardType(selectedValue);
 
-        selectedValue = (String) monthComboBox.getSelectionModel().getSelectedItem();
-        card.setValidMonth(Integer.parseInt(selectedValue));
+        int selectedValue1 = (int) monthComboBox.getSelectionModel().getSelectedItem();
+        card.setValidMonth(selectedValue1);
 
-        selectedValue = (String) yearComboBox.getSelectionModel().getSelectedItem();
-        card.setValidYear(Integer.parseInt(selectedValue));
+        selectedValue1 = (int) yearComboBox.getSelectionModel().getSelectedItem();
+        card.setValidYear(selectedValue1);
 
         card.setVerificationCode(Integer.parseInt(cvcField.getText()));
     }

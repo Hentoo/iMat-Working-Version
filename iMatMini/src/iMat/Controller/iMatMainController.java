@@ -31,6 +31,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     public List<iMatProduct> favourites = new ArrayList<>();
 
     private iMatSecondCheckout secondCheckout = new iMatSecondCheckout(this);
+    private iMatThirdCheckout thirdCheckout = new iMatThirdCheckout(this);
 
 
 
@@ -373,6 +374,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     public void activateSecondCheckout(){
         secondCheckoutAnchor.toFront();
         secondCheckout.fillPersonalInfoTextFields();
+        secondCheckoutFlowp.getChildren().clear();
         secondCheckoutFlowp.getChildren().add(secondCheckout);
     }
 
@@ -532,7 +534,8 @@ public void setDays(int days) {
 
     public void activateThirdCheckout(){
     thirdCheckoutAnchor.toFront();
-    thirdCheckoutFlowPane.getChildren().add(new iMatThirdCheckout(this));
+    thirdCheckout.fillCardInfoTextFields();
+    thirdCheckoutFlowPane.getChildren().add(thirdCheckout);
     }
 
     public void mainToFront(){
