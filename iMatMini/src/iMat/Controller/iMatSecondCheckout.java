@@ -211,7 +211,7 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 31, 1, 1);
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 31, 3, 1);
         daySpinner.setValueFactory(valueFactory);
 
         daySpinner.valueProperty().addListener(new ChangeListener<Integer>() {
@@ -241,7 +241,7 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
             }
         });
 
-        SpinnerValueFactory<Integer> valueFactoryMonth = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 1, 1);
+        SpinnerValueFactory<Integer> valueFactoryMonth = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 6, 1);
         monthSpinner.setValueFactory(valueFactoryMonth);
 
         monthSpinner.valueProperty().addListener(new ChangeListener<Integer>() {

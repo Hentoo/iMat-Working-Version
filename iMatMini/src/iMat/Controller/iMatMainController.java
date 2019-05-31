@@ -79,6 +79,9 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     Line lineLine;
 
 
+    IMatMyPages iMatMyPages;
+
+
     iMatFirstCheckout firstCheckout;
 
     private List<String> difficultyList = Arrays.asList("14:00", "14:30", "15:00","15:30","16:00");
@@ -379,6 +382,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         myPagesFlowPane.getChildren().clear();
         myPagesFlowPane.getChildren().add(mypages);
         mypages.setFavorites();
+        mypages.favoritesAnchorPane.toFront();
     }
 
     @FXML
@@ -388,6 +392,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         myPagesFlowPane.getChildren().clear();
         myPagesFlowPane.getChildren().add(mypages);
         mypages.setStart();
+
 
     }
 
