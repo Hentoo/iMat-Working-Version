@@ -31,7 +31,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     public List<iMatProduct> favourites = new ArrayList<>();
 
     private iMatSecondCheckout secondCheckout = new iMatSecondCheckout(this);
-    private iMatThirdCheckout thirdCheckout = new iMatThirdCheckout(this);
+    public iMatThirdCheckout thirdCheckout = new iMatThirdCheckout(this);
     public int currentOrderNumber = 1;
     public List<Order> orders = new ArrayList<>();
 
@@ -89,7 +89,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     private List<String> difficultyList = Arrays.asList("14:00", "14:30", "15:00","15:30","16:00");
 
-    Order currentOrder;
+    Order currentOrder = new Order();
 
 
 
