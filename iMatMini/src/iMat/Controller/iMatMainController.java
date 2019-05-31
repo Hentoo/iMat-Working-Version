@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -390,10 +391,31 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     private void updateProductList(List<Product> products) {
 
+        String iconPath;
+        int checkIfFound = 0;
 
         for (Product product : products) {
-            productsFlowPane.getChildren().add(new iMatProduct(product,this));   //DETTA HAR PAJAT HELA VÅR KOD
+            if (favourites.isEmpty()){
+                productsFlowPane.getChildren().add(new iMatProduct(product,this));   //DETTA HAR PAJAT HELA VÅR KOD
+                checkIfFound = 1;
+            }
+            for (iMatProduct favouriteCheck : favourites){
+                if (favouriteCheck.getProduct().getName() == product.getName()){
+                    iMatProduct productWithFavourite = new iMatProduct(product, this);
+                    productWithFavourite.setFavourite(true);
+                    iconPath = "imatresources/images/favourites.png";
+                    productWithFavourite.getFavoriteStar().setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
+                    productsFlowPane.getChildren().add(productWithFavourite);
+                    checkIfFound = 1;
+                }
+            }
+            if (checkIfFound == 0){
+                productsFlowPane.getChildren().add(new iMatProduct(product, this));
+            }
+
         }
+
+
 
     }
 
