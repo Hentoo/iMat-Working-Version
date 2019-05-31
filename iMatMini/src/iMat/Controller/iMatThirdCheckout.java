@@ -14,6 +14,8 @@ public class iMatThirdCheckout extends AnchorPane {
     @FXML
     private AnchorPane buyDoneAnchor;
     @FXML
+    private AnchorPane summaryAnchorPane;
+    @FXML
     private Button backToStart;
     @FXML
     private Button closeProgram;
@@ -43,6 +45,11 @@ public class iMatThirdCheckout extends AnchorPane {
 
     @FXML
     private void finalizeButtonAction(){
+        summaryAnchorPane.toFront();
+    }
+
+    @FXML
+    private void endPurchaseButton(){
         buyDoneAnchor.toFront();
     }
 

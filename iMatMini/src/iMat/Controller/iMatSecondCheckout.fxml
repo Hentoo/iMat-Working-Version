@@ -93,8 +93,8 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <TextField fx:id="lastNameContainer" prefHeight="27.0" prefWidth="264.0" promptText="Skriv ditt efternamn här" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="firstNameContainer" prefHeight="27.0" prefWidth="264.0" promptText="Skriv ditt förnamn här" GridPane.columnIndex="1" />
+                  <TextField fx:id="lastNameContainer" prefHeight="27.0" prefWidth="264.0" promptText="Skriv ditt efternamn här" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="phonenumberContainer" prefHeight="27.0" prefWidth="264.0" promptText="Skriv ditt telefonnummer här" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <TextField fx:id="mailContainer" prefHeight="27.0" prefWidth="264.0" promptText="Skriv din mailadress här (ex. namn@mail.se)" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <TextField fx:id="adressContainer" prefHeight="27.0" prefWidth="264.0" promptText="Skriv din adress här" GridPane.columnIndex="1" GridPane.rowIndex="4" />

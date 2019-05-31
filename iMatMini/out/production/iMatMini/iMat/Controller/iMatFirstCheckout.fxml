@@ -102,7 +102,7 @@
       <Line endX="61.0" endY="675.0" layoutX="189.0" layoutY="45.0" startX="61.0" startY="45.0" />
       <Line endX="831.0" endY="665.0" layoutX="199.0" layoutY="55.0" startX="831.0" startY="35.0" />
       <Line endX="1081.0" endY="35.0" layoutX="199.0" layoutY="55.0" startX="-199.0" startY="35.0" />
-      <Label layoutX="36.0" layoutY="66.0" prefHeight="24.0" prefWidth="128.0" text="&lt; Åter till butiken" textFill="WHITE">
+      <Label layoutX="37.0" layoutY="73.0" text="&lt; Åter till butiken" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>

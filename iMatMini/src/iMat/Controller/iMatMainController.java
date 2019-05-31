@@ -178,7 +178,6 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         startingPage.toFront();
         lineLine.toFront();
         productsFlowPane.getChildren().clear();
-        updateProductList(offers);
     }
 
     @FXML
@@ -378,10 +377,12 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void gotomyPages(){
+        lineLine.toFront();
         myPagesAnchorPane.toFront();
         myPagesFlowPane.getChildren().clear();
         myPagesFlowPane.getChildren().add(mypages);
         mypages.setStart();
+
     }
 
 
