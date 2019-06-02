@@ -32,6 +32,7 @@ public class iMatInfoViewController extends AnchorPane {
     private TextField amountField;
     @FXML
     private Button addToCart;
+    @FXML private Button favoritesInfoView;
 
     int chosenAmount = 1;
 
