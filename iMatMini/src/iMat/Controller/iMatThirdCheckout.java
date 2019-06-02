@@ -254,6 +254,9 @@ public class iMatThirdCheckout extends AnchorPane {
             setTeextfieldToIntOnly(cvcText);
             hasBeenDone++;
         }
+        if(card.getValidYear() == 2011){
+            card.setValidYear(2019);
+        }
 
         cardNumberText.clear();
         cardNumberText.appendText(card.getCardNumber());
