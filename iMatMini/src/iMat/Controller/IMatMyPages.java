@@ -320,10 +320,8 @@ public class IMatMyPages extends AnchorPane{
         yearComboBox.getItems().clear();
         yearComboBox.getItems().addAll(2019, 2020, 2021, 2022, 2023, 2024, 2025);
         yearComboBox.getSelectionModel().select(card.getValidYear());
-
-        int cvc = card.getVerificationCode();
         cvcField.clear();
-        cvcField.appendText(Integer.toString(cvc));
+        cvcField.appendText(Integer.toString(card.getVerificationCode()));
     }
 
     /**
@@ -348,6 +346,8 @@ public class IMatMyPages extends AnchorPane{
     private void updateCreditCard() {
         CreditCard card = model.getCreditCard();
 
+        card.setVerificationCode(Integer.parseInt(cvcField.getText()));
+
         card.setCardNumber(cardNumberTextField.getText());
         card.setHoldersName(nameCardHolder.getText());
 
@@ -360,7 +360,6 @@ public class IMatMyPages extends AnchorPane{
         selectedValue1 = (int) yearComboBox.getSelectionModel().getSelectedItem();
         card.setValidYear(selectedValue1);
 
-        card.setVerificationCode(Integer.parseInt(cvcField.getText()));
     }
 
 
