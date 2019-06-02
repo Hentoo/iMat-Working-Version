@@ -144,7 +144,20 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void keepBackgroundDarkUnder(Button button){
 
         if(currentUnderButton != null){
-            currentUnderButton.setStyle("-fx-background-color: white");
+            StringBuilder normal = new StringBuilder();
+            normal.append("}\n");
+            normal.append("Button:hover{\n" +
+                    "    -fx-background-color: #7a94a2;\n" +
+                    "    -fx-border-bottom: 2px;\n" +
+                    "    -fx-border-color: #929292;\n" +
+                    "}\n" +
+                    "\n" +
+                    "Button:pressed{\n" +
+                    "    -fx-background-color: GREY;\n" +
+                    "    -fx-border-bottom: 2px;\n" +
+                    "    -fx-border-color: #929292;\n" +
+                    "}");
+            currentUnderButton.setStyle(normal.toString());
         }
         button.setStyle("-fx-background-color: #7a94a2");
         currentUnderButton = button;
@@ -153,13 +166,27 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void keepBackgroundDark(Button button){
 
         if(currentButton != null){
-            currentButton.setStyle("-fx-background-color: white");
+            StringBuilder normal = new StringBuilder();
+            normal.append("}\n");
+            normal.append("Button:hover{\n" +
+                    "    -fx-background-color: DARKGREY;\n" +
+                    "    -fx-border-bottom: 2px;\n" +
+                    "    -fx-border-color: #929292;\n" +
+                    "}\n" +
+                    "\n" +
+                    "Button:pressed{\n" +
+                    "    -fx-background-color: GREY;\n" +
+                    "    -fx-border-bottom: 2px;\n" +
+                    "    -fx-border-color: #929292;\n" +
+                    "}");
+            currentButton.setStyle(normal.toString());
         }
         button.setStyle("-fx-background-color: grey");
         currentButton = button;
         if(currentUnderButton != null) {
             currentUnderButton.setStyle("-fx-background-color: lightblue");
         }
+
     }
 
 
@@ -670,12 +697,7 @@ public void setDays(int days) {
 
     }
 
-    public void activateInfoView(Product product){
-        infoViewAnchor.toFront();
-        infoViewPane.getChildren().clear();
-        infoViewPane.getChildren().add(new iMatInfoViewController(product, this));
 
-    }
 
     public void activateFirstCheckout(){
         firstCheckoutAnchor.toFront();
