@@ -19,7 +19,9 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class iMatThirdCheckout extends AnchorPane {
@@ -108,10 +110,12 @@ public class iMatThirdCheckout extends AnchorPane {
     }
 
     private void fillOrderList(Order order){
+        List<ShoppingItem> orderHistoryList = new ArrayList<>();
 
-        order.setItems(IMatDataHandler.getInstance().getShoppingCart().getItems());
-
-
+        for (ShoppingItem si : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+            orderHistoryList.add(si);
+        }
+        order.setItems(orderHistoryList);
     }
 
     @FXML
@@ -130,9 +134,11 @@ public class iMatThirdCheckout extends AnchorPane {
     private void backToStart(){
         buyDoneAnchor.toBack();
         controller.mainToFront();
-
+        controller.mainScreen.toFront();
+        controller.startingPage.toFront();
         controller.shoppingCartArea.getChildren().clear();
-      //  IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
+        IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
+        controller.updateTotalPrice();
 
 
     }
