@@ -167,6 +167,7 @@ public class iMatThirdCheckout extends AnchorPane {
     @FXML
     private void finalizeButtonAction(){ //TODO fixa så att kortInfo sparas
         int fieldChecker = 3;
+        updateCreditCard();
 
         if (cardNumberText.getText().isEmpty()){
             cardNumberError.toFront();
@@ -194,7 +195,6 @@ public class iMatThirdCheckout extends AnchorPane {
             lineLine.toFront();
             fillPersonalInfo();
         }
-        updateCreditCard();
     }
 
 

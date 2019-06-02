@@ -213,6 +213,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        shoppingCartArea.getChildren().clear();
         mainScreen.toFront();
         startingPage.toFront();
         lineLine.toFront();
