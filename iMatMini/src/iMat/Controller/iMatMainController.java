@@ -39,8 +39,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     public AnchorPane mainAnchorPane;
 
-    @FXML
-    private Button categoryButton1;
+
     @FXML
     private ImageView imageField;
     @FXML
@@ -73,6 +72,33 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML private AnchorPane myPagesAnchorPane;
     @FXML private FlowPane myPagesFlowPane;
 
+    @FXML private Button categoryButton1;
+    @FXML private Button categoryButton2;
+    @FXML private Button categoryButton3;
+    @FXML private Button categoryButton4;
+    @FXML private Button categoryButton5;
+    @FXML private Button categoryButton6;
+    @FXML private Button categoryButton7;
+    @FXML private Button categoryButton8;
+    @FXML private Button categoryButton9;
+
+    @FXML private Button pastaButton;
+    @FXML private Button podButton;
+    @FXML private Button vegetableButton;
+    @FXML private Button rootButton;
+    @FXML private Button seedButton;
+    @FXML private Button exoticButton;
+    @FXML private Button citrusButton;
+    @FXML private Button berryButton;
+    @FXML private Button flourButton;
+    @FXML private Button potatoButton;
+    @FXML private Button coldDrinks;
+    @FXML private Button hotDrinks;
+
+
+
+
+
     @FXML
     Line lineLine;
 
@@ -95,8 +121,9 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
 
 
+    Button currentUnderButton;
 
-
+    Button currentButton;
 
 
 
@@ -106,6 +133,27 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     List<Product> offers = IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES);
 
+
+    private void keepBackgroundDarkUnder(Button button){
+
+        if(currentUnderButton != null){
+            currentUnderButton.setStyle("-fx-background-color: white");
+        }
+        button.setStyle("-fx-background-color: #7a94a2");
+        currentUnderButton = button;
+    }
+
+    private void keepBackgroundDark(Button button){
+
+        if(currentButton != null){
+            currentButton.setStyle("-fx-background-color: white");
+        }
+        button.setStyle("-fx-background-color: grey");
+        currentButton = button;
+        if(currentUnderButton != null) {
+            currentUnderButton.setStyle("-fx-background-color: lightblue");
+        }
+    }
 
 
     void populateFlowPane(Product product) {
@@ -157,6 +205,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
 
 
+
+
     @FXML
     private void pressedOnCheckout(){
         activateFirstCheckout();
@@ -191,6 +241,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         startingPage.toBack();
         fruitCategory.toFront();
         lineLine.toFront();
+        keepBackgroundDark(categoryButton1);
        // categoryButton1.setStyle("-fx-background-color: DARKGREY;");
 
 
@@ -207,6 +258,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         startingPage.toBack();
         greenCategory.toFront();
         lineLine.toFront();
+        keepBackgroundDark(categoryButton2);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HERB));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.ROOT_VEGETABLE));
@@ -220,6 +272,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         mainScreen.toFront();
         startingPage.toBack();
         lineLine.toFront();
+        keepBackgroundDark(categoryButton3);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BREAD));
 
 
@@ -230,6 +283,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         mainScreen.toFront();
         startingPage.toBack();
         lineLine.toFront();
+        keepBackgroundDark(categoryButton4);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES));
 
     }
@@ -239,6 +293,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         mainScreen.toFront();
         startingPage.toBack();
         lineLine.toFront();
+        keepBackgroundDark(categoryButton5);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT));
     }
     @FXML
@@ -247,6 +302,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         mainScreen.toFront();
         startingPage.toBack();
         lineLine.toFront();
+        keepBackgroundDark(categoryButton6);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FISH));
 
     }
@@ -257,6 +313,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         startingPage.toBack();
         pastaCategory.toFront();
         lineLine.toFront();
+        keepBackgroundDark(categoryButton7);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FLOUR_SUGAR_SALT));
@@ -269,6 +326,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         startingPage.toBack();
         drinkCategory.toFront();
         lineLine.toFront();
+        keepBackgroundDark(categoryButton8);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS));
 
@@ -280,6 +338,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         mainScreen.toFront();
         startingPage.toBack();
         lineLine.toFront();
+        keepBackgroundDark(categoryButton9);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET));
     }
 
@@ -287,12 +346,14 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnPasta(){
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
+        keepBackgroundDarkUnder(pastaButton);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA));
     }
     @FXML
     private void pressedOnPotato(){
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
+        keepBackgroundDarkUnder(potatoButton);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
     }
 
@@ -300,6 +361,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnFlour(){
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
+        keepBackgroundDarkUnder(flourButton);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FLOUR_SUGAR_SALT));
     }
 
@@ -307,18 +369,21 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnRoot(){
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
+        keepBackgroundDarkUnder(rootButton);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.ROOT_VEGETABLE));
     }
 
     @FXML
     private void pressedOnSeed(){
         productsFlowPane.getChildren().clear();
+        keepBackgroundDarkUnder(pastaButton);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.NUTS_AND_SEEDS));
     }
     
     @FXML void pressedOnPod(){
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
+        keepBackgroundDarkUnder(podButton);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.POD));
 
     }
@@ -327,6 +392,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnVegetable(){
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
+        keepBackgroundDarkUnder(vegetableButton);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.VEGETABLE_FRUIT));
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HERB));
     }
@@ -335,6 +401,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnHot(){
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
+        keepBackgroundDarkUnder(hotDrinks);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
     }
 
@@ -342,6 +409,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnCold(){
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
+        keepBackgroundDarkUnder(coldDrinks);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS));
     }
 
@@ -349,12 +417,14 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnExotic(){
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
+        keepBackgroundDarkUnder(exoticButton);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.EXOTIC_FRUIT));
     }
     @FXML
     private void pressedOnCitrus(){
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
+        keepBackgroundDarkUnder(citrusButton);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.CITRUS_FRUIT));
     }
 
@@ -362,6 +432,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     private void pressedOnBerry(){
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
+        keepBackgroundDarkUnder(berryButton);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.BERRY));
     }
 
