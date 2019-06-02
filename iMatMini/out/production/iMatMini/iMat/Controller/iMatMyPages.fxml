@@ -5,7 +5,6 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -18,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="mainAnchorPane" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../Styles/MyPagestStyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="mainAnchorPane" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../Styles/MyPagestStyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
       <AnchorPane fx:id="favoritesAnchorPane" layoutX="10.0" layoutY="103.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
          <children>
@@ -128,19 +127,6 @@
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="purchaseHistory" layoutY="93.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
-         <children>
-            <Label layoutX="87.0" layoutY="46.0" style="-fx-background-color: #eee;" text="Köphistorik/Tidigare köp OMG WOW">
-               <font>
-                  <Font size="39.0" />
-               </font>
-            </Label>
-            <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0">
-               <content>
-                  <FlowPane fx:id="shoppingHistoryFlowPane" prefHeight="630.0" prefWidth="874.0" style="-fx-background-color: #eee;" />
-               </content>
-            </ScrollPane>
-         </children></AnchorPane>
         <AnchorPane fx:id="MainMyPagesFlowPAne" prefHeight="200.0" prefWidth="888.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <AnchorPane prefHeight="720.0" prefWidth="190.0" style="-fx-background-color: #DDD;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -302,5 +288,18 @@
             </Label>
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="purchaseHistory" layoutY="93.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <Label alignment="CENTER" layoutX="87.0" layoutY="46.0" style="-fx-background-color: #eee;" text="Köphistorik" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0">
+               <content>
+                  <FlowPane fx:id="shoppingHistoryFlowPane" prefHeight="491.0" prefWidth="874.0" style="-fx-background-color: #eee; -fx-padding: 10px;" />
+               </content>
+            </ScrollPane>
+         </children></AnchorPane>
     </children>
 </fx:root>
