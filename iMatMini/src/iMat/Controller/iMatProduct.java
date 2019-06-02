@@ -216,6 +216,8 @@ public class iMatProduct extends AnchorPane {
 
         }
 
+        controller.mypages.updateFavoriteProductList();
+
     }
 
 }

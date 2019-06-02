@@ -259,6 +259,7 @@ public class IMatMyPages extends AnchorPane{
             String iconPath;
                 iconPath = "imatresources/images/favourites.png";
                 addedProduct.favoriteStar.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
+                addedProduct.isFavourite = true;
             favoritesFlowPane.getChildren().add(addedProduct);
         }
     }
