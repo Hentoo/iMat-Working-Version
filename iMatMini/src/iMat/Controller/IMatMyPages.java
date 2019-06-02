@@ -312,14 +312,19 @@ public class IMatMyPages extends AnchorPane{
         nameCardHolder.appendText(card.getHoldersName());
 
         cardTypeComboBox.getItems().clear();
+
         cardTypeComboBox.getItems().addAll("Mastercard", "Maestro", "Visa");  //oklart om dessa rader kommer att fungera
         cardTypeComboBox.getSelectionModel().select(card.getCardType());
+
         monthComboBox.getItems().clear();
         monthComboBox.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
-        monthComboBox.getSelectionModel().select(card.getValidMonth());
+        monthComboBox.getSelectionModel().select(card.getValidMonth()-1);
+
         yearComboBox.getItems().clear();
         yearComboBox.getItems().addAll(2019, 2020, 2021, 2022, 2023, 2024, 2025);
-        yearComboBox.getSelectionModel().select(card.getValidYear());
+        yearComboBox.getSelectionModel().select(card.getValidYear()-2019);
+
+        int cvc = card.getVerificationCode();
         cvcField.clear();
         cvcField.appendText(Integer.toString(card.getVerificationCode()));
     }
