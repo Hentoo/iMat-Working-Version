@@ -122,11 +122,13 @@ public class IMatMyPages extends AnchorPane{
     int hasBeenDone2 = 0;
 
 
+
     @FXML
     private void pressedOnLogoButton(){
         //TODO
 
         controller.mainScreen.toFront();
+        controller.startingPage.toFront();
         controller.lineLine.toFront();
         mainAnchorPane.toBack();
 

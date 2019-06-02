@@ -48,6 +48,18 @@ public class iMatFirstCheckout extends AnchorPane {
     }
 
     @FXML
+    private void pressedOnLogoButton(){
+        //TODO
+
+
+        controller.mainScreen.toFront();
+        controller.startingPage.toFront();
+        controller.lineLine.toFront();
+
+    }
+
+
+    @FXML
     public void toStart(){
         controller.mainScreen.toFront();
 }
