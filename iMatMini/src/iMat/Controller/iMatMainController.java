@@ -670,12 +670,7 @@ public void setDays(int days) {
 
     }
 
-    public void activateInfoView(Product product){
-        infoViewAnchor.toFront();
-        infoViewPane.getChildren().clear();
-        infoViewPane.getChildren().add(new iMatInfoViewController(product, this));
 
-    }
 
     public void activateFirstCheckout(){
         firstCheckoutAnchor.toFront();

@@ -59,9 +59,9 @@
                   <Font name="Arial Italic" size="31.0" />
                </font>
             </Text>
-            <Button fx:id="favoritesInfoView" layoutX="292.0" layoutY="128.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="77.0" style="-fx-background-color: white;">
+            <Button fx:id="favoritesInfoView" layoutX="292.0" layoutY="128.0" mnemonicParsing="false" onMousePressed="#addToFavourites" prefHeight="71.0" prefWidth="77.0" style="-fx-background-color: white;">
                <graphic>
-                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="starImage" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../imatresources/images/empty_star.png" />
                      </image>

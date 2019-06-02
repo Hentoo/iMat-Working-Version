@@ -66,7 +66,7 @@ public class iMatProduct extends AnchorPane {
         return product;
     }
 
-    private Product product;
+    public Product product;
 
     int chosenAmount = 1;
 
@@ -105,7 +105,9 @@ public class iMatProduct extends AnchorPane {
 
     @FXML
     private void onInfoClick(){
-        controller.activateInfoView(product);
+            controller.infoViewAnchor.toFront();
+            controller.infoViewPane.getChildren().clear();
+            controller.infoViewPane.getChildren().add(new iMatInfoViewController(product, this.controller, this));
     }
 
     @FXML
@@ -185,7 +187,7 @@ public class iMatProduct extends AnchorPane {
     }
 
     @FXML
-    private void addToFavourites() {
+    public void addToFavourites() {
 
 
         String iconPath;
