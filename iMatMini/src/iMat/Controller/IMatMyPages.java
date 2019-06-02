@@ -9,6 +9,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.fxml.FXMLLoader;
@@ -254,7 +255,11 @@ public class IMatMyPages extends AnchorPane{
         favoritesFlowPane.getChildren().clear();
 
         for (iMatProduct product : favorites) {
-            favoritesFlowPane.getChildren().add(new iMatProduct(product.getProduct(), this.controller));
+            iMatProduct addedProduct = new iMatProduct(product.getProduct(), this.controller);
+            String iconPath;
+                iconPath = "imatresources/images/favourites.png";
+                addedProduct.favoriteStar.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
+            favoritesFlowPane.getChildren().add(addedProduct);
         }
     }
 
