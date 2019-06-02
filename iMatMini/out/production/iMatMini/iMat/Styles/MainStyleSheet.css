@@ -10,9 +10,14 @@
     -fx-background-color: #5277ff;
 }
 
-#logoButt{
+.logoButt{
     -fx-background-color: #5277ff;
 }
+.logoButt:hover{
+    -fx-background-color: #3957ae;
+
+}
+
 
 .sideButt{
     -fx-background-color: WHITE;
@@ -57,9 +62,7 @@
     -fx-border-color: #929292;
 }
 
-.categoryButt:focused{
-    -fx-background-color: #7a94a2;
-}
+
 
 
 

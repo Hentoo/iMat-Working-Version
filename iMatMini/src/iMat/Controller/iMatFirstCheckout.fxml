@@ -86,7 +86,7 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <Button maxWidth="195.0" minHeight="90.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="260.0" styleClass="topTop" wrapText="true" GridPane.halignment="LEFT">
+                  <Button maxWidth="195.0" minHeight="90.0" mnemonicParsing="false" onMousePressed="#pressedOnLogoButton" prefHeight="90.0" prefWidth="260.0" styleClass="logoButt" wrapText="true" GridPane.halignment="LEFT">
                      <graphic>
                         <ImageView fx:id="logo" fitHeight="70.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true" styleClass="topTop">
                            <image>

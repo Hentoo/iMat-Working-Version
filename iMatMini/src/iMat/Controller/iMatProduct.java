@@ -28,7 +28,7 @@ import java.util.ListIterator;
 public class iMatProduct extends AnchorPane {
 
     @FXML
-    private ImageView imageField;
+    public ImageView imageField;
 
     public ImageView getFavoriteStar() {
         return favoriteStar;

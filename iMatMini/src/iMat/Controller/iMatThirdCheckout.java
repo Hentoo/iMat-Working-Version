@@ -1,6 +1,7 @@
 package iMat.Controller;
 
 import iMat.IMat;
+import iMat.Model;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -17,7 +18,9 @@ import javafx.scene.shape.Line;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class iMatThirdCheckout extends AnchorPane {
@@ -155,22 +158,19 @@ public class iMatThirdCheckout extends AnchorPane {
         fillPersonalInfo();
     }
 
+
     private void fillOrderList(Order order){
+        List<ShoppingItem> orderHistoryList = new ArrayList<>();
 
-        order.setItems(IMatDataHandler.getInstance().getShoppingCart().getItems());
-
-
+        for (ShoppingItem si : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+            orderHistoryList.add(si);
+        }
+        order.setItems(orderHistoryList);
     }
 
     @FXML
     private void endPurchaseButton(){
-        controller.currentOrder = new Order();
-        controller.currentOrder.setOrderNumber(controller.currentOrderNumber);
-        controller.currentOrderNumber++;
-        fillOrderList(controller.currentOrder);
-        controller.orders.add(controller.currentOrder);
-        controller.currentOrder.setDate(new Date(2019, 06, 03));
-
+        IMatDataHandler.getInstance().placeOrder(true);
         buyDoneAnchor.toFront();
     }
 
@@ -178,15 +178,18 @@ public class iMatThirdCheckout extends AnchorPane {
     private void backToStart(){
         buyDoneAnchor.toBack();
         controller.mainToFront();
-
+        controller.mainScreen.toFront();
+        controller.startingPage.toFront();
         controller.shoppingCartArea.getChildren().clear();
-      //  IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
+        IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
+        controller.updateTotalPrice();
 
 
     }
 
     @FXML
     private void closeProgramAction(){
+        Model.getInstance().shutDown();
         System.exit(0);
     }
 

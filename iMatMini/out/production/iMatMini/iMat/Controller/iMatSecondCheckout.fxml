@@ -243,9 +243,9 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <Button maxWidth="195.0" minHeight="88.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="195.0" styleClass="topTop" wrapText="true">
+                  <Button maxWidth="195.0" minHeight="88.0" mnemonicParsing="false" onMousePressed="#pressedOnLogoButton" prefHeight="88.0" prefWidth="195.0" styleClass="topTop" wrapText="true">
                      <graphic>
-                        <ImageView id="logo" fx:id="logo" fitHeight="70.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="logo" fitHeight="70.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true" styleClass="logoButt">
                            <image>
                               <Image url="@../../imatresources/images/LogoiMat.png" />
                            </image>
