@@ -469,6 +469,15 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     }
 
+    private boolean checkIfInCart(Product product){
+        for(ShoppingItem item : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+            if (item.getProduct().getName().equals(product.getName())){
+                return true;
+            }
+        }
+        return false;
+    }
+
     private boolean checkIfInFavourites(Product product){
 
         for(iMatProduct favorit : favourites){
@@ -485,12 +494,28 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
 
         for (Product product : products){
-            if (checkIfInFavourites(product)){
+            if(checkIfInFavourites(product) && checkIfInCart(product)){
+                iMatProduct productWithFavouriteAndCart = new iMatProduct(product, this);
+                productWithFavouriteAndCart.setFavourite(true);
+                iconPath = "imatresources/images/favourites.png";
+                productWithFavouriteAndCart.getFavoriteStar().setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
+                productWithFavouriteAndCart.imageField.toBack();
+                productWithFavouriteAndCart.backProduct.toBack();
+                productsFlowPane.getChildren().add(productWithFavouriteAndCart);
+            }
+            else if (checkIfInFavourites(product)){
                 iMatProduct productWithFavourite = new iMatProduct(product, this);
                 productWithFavourite.setFavourite(true);
                 iconPath = "imatresources/images/favourites.png";
                 productWithFavourite.getFavoriteStar().setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
                 productsFlowPane.getChildren().add(productWithFavourite);
+
+            }
+            else if (checkIfInCart(product)){
+                iMatProduct productInCart = new iMatProduct(product, this);
+                productInCart.imageField.toBack();
+                productInCart.backProduct.toBack();
+                productsFlowPane.getChildren().add(productInCart);
 
             }
             else {
