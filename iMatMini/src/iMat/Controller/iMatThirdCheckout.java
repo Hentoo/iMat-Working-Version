@@ -100,6 +100,18 @@ public class iMatThirdCheckout extends AnchorPane {
 
 
     }
+
+    @FXML
+    private void pressedOnLogoButton(){
+        //TODO
+
+
+        controller.mainScreen.toFront();
+        controller.startingPage.toFront();
+        controller.lineLine.toFront();
+
+    }
+
     @FXML
     private void goBackToPayment(){
         summaryAnchorPane.toBack();

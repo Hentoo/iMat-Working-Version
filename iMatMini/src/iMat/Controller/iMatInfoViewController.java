@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -32,8 +33,13 @@ public class iMatInfoViewController extends AnchorPane {
     private TextField amountField;
     @FXML
     private Button addToCart;
+    @FXML private Button favoritesInfoView;
+    @FXML private ImageView starImage;
 
     int chosenAmount = 1;
+
+    boolean isFavourite;
+    String iconPath;
 
 
     private Product product;
@@ -41,9 +47,10 @@ public class iMatInfoViewController extends AnchorPane {
     private Model model = Model.getInstance();
 
     private iMatMainController controller;
+    iMatProduct pekarProduct;
 
 
-    public iMatInfoViewController(Product product, iMatMainController controller){
+    public iMatInfoViewController(Product product, iMatMainController controller, iMatProduct iMatProduct){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatInfoView.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -59,6 +66,17 @@ public class iMatInfoViewController extends AnchorPane {
         this.infoViewProductName.setText(product.getName());
         this.controller = controller;
         updateAmountBar();
+        this.isFavourite = isFavourite;
+        this.pekarProduct = iMatProduct;
+
+        if(iMatProduct.isFavourite){
+            iconPath = "imatresources/images/favourites.png";
+            starImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
+        }
+        else{
+            iconPath = "imatresources/images/empty_star.png";
+            starImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
+        }
 
 
 
@@ -132,6 +150,21 @@ public class iMatInfoViewController extends AnchorPane {
         updateAmountBar();
         controller.mainToFront();
 
+    }
+
+    @FXML
+    private void addToFavourites() {
+
+        pekarProduct.addToFavourites();
+
+        if(pekarProduct.isFavourite){
+            iconPath = "imatresources/images/favourites.png";
+            starImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
+        }
+        else{
+            iconPath = "imatresources/images/empty_star.png";
+            starImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
+        }
     }
 
 

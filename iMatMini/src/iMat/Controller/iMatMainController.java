@@ -244,6 +244,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnCheckout(){
+        categoryActive=0;
         activateFirstCheckout();
     }
 
@@ -262,6 +263,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnLogoButton(){
+        categoryActive=0;
         if(currentButton != null){
             currentButton.setStyle("-fx-background-color: white");
         }
@@ -524,6 +526,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void gotoFavorites(){
+        categoryActive=0;
         mypages.pressedOnCategory4();
         myPagesAnchorPane.toFront();
         myPagesFlowPane.getChildren().clear();
@@ -536,6 +539,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void gotomyPages(){
+        categoryActive=0;
 
         myPagesAnchorPane.toFront();
         myPagesFlowPane.getChildren().clear();
@@ -693,12 +697,7 @@ public void setDays(int days) {
 
     }
 
-    public void activateInfoView(Product product){
-        infoViewAnchor.toFront();
-        infoViewPane.getChildren().clear();
-        infoViewPane.getChildren().add(new iMatInfoViewController(product, this));
 
-    }
 
     public void activateFirstCheckout(){
         firstCheckoutAnchor.toFront();
