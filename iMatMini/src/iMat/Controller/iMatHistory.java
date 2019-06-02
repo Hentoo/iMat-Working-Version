@@ -36,6 +36,7 @@ public class iMatHistory extends AnchorPane {
         this.controller = controller;
         this.order = order;
         orderNumberLabel.setText(Integer.toString(order.getOrderNumber()));
+        dateLabel.setText(order.getDate().toString());
         fillHistory();
         itemsFlowPane.toFront();
 

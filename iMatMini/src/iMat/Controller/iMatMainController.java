@@ -577,7 +577,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
 
         for (Product product : products){
-            if(checkIfInFavourites(product) && checkIfInCart(product)){
+            if(IMatDataHandler.getInstance().isFavorite(product) && checkIfInCart(product)){
                 iMatProduct productWithFavouriteAndCart = new iMatProduct(product, this);
                 productWithFavouriteAndCart.setFavourite(true);
                 iconPath = "imatresources/images/favourites.png";
@@ -586,7 +586,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
                 productWithFavouriteAndCart.backProduct.toBack();
                 productsFlowPane.getChildren().add(productWithFavouriteAndCart);
             }
-            else if (checkIfInFavourites(product)){
+            else if (IMatDataHandler.getInstance().isFavorite(product)){
                 iMatProduct productWithFavourite = new iMatProduct(product, this);
                 productWithFavourite.setFavourite(true);
                 iconPath = "imatresources/images/favourites.png";

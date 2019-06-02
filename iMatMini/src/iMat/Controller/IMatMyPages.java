@@ -254,8 +254,8 @@ public class IMatMyPages extends AnchorPane{
     public void updateFavoriteProductList() {
         favoritesFlowPane.getChildren().clear();
 
-        for (iMatProduct product : favorites) {
-            iMatProduct addedProduct = new iMatProduct(product.getProduct(), this.controller);
+        for (Product product : IMatDataHandler.getInstance().favorites()) {
+            iMatProduct addedProduct = new iMatProduct(product, this.controller);
             String iconPath;
                 iconPath = "imatresources/images/favourites.png";
                 addedProduct.favoriteStar.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));

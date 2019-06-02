@@ -190,29 +190,20 @@ public class iMatProduct extends AnchorPane {
     public void addToFavourites() {
 
 
+
         String iconPath;
         iMatProduct pekarProduct = this;
 
-        if (!isFavourite) {
-            isFavourite = true;
+        if (!IMatDataHandler.getInstance().isFavorite(pekarProduct.product)) {
+            IMatDataHandler.getInstance().favorites().add(pekarProduct.product);
             iconPath = "imatresources/images/favourites.png";
-            controller.favourites.add(pekarProduct);
             favoriteStar.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
         }
 
         else {
-
-            int i = 0;
-            for (int j = 0; j < controller.favourites.size(); j++) {
-                if (controller.favourites.get(j).product.getName() == this.product.getName()) {
-                    i = j;
-                }
-            }
-
-            controller.favourites.remove(i);
-            isFavourite = false;
             iconPath = "imatresources/images/empty_star.png";
             favoriteStar.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
+            IMatDataHandler.getInstance().removeFavorite(pekarProduct.product);
 
         }
 
