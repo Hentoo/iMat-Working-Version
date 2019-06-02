@@ -263,7 +263,7 @@
             <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#savePersonalInfo" prefWidth="160.0" styleClass="saveButt" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="favoritesAnchorPane" layoutX="10.0" layoutY="103.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
+      <AnchorPane fx:id="favoritesAnchorPane" layoutX="10.0" layoutY="103.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
          <children>
             <Label layoutX="87.0" layoutY="46.0" style="-fx-background-color: #eee;" text="Här ser du dina favoritmarkerade varor. du kan antingen handla bland dem som vanligt eller välja bort de från sidan genom att klicka på stjärnan." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
                <font>
