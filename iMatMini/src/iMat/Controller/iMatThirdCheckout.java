@@ -80,8 +80,6 @@ public class iMatThirdCheckout extends AnchorPane {
     @FXML AnchorPane cvcError;
 
 
-    String[] years = {"2019", "2020", "2021", "2022", "2023", "2024", "2025"};
-    String[] months = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
     @FXML
     private AnchorPane orderPane;
     @FXML
@@ -266,10 +264,10 @@ public class iMatThirdCheckout extends AnchorPane {
         cardTypeText.getSelectionModel().select(card.getCardType());
         monthCardText.getItems().clear();
         monthCardText.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
-        monthCardText.getSelectionModel().select(card.getValidMonth());
+        monthCardText.getSelectionModel().select(card.getValidMonth()-1);
         yearCardText.getItems().clear();
         yearCardText.getItems().addAll(2019, 2020, 2021, 2022, 2023, 2024, 2025);
-        yearCardText.getSelectionModel().select(card.getValidYear());
+        yearCardText.getSelectionModel().select(card.getValidYear()-2019);
 
         int cvc = card.getVerificationCode();
         cvcText.clear();
