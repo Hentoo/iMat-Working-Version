@@ -3,7 +3,14 @@ package iMat.Controller;
 import iMat.Model;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
+import iMat.Model;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
@@ -98,6 +105,16 @@ public class IMatMyPages extends AnchorPane{
     String[] years = {"2019", "2020", "2021", "2022", "2023", "2024", "2025"};
     String[] months = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
 
+    @FXML
+    private Button categoryButton6; //TODO 6 HJÄLP
+    @FXML
+    private Button categoryButton4; //TODO 4 Favoriter
+    @FXML
+    private Button categoryButton3; //TODO 3 KöpHistorik
+    @FXML
+    private Button categoryButton2; //TODO 2 Personliga uppgifter -
+    @FXML
+    private Button categoryButton1; //TODO 1 Betalningssätt -
 
     @FXML
     private Button categoryButton6; //TODO 6 HJÄLP
@@ -193,6 +210,9 @@ public class IMatMyPages extends AnchorPane{
 
     @FXML
     private void pressedOnCategory6(){
+
+        helpMyPages.toFront();
+        //TODO visar "startsida" för denna vy, med andra ord hjälpen med vad vyn är till för
 
         helpMyPages.toFront();
         //TODO visar "startsida" för denna vy, med andra ord hjälpen med vad vyn är till för
