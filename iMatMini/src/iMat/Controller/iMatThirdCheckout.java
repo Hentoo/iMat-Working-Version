@@ -107,7 +107,7 @@ public class iMatThirdCheckout extends AnchorPane {
     private void pressedOnLogoButton(){
         //TODO
 
-
+        controller.hej();
         controller.mainScreen.toFront();
         controller.startingPage.toFront();
         controller.lineLine.toFront();

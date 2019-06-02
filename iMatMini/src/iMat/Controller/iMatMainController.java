@@ -244,6 +244,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnCheckout(){
+        hej();
         categoryActive=0;
         activateFirstCheckout();
     }
@@ -263,7 +264,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnLogoButton(){
-        
+        hej();
         categoryActive=0;
         if(currentButton != null){
             StringBuilder normal = new StringBuilder();
@@ -540,6 +541,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void gotoFavorites(){
+        hej();
         categoryActive=0;
         mypages.pressedOnCategory4();
         myPagesAnchorPane.toFront();
@@ -554,7 +556,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private void gotomyPages(){
         categoryActive=0;
-
+        hej();
         myPagesAnchorPane.toFront();
         myPagesFlowPane.getChildren().clear();
         myPagesFlowPane.getChildren().add(mypages);
@@ -689,8 +691,10 @@ public void setDays(int days) {
 
     @FXML
     private void handleSearchAction(ActionEvent event) {
+        hej();
         productsFlowPane.getChildren().clear();
         startingPage.toBack();
+        mainScreen.toFront();
         lineLine.toFront();
         List<Product> matches = dataHandler.findProducts(searchField.getText());
         updateProductList(matches);
