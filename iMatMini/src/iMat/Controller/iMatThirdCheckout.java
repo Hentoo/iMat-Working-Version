@@ -75,6 +75,10 @@ public class iMatThirdCheckout extends AnchorPane {
     private TextField cvcText;
     @FXML
     public FlowPane summaryFlowPane;
+    @FXML AnchorPane cardNameError;
+    @FXML AnchorPane cardNumberError;
+    @FXML AnchorPane cvcError;
+
 
     String[] years = {"2019", "2020", "2021", "2022", "2023", "2024", "2025"};
     String[] months = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
@@ -164,10 +168,34 @@ public class iMatThirdCheckout extends AnchorPane {
      */
     @FXML
     private void finalizeButtonAction(){ //TODO fixa så att kortInfo sparas
-        //saveCardInfo();
-        summaryAnchorPane.toFront();
-        lineLine.toFront();
-        fillPersonalInfo();
+        int fieldChecker = 3;
+
+        if (cardNumberText.getText().isEmpty()){
+            cardNumberError.toFront();
+        }
+        else {
+            cardNameError.toBack();
+            fieldChecker--;
+        }
+        if (cardNameText.getText().isEmpty()){
+            cardNameError.toFront();
+        }
+        else {
+            cardNameError.toBack();
+            fieldChecker--;
+        }
+        if(cvcText.getText().isEmpty()){
+            cvcError.toFront();
+        }
+        else{
+            cvcError.toBack();
+            fieldChecker--;
+        }
+        if (fieldChecker == 0){
+            summaryAnchorPane.toFront();
+            lineLine.toFront();
+            fillPersonalInfo();
+        }
     }
 
 
