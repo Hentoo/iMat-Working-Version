@@ -35,7 +35,7 @@ public class iMatProduct extends AnchorPane {
     }
 
     @FXML
-    private ImageView favoriteStar;
+    public ImageView favoriteStar;
     @FXML
     private Button lesserButton;
     @FXML
@@ -215,6 +215,7 @@ public class iMatProduct extends AnchorPane {
             favoriteStar.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
 
         }
+
     }
 
 }
