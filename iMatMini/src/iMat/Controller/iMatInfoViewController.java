@@ -157,7 +157,7 @@ public class iMatInfoViewController extends AnchorPane {
 
         pekarProduct.addToFavourites();
 
-        if(pekarProduct.isFavourite){
+        if(IMatDataHandler.getInstance().isFavorite(pekarProduct.product)){
             iconPath = "imatresources/images/favourites.png";
             starImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
         }
