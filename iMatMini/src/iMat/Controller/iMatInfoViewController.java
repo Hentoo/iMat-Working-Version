@@ -33,6 +33,7 @@ public class iMatInfoViewController extends AnchorPane {
     @FXML
     private Button addToCart;
     @FXML private Button favoritesInfoView;
+    @FXML private ImageView starImage;
 
     int chosenAmount = 1;
 
