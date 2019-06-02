@@ -1,6 +1,7 @@
 package iMat.Controller;
 
 import iMat.IMat;
+import iMat.Model;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -109,6 +110,7 @@ public class iMatThirdCheckout extends AnchorPane {
         lineLine.toFront();
     }
 
+
     private void fillOrderList(Order order){
         List<ShoppingItem> orderHistoryList = new ArrayList<>();
 
@@ -120,13 +122,7 @@ public class iMatThirdCheckout extends AnchorPane {
 
     @FXML
     private void endPurchaseButton(){
-        controller.currentOrder = new Order();
-        controller.currentOrder.setOrderNumber(controller.currentOrderNumber);
-        controller.currentOrderNumber++;
-        fillOrderList(controller.currentOrder);
-        controller.orders.add(controller.currentOrder);
-        controller.currentOrder.setDate(new Date(2019, 06, 03));
-
+        IMatDataHandler.getInstance().placeOrder(true);
         buyDoneAnchor.toFront();
     }
 
@@ -145,6 +141,7 @@ public class iMatThirdCheckout extends AnchorPane {
 
     @FXML
     private void closeProgramAction(){
+        Model.getInstance().shutDown();
         System.exit(0);
     }
 

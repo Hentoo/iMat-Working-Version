@@ -166,8 +166,8 @@ public class IMatMyPages extends AnchorPane{
 
     private void fillHistoryWithHistory(){
         shoppingHistoryFlowPane.getChildren().clear();
-        for(int i = 0; i < controller.orders.size(); i++){
-            shoppingHistoryFlowPane.getChildren().add(new iMatHistory(controller.orders.get(i), controller));
+        for(int i = 0; i < IMatDataHandler.getInstance().getOrders().size(); i++){
+            shoppingHistoryFlowPane.getChildren().add(new iMatHistory(IMatDataHandler.getInstance().getOrders().get(i), controller));
         }
     }
 
