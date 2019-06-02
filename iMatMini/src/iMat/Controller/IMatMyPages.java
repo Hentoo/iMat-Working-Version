@@ -116,16 +116,6 @@ public class IMatMyPages extends AnchorPane{
     @FXML
     private Button categoryButton1; //TODO 1 Betalningssätt -
 
-    @FXML
-    private Button categoryButton6; //TODO 6 HJÄLP
-    @FXML
-    private Button categoryButton4; //TODO 4 Favoriter
-    @FXML
-    private Button categoryButton3; //TODO 3 KöpHistorik
-    @FXML
-    private Button categoryButton2; //TODO 2 Personliga uppgifter -
-    @FXML
-    private Button categoryButton1; //TODO 1 Betalningssätt -
 
 
 
