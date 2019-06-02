@@ -80,6 +80,17 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
     }
 
     @FXML
+    private void pressedOnLogoButton(){
+        //TODO
+
+
+        controller.mainScreen.toFront();
+        controller.startingPage.toFront();
+        controller.lineLine.toFront();
+
+    }
+
+    @FXML
     private void backToFirst(){
         updatePersonalInfo();
         controller.activateFirstCheckout();
@@ -155,9 +166,6 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
         if (fieldChecker == 0){
             controller.activateThirdCheckout();
         }
-
-
-
 
 
 

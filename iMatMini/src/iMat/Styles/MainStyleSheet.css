@@ -10,9 +10,14 @@
     -fx-background-color: #5277ff;
 }
 
-#logoButt{
+.logoButt{
     -fx-background-color: #5277ff;
 }
+.logoButt:hover{
+    -fx-background-color: #3957ae;
+
+}
+
 
 .sideButt{
     -fx-background-color: WHITE;

@@ -96,6 +96,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML private Button coldDrinks;
     @FXML private Button hotDrinks;
 
+    @FXML private Button checkoutButton;
 
 
 
@@ -228,6 +229,9 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnLogoButton(){
+        if(currentButton != null){
+            currentButton.setStyle("-fx-background-color: white");
+        }
         infoViewPane.toBack();
         mainScreen.toFront();
         startingPage.toFront();
@@ -454,6 +458,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         mypages.setFavorites();
         mypages.favoritesAnchorPane.toFront();
         lineLine.toFront();
+
     }
 
     @FXML
@@ -465,6 +470,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
         mypages.setStart();
         lineLine.toFront();
+
 
 
     }
