@@ -326,7 +326,7 @@ public class IMatMyPages extends AnchorPane{
 
         int cvc = card.getVerificationCode();
         cvcField.clear();
-        cvcField.appendText(Integer.toString(cvc));
+        cvcField.appendText(Integer.toString(card.getVerificationCode()));
     }
 
     /**
@@ -351,6 +351,8 @@ public class IMatMyPages extends AnchorPane{
     private void updateCreditCard() {
         CreditCard card = model.getCreditCard();
 
+        card.setVerificationCode(Integer.parseInt(cvcField.getText()));
+
         card.setCardNumber(cardNumberTextField.getText());
         card.setHoldersName(nameCardHolder.getText());
 
@@ -363,7 +365,6 @@ public class IMatMyPages extends AnchorPane{
         selectedValue1 = (int) yearComboBox.getSelectionModel().getSelectedItem();
         card.setValidYear(selectedValue1);
 
-        card.setVerificationCode(Integer.parseInt(cvcField.getText()));
     }
 
 

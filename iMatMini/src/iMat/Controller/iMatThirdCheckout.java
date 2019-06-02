@@ -194,6 +194,7 @@ public class iMatThirdCheckout extends AnchorPane {
             lineLine.toFront();
             fillPersonalInfo();
         }
+        updateCreditCard();
     }
 
 
@@ -277,6 +278,8 @@ public class iMatThirdCheckout extends AnchorPane {
     private void updateCreditCard() {
         CreditCard card = IMatDataHandler.getInstance().getCreditCard();
 
+        card.setVerificationCode(Integer.parseInt(cvcText.getText()));
+
         card.setCardNumber(cardNumberText.getText());
         card.setHoldersName(cardNameText.getText());
 
@@ -291,8 +294,6 @@ public class iMatThirdCheckout extends AnchorPane {
         selectedValue1 = (int) yearCardText.getSelectionModel().getSelectedItem();
         card.setValidYear(selectedValue1);
 
-
-        card.setVerificationCode(Integer.parseInt(cvcText.getText()));
     }
 
 }
