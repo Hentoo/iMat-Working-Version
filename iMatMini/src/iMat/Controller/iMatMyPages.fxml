@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -274,6 +275,31 @@
                </font>
             </Label>
             <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#savePersonalInfo" prefWidth="160.0" styleClass="saveButt" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="103.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <Label layoutX="87.0" layoutY="46.0" style="-fx-background-color: #eee;" text="Här ser du dina favoritmarkerade varor. du kan antingen handla bland dem som vanligt eller välja bort de från sidan genom att klicka på stjärnan." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </Label>
+            <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0">
+               <content>
+                  <FlowPane fx:id="favoritesFlowPane" prefHeight="630.0" prefWidth="872.0" style="-fx-background-color: #eee;" />
+               </content>
+            </ScrollPane>
+            <Label layoutX="97.0" layoutY="56.0" style="-fx-background-color: #eee;" text="Ifall du skulle vilja lägga till favoriter i denna lista så gör du det genom att gå tillbaka till butiken och klickar på stjärnan på de produkter som du vill ha hit." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </Label>
          </children>
       </AnchorPane>
     </children>
