@@ -89,6 +89,7 @@ public class iMatCartItemController extends AnchorPane {
         controller.firstCheckout.firstCheckoutFlowPane.getChildren().clear();
         controller.firstCheckout.fillTotalPrice();
         controller.firstCheckout.fillCheckoutPane();
+        controller.updateCurrentCategory();
 
 
     }

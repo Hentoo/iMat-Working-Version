@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.shape.Line;
@@ -83,6 +84,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML private Button categoryButton8;
     @FXML private Button categoryButton9;
 
+
+
     @FXML private Button pastaButton;
     @FXML private Button podButton;
     @FXML private Button vegetableButton;
@@ -97,6 +100,8 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML private Button hotDrinks;
 
     @FXML private Button checkoutButton;
+
+    private int categoryActive=0;
 
 
 
@@ -183,6 +188,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         mainScreen.toFront();
         startingPage.toFront();
         lineLine.toFront();
+        firstCheckout = new iMatFirstCheckout(this);
 
         IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
 
@@ -240,7 +246,39 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     }
 
     @FXML
+    public void updateCurrentCategory(){
+        if (categoryActive == 1){
+            pressedOnCategory1();
+        }
+        if (categoryActive == 2){
+            pressedOnCategory2();
+        }
+        if (categoryActive == 3){
+            pressedOnCategory3();
+        }
+        if (categoryActive == 4){
+            pressedOnCategory4();
+        }
+        if (categoryActive == 5){
+            pressedOnCategory5();
+        }
+        if (categoryActive == 6){
+            pressedOnCategory6();
+        }
+        if (categoryActive == 7){
+            pressedOnCategory7();
+        }
+        if (categoryActive == 8){
+            pressedOnCategory8();
+        }
+        if (categoryActive == 9) {
+            pressedOnCategory9();
+        }
+    }
+
+    @FXML
   private void pressedOnCategory1(){
+        categoryActive=1;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -258,6 +296,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
   }
     @FXML
     private void pressedOnCategory2(){
+        categoryActive=2;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -273,6 +312,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     }
     @FXML
     private void pressedOnCategory3(){
+        categoryActive=3;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -284,6 +324,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     }
     @FXML
     private void pressedOnCategory4(){
+        categoryActive=4;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -294,6 +335,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     }
     @FXML
     private void pressedOnCategory5(){
+        categoryActive=5;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -303,6 +345,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     }
     @FXML
     private void pressedOnCategory6(){
+        categoryActive=6;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -313,6 +356,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     }
     @FXML
     private void pressedOnCategory7(){
+        categoryActive=7;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -326,6 +370,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     }
     @FXML
     private void pressedOnCategory8(){
+        categoryActive=8;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -339,6 +384,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     }
     @FXML
     private void pressedOnCategory9(){
+        categoryActive=9;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
