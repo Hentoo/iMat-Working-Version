@@ -107,6 +107,7 @@ public class iMatSecondCheckout extends AnchorPane implements Initializable {
     private void toThirdCheckout(){
         updatePersonalInfo();
         controller.thirdCheckout.fillSummaryCheckout();
+        controller.thirdCheckout.summaryFlowPane.toBack();
 
         int fieldChecker = 6;
 
