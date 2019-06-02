@@ -1,10 +1,6 @@
 package iMat.Controller;
 
 
-import iMat.IMat;
-import iMat.ProductPanel;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,7 +15,6 @@ import se.chalmers.cse.dat216.project.*;
 
 
 import java.net.URL;
-import java.sql.SQLOutput;
 import java.util.*;
 
 
@@ -141,10 +136,6 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
         IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
 
-
-
-
-
         
         updateShoppingCart();
 
@@ -200,7 +191,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         startingPage.toBack();
         fruitCategory.toFront();
         lineLine.toFront();
-        categoryButton1.setStyle("-fx-background-color: DARKGREY;");
+       // categoryButton1.setStyle("-fx-background-color: DARKGREY;");
 
 
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT));

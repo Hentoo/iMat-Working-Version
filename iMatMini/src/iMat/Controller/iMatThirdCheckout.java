@@ -111,6 +111,7 @@ public class iMatThirdCheckout extends AnchorPane {
 
         order.setItems(IMatDataHandler.getInstance().getShoppingCart().getItems());
 
+
     }
 
     @FXML
@@ -121,6 +122,7 @@ public class iMatThirdCheckout extends AnchorPane {
         fillOrderList(controller.currentOrder);
         controller.orders.add(controller.currentOrder);
         controller.currentOrder.setDate(new Date(2019, 06, 03));
+
         buyDoneAnchor.toFront();
     }
 
@@ -128,7 +130,10 @@ public class iMatThirdCheckout extends AnchorPane {
     private void backToStart(){
         buyDoneAnchor.toBack();
         controller.mainToFront();
-        IMatDataHandler.getInstance().getShoppingCart().clear();
+
+        controller.shoppingCartArea.getChildren().clear();
+      //  IMatDataHandler.getInstance().getShoppingCart().getItems().clear();
+
 
     }
 
