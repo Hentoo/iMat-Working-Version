@@ -263,6 +263,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnLogoButton(){
+        
         categoryActive=0;
         if(currentButton != null){
             currentButton.setStyle("-fx-background-color: white");
