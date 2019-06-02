@@ -266,7 +266,20 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         
         categoryActive=0;
         if(currentButton != null){
-            currentButton.setStyle("-fx-background-color: white");
+            StringBuilder normal = new StringBuilder();
+            normal.append("}\n");
+            normal.append("Button:hover{\n" +
+                    "    -fx-background-color: DARKGREY;\n" +
+                    "    -fx-border-bottom: 2px;\n" +
+                    "    -fx-border-color: #929292;\n" +
+                    "}\n" +
+                    "\n" +
+                    "Button:pressed{\n" +
+                    "    -fx-background-color: GREY;\n" +
+                    "    -fx-border-bottom: 2px;\n" +
+                    "    -fx-border-color: #929292;\n" +
+                    "}");
+            currentButton.setStyle(normal.toString());
         }
         infoViewPane.toBack();
         mainScreen.toFront();
