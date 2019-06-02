@@ -1,0 +1,20 @@
+Button {
+
+    -fx-background-color: WHITE;
+    -fx-border-bottom: 2px;
+    -fx-border-color: #929292;
+    -fx-font-size: 20px;
+    -fx-font-style: bold;
+}
+
+Button:hover{
+    -fx-background-color: DARKGREY;
+    -fx-border-bottom: 2px;
+    -fx-border-color: #929292;
+}
+
+Button:pressed{
+    -fx-background-color: GREY;
+    -fx-border-bottom: 2px;
+    -fx-border-color: #929292;
+}
