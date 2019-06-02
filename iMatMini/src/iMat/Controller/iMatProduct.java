@@ -215,6 +215,7 @@ public class iMatProduct extends AnchorPane {
             favoriteStar.setImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
 
         }
+
     }
 
 }

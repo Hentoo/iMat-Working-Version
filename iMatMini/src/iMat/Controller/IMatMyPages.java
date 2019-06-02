@@ -254,7 +254,7 @@ public class IMatMyPages extends AnchorPane{
         favoritesFlowPane.getChildren().clear();
 
         for (iMatProduct product : favorites) {
-            favoritesFlowPane.getChildren().add(product);
+            favoritesFlowPane.getChildren().add(new iMatProduct(product.getProduct(), this.controller));
         }
     }
 
