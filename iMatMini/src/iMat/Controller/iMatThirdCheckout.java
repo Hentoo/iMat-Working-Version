@@ -86,6 +86,7 @@ public class iMatThirdCheckout extends AnchorPane {
     private AnchorPane sequencePane;
     @FXML
     private Line lineLine;
+    @FXML private Label totalPrice;
 
     public iMatThirdCheckout(iMatMainController controller) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("iMatThirdCheckout.fxml"));
@@ -146,6 +147,9 @@ public class iMatThirdCheckout extends AnchorPane {
         CreditCard card = IMatDataHandler.getInstance().getCreditCard();
         Customer customer = IMatDataHandler.getInstance().getCustomer();
 
+        Integer k = (int) IMatDataHandler.getInstance().getShoppingCart().getTotal();
+        totalPrice.setText(k.toString() + " SEK");
+
         nameLabel.setText(customer.getFirstName());
         lastNameLabel.setText(customer.getLastName());
         phoneLabel.setText(customer.getMobilePhoneNumber());
@@ -191,9 +195,9 @@ public class iMatThirdCheckout extends AnchorPane {
             fieldChecker--;
         }
         if (fieldChecker == 0){
+            fillPersonalInfo();
             summaryAnchorPane.toFront();
             lineLine.toFront();
-            fillPersonalInfo();
         }
     }
 
