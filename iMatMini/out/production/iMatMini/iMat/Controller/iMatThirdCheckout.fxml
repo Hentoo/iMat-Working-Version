@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root fx:id="firstCheckout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" stylesheets="@../Styles/checkoutStyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="firstCheckout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" stylesheets="@../Styles/checkoutStyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane fx:id="buyDoneAnchor" layoutX="250.0" prefHeight="720.0" prefWidth="781.0" style="-fx-background-color: white;">
          <children>
@@ -200,7 +200,7 @@
             </Label>
             <ScrollPane layoutX="22.0" layoutY="169.0" prefHeight="411.0" prefWidth="195.0">
                <content>
-                  <FlowPane fx:id="summaryFlowPane" prefHeight="458.0" prefWidth="179.0" />
+                  <FlowPane fx:id="summaryFlowPane" prefHeight="458.0" prefWidth="177.0" />
                </content>
             </ScrollPane>
             <Label alignment="CENTER" layoutX="48.0" layoutY="99.0" prefHeight="54.0" prefWidth="165.0" text="Dina varor">
@@ -208,7 +208,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <GridPane layoutX="1.0" layoutY="163.0" prefHeight="289.0" prefWidth="780.0">
+            <GridPane layoutX="1.0" layoutY="163.0" prefHeight="397.0" prefWidth="780.0" AnchorPane.topAnchor="150.0">
                <columnConstraints>
                   <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="242.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="218.0" />
@@ -222,41 +222,74 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <TextField fx:id="firstNameContainer" prefHeight="27.0" prefWidth="200.0" GridPane.columnIndex="1" />
-                  <TextField fx:id="lastNameContainer" prefHeight="27.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="phonenumberContainer" prefHeight="27.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="mailContainer" prefHeight="27.0" prefWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField fx:id="adressContainer" prefHeight="27.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <TextField fx:id="postNumberContainer" layoutX="253.0" layoutY="183.0" prefHeight="27.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-               </children>
-            </GridPane>
-            <GridPane layoutY="84.0" prefHeight="382.0" prefWidth="698.0">
-               <columnConstraints>
-                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="337.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="227.0" minWidth="10.0" prefWidth="128.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <TextField fx:id="cardNumberContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField fx:id="cardNameContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <TextField fx:id="cvcContainer" prefHeight="0.0" prefWidth="183.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                  <ComboBox prefWidth="215.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                  <ComboBox prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <ComboBox prefWidth="100.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets left="115.0" />
-                     </GridPane.margin>
-                  </ComboBox>
+                  <Label fx:id="nameLabel" text="Namn" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lastNameLabel" text="Efternamn" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="phoneLabel" text="Telefonnummer" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mailLabel" text="Email" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="adressLabel" text="Adress" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="postcodeLabel" text="Postnummer" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cardnumberLabel" text="Kortnummer" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cardholderLabel" text="Kortinnehavare" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="expiryLabel" text="ÅÅ/MM" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="typeLabel" text="Korttyp" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cvcLabel" text="CVC" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="183.0" text="Betalning" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="183.0" text="Leverans" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
                </children>
             </GridPane>
             <Label alignment="CENTER" layoutX="373.0" layoutY="109.0" prefHeight="39.0" prefWidth="183.0" text="Dina uppgifter">

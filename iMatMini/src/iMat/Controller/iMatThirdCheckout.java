@@ -8,14 +8,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import se.chalmers.cse.dat216.project.CreditCard;
+import se.chalmers.cse.dat216.project.*;
 import javafx.scene.shape.Line;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Order;
-import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 import java.net.URL;
@@ -27,6 +25,29 @@ public class iMatThirdCheckout extends AnchorPane {
     int hasBeenDone = 0;
 
     iMatMainController controller;
+    @FXML                                      //Dessa är de slutliga som ligger i sammanfattningen
+    private Label nameLabel;                   //Dessa är de slutliga som ligger i sammanfattningen
+    @FXML                                      //Dessa är de slutliga som ligger i sammanfattningen
+    private Label lastNameLabel;               //Dessa är de slutliga som ligger i sammanfattningen
+    @FXML                                      //Dessa är de slutliga som ligger i sammanfattningen
+    private Label phoneLabel;                  //Dessa är de slutliga som ligger i sammanfattningen
+    @FXML                                      //Dessa är de slutliga som ligger i sammanfattningen
+    private Label mailLabel;                   //Dessa är de slutliga som ligger i sammanfattningen
+    @FXML                                      //Dessa är de slutliga som ligger i sammanfattningen
+    private Label adressLabel;                 //Dessa är de slutliga som ligger i sammanfattningen
+    @FXML                                      //Dessa är de slutliga som ligger i sammanfattningen
+    private Label postcodeLabel;               //Dessa är de slutliga som ligger i sammanfattningen
+    @FXML                                      //Dessa är de slutliga som ligger i sammanfattningen
+    private Label cardnumberLabel;             //Dessa är de slutliga som ligger i sammanfattningen
+    @FXML                                      //Dessa är de slutliga som ligger i sammanfattningen
+    private Label cardholderLabel;             //Dessa är de slutliga som ligger i sammanfattningen
+    @FXML                                      //Dessa är de slutliga som ligger i sammanfattningen
+    private Label expiryLabel;                 //Dessa är de slutliga som ligger i sammanfattningen
+    @FXML                                      //Dessa är de slutliga som ligger i sammanfattningen
+    private Label typeLabel;                   //Dessa är de slutliga som ligger i sammanfattningen
+    @FXML                                      //Dessa är de slutliga som ligger i sammanfattningen
+    private Label cvcLabel;                    //Dessa är de slutliga som ligger i sammanfattningen
+
     @FXML
     private AnchorPane buyDoneAnchor;
     @FXML
@@ -101,10 +122,37 @@ public class iMatThirdCheckout extends AnchorPane {
         }
     }
 
+    /**
+     * fyller personfälten på sammanfattningen
+     */
+    private void fillPersonalInfo() {
+        CreditCard card = IMatDataHandler.getInstance().getCreditCard();
+        Customer customer = IMatDataHandler.getInstance().getCustomer();
+
+        nameLabel.setText(customer.getFirstName());
+        lastNameLabel.setText(customer.getLastName());
+        phoneLabel.setText(customer.getMobilePhoneNumber());
+        mailLabel.setText(customer.getEmail());
+        adressLabel.setText(customer.getAddress());
+        postcodeLabel.setText(customer.getPostCode());
+
+        cardnumberLabel.setText(card.getCardNumber());
+        cardholderLabel.setText(card.getHoldersName());
+        expiryLabel.setText(card.getValidMonth() + "/" + card.getValidYear());
+        typeLabel.setText(card.getCardType());
+        Integer cvc = card.getVerificationCode();
+        cvcLabel.setText(cvc.toString());
+    }
+
+    /**
+     * denna går vidare från att man ska skriva in kortinfo till att man ser sammanfattningen
+     */
     @FXML
-    private void finalizeButtonAction(){
+    private void finalizeButtonAction(){ //TODO fixa så att kortInfo sparas
+        //saveCardInfo();
         summaryAnchorPane.toFront();
         lineLine.toFront();
+        fillPersonalInfo();
     }
 
     private void fillOrderList(Order order){
