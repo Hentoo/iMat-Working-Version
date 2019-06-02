@@ -102,6 +102,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML private Button checkoutButton;
 
     private int categoryActive=0;
+    private int subCategoryActive = 0;
 
 
 
@@ -212,6 +213,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        shoppingCartArea.getChildren().clear();
         mainScreen.toFront();
         startingPage.toFront();
         lineLine.toFront();
@@ -291,11 +293,32 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     public void updateCurrentCategory(){
-        if (categoryActive == 1){
+        if (categoryActive == 1 && subCategoryActive == 0){
             pressedOnCategory1();
+        }
+        if (categoryActive == 1 && subCategoryActive == 1){
+            pressedOnExotic();
+        }
+        if (categoryActive == 1 && subCategoryActive == 2){
+            pressedOnCitrus();
+        }
+        if (categoryActive == 1 && subCategoryActive == 3){
+            pressedOnBerry();
         }
         if (categoryActive == 2){
             pressedOnCategory2();
+        }
+        if (categoryActive == 2 && subCategoryActive == 4){
+            pressedOnVegetable();
+        }
+        if (categoryActive == 2 && subCategoryActive == 5){
+            pressedOnRoot();
+        }
+        if (categoryActive == 2 && subCategoryActive == 6){
+            pressedOnSeed();
+        }
+        if (categoryActive == 2 && subCategoryActive == 7){
+            pressedOnPod();
         }
         if (categoryActive == 3){
             pressedOnCategory3();
@@ -312,8 +335,23 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
         if (categoryActive == 7){
             pressedOnCategory7();
         }
+        if (categoryActive == 7 && subCategoryActive == 8){
+            pressedOnPasta();
+        }
+        if (categoryActive == 7 && subCategoryActive == 9){
+            pressedOnPotato();
+        }
+        if (categoryActive == 7 && subCategoryActive == 10){
+            pressedOnFlour();
+        }
         if (categoryActive == 8){
             pressedOnCategory8();
+        }
+        if (categoryActive == 8 && subCategoryActive == 11){
+            pressedOnCold();
+        }
+        if (categoryActive == 8 && subCategoryActive == 12){
+            pressedOnHot();
         }
         if (categoryActive == 9) {
             pressedOnCategory9();
@@ -323,6 +361,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
   private void pressedOnCategory1(){
         categoryActive=1;
+        subCategoryActive = 0;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -341,6 +380,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private void pressedOnCategory2(){
         categoryActive=2;
+        subCategoryActive = 0;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -357,6 +397,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private void pressedOnCategory3(){
         categoryActive=3;
+        subCategoryActive = 0;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -369,6 +410,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private void pressedOnCategory4(){
         categoryActive=4;
+        subCategoryActive = 0;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -380,6 +422,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private void pressedOnCategory5(){
         categoryActive=5;
+        subCategoryActive = 0;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -390,6 +433,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private void pressedOnCategory6(){
         categoryActive=6;
+        subCategoryActive = 0;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -401,6 +445,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private void pressedOnCategory7(){
         categoryActive=7;
+        subCategoryActive = 0;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -415,6 +460,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private void pressedOnCategory8(){
         categoryActive=8;
+        subCategoryActive = 0;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -429,6 +475,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     @FXML
     private void pressedOnCategory9(){
         categoryActive=9;
+        subCategoryActive = 0;
         productsFlowPane.getChildren().clear();
         mainScreen.toFront();
         startingPage.toBack();
@@ -439,6 +486,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnPasta(){
+        subCategoryActive = 8;
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
         keepBackgroundDarkUnder(pastaButton);
@@ -446,6 +494,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     }
     @FXML
     private void pressedOnPotato(){
+        subCategoryActive = 9;
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
         keepBackgroundDarkUnder(potatoButton);
@@ -454,6 +503,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnFlour(){
+        subCategoryActive = 10;
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
         keepBackgroundDarkUnder(flourButton);
@@ -462,6 +512,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnRoot(){
+        subCategoryActive = 5;
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
         keepBackgroundDarkUnder(rootButton);
@@ -470,12 +521,14 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnSeed(){
+        subCategoryActive = 6;
         productsFlowPane.getChildren().clear();
         keepBackgroundDarkUnder(pastaButton);
         updateProductList(IMatDataHandler.getInstance().getProducts(ProductCategory.NUTS_AND_SEEDS));
     }
     
     @FXML void pressedOnPod(){
+        subCategoryActive = 7;
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
         keepBackgroundDarkUnder(podButton);
@@ -485,6 +538,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnVegetable(){
+        subCategoryActive = 4;
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
         keepBackgroundDarkUnder(vegetableButton);
@@ -494,6 +548,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnHot(){
+        subCategoryActive = 12;
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
         keepBackgroundDarkUnder(hotDrinks);
@@ -502,6 +557,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnCold(){
+        subCategoryActive = 11;
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
         keepBackgroundDarkUnder(coldDrinks);
@@ -510,6 +566,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnExotic(){
+        subCategoryActive = 1;
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
         keepBackgroundDarkUnder(exoticButton);
@@ -517,6 +574,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
     }
     @FXML
     private void pressedOnCitrus(){
+        subCategoryActive = 2;
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
         keepBackgroundDarkUnder(citrusButton);
@@ -525,6 +583,7 @@ public class iMatMainController implements Initializable, ShoppingCartListener {
 
     @FXML
     private void pressedOnBerry(){
+        subCategoryActive = 3;
         productsFlowPane.getChildren().clear();
         lineLine.toFront();
         keepBackgroundDarkUnder(berryButton);
