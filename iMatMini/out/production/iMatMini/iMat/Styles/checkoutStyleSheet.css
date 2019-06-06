@@ -1,0 +1,30 @@
+.backButton{
+    -fx-background-color: #f55;
+    -fx-font-size: 24px;
+}
+.backButton:hover{
+    -fx-background-color: #ad3d3d;
+}
+.nextButton{
+    -fx-background-color:  #1db954;
+    -fx-font-size: 24px;
+}
+.nextButton:hover{
+    -fx-background-color: #1d9148;
+}
+
+.topTop{
+    -fx-background-color: #5277ff;
+}
+.topTop:hover{
+    -fx-background-color: #3454a4;
+}
+
+
+.logoButt{
+    -fx-background-color: #5277ff;
+}
+.logoButt:hover{
+    -fx-background-color: #3957ae;
+
+}

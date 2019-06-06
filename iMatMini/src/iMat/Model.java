@@ -5,10 +5,6 @@
  */
 package iMat;
 
-/**
- *
- * @author oloft
- */
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

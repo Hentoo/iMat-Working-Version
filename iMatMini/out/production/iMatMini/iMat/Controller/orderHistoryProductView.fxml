@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="productImage" maxHeight="105.0" maxWidth="180.0" minHeight="105.0" minWidth="180.0" prefHeight="105.0" prefWidth="180.0" stylesheets="@../Styles/Histtoryyy.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-border-color: #aaa; -fx-border-width: 2px;" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imageField" fitHeight="67.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../imatresources/images/product_94.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="productPrize" alignment="CENTER_RIGHT" ellipsisString="" text="Tot: 250 kr" textAlignment="RIGHT" textOverrun="LEADING_ELLIPSIS" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="3.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nrOfItems" layoutX="94.0" prefHeight="18.0" prefWidth="73.0" text="4x40kr" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="3.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="productName" ellipsisString="" maxHeight="60.0" text="Potatisgratäng" wrapText="true" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</fx:root>

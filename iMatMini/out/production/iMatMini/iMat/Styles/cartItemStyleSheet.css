@@ -1,0 +1,13 @@
+#lesserButton{
+
+}
+
+#moreButton, #lesserButton{
+    -fx-background-color: #2ceb6a;
+    -fx-max-height: 20px;
+    -fx-border-radius: 30px;
+}
+
+#deleteButton{
+    -fx-background-color: #d48a8f;
+}

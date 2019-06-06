@@ -1,0 +1,52 @@
+Button{
+    -fx-font-size: 20px;
+}
+
+.sideButt{
+    -fx-background-color: White;
+    -fx-border-bottom: 2px;
+    -fx-border-color: #929292;
+}
+
+.sideButt:hover{
+    -fx-background-color: #a8a8a8;
+    -fx-border-bottom: 2px;
+    -fx-border-color: #929292;
+}
+
+.sideButt:pressed{
+    -fx-background-color: #5277ff;
+    -fx-border-bottom: 2px;
+    -fx-border-color: #929292;
+}
+.saveButt{
+    -fx-background-color: #7fc97c;
+    -fx-border-color: #929292;
+}
+
+.saveButt:hover{
+    -fx-border-radius: 2px;
+    -fx-border-color: GREY;
+}
+.saveButt:pressed{
+    -fx-background-color: rgba(33, 191, 55, 1);
+}
+#topTop{
+    -fx-background-color: #5277ff;
+}
+
+
+.logoButt{
+    -fx-background-color: #5277ff;
+}
+.logoButt:hover{
+    -fx-background-color: #3957ae;
+
+}
+.nextButton{
+    -fx-background-color:  #1db954;
+    -fx-font-size: 24px;
+}
+.nextButton:hover{
+    -fx-background-color: #1d9148;
+}

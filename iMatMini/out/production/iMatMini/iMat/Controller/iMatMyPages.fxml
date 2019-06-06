@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="mainAnchorPane" prefHeight="720.0" prefWidth="1080.0" stylesheets="@../Styles/MyPagestStyleSheet.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <AnchorPane fx:id="favoritesAnchorPane" layoutX="10.0" layoutY="103.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <Label layoutX="87.0" layoutY="46.0" style="-fx-background-color: #eee;" text="Här ser du dina favoritmarkerade varor. du kan antingen handla bland dem som vanligt eller välja bort de från sidan genom att klicka på stjärnan." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </Label>
+            <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0">
+               <content>
+                  <FlowPane fx:id="favoritesFlowPane" prefHeight="630.0" prefWidth="872.0" style="-fx-background-color: #eee;" />
+               </content>
+            </ScrollPane>
+            <Label layoutX="97.0" layoutY="56.0" style="-fx-background-color: #eee;" text="Ifall du skulle vilja lägga till favoriter i denna lista så gör du det genom att gå tillbaka till butiken och klickar på stjärnan på de produkter som du vill ha hit." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paymentAnchorPane" style="-fx-background-color: #EEE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <GridPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="190.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="nameCardHolder" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label text="Kortnummer:" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Namn på kortinnehavare:" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Månad och År" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Korttyp" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="CVC/CVV" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ComboBox fx:id="cardTypeComboBox" prefWidth="215.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="cardNumberTextField" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="cvcField" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <ComboBox fx:id="monthComboBox" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="yearComboBox" prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="115.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+               </children>
+            </GridPane>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Betalningssätt" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="300.0" text="Här kan du Fylla i och spara din kortinformation för att underlätta vid utcheckning." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="295.0" AnchorPane.topAnchor="100.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="210.0" text="1. Börja med att klicka på en ruta för att ändra dess innehåll" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="225.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="210.0" text="2. Klicka sedan på Spara för att spara dina ändringar." textAlignment="CENTER" wrapText="true" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="225.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#saveCardInfo" prefWidth="160.0" styleClass="saveButt" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="helpMyPages" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0" />
+         </children>
+      </AnchorPane>
+        <AnchorPane fx:id="MainMyPagesFlowPAne" prefHeight="200.0" prefWidth="888.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane prefHeight="720.0" prefWidth="190.0" style="-fx-background-color: #DDD;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Button fx:id="categoryButton1" layoutY="90.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory1" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Betalningssätt" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0" />
+                        <Button fx:id="categoryButton2" layoutY="160.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory2" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Personliga uppgifter" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="160.0" />
+                        <Button fx:id="categoryButton3" layoutY="230.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory3" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Köphistorik" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="370.0" />
+                        <Button fx:id="categoryButton4" layoutY="300.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory4" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Favoriter" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <Button fx:id="categoryButton6" layoutX="1.0" layoutY="370.0" mnemonicParsing="false" onMousePressed="#pressedOnCategory6" prefHeight="70.0" prefWidth="220.0" styleClass="sideButt" text="Hjälp" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="90.0" />
+                        <Button maxWidth="190.0" minHeight="90.0" minWidth="190.0" mnemonicParsing="false" onMousePressed="#pressedOnLogoButton" prefHeight="90.0" prefWidth="190.0" styleClass="logoButt" wrapText="true">
+                            <graphic>
+                                <ImageView fx:id="logo" fitHeight="70.0" fitWidth="165.0" onMousePressed="#pressedOnLogoButton" pickOnBounds="true" preserveRatio="true" styleClass="logoButt">
+                                    <image>
+                                        <Image url="@../../imatresources/images/LogoiMat.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <Label onMouseClicked="#pressedOnLogoButton" text="&lt; Åter till butiken" textFill="WHITE" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="70.0">
+                    <font>
+                        <Font name="Arial Black" size="12.0" />
+                    </font>
+                </Label>
+                <AnchorPane prefHeight="503.0" prefWidth="890.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="90.0">
+                    <children>
+                        <SplitPane dividerPositions="0.215" layoutY="14.0" orientation="VERTICAL" prefHeight="630.0" prefWidth="890.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="159.0" prefWidth="888.0" style="-fx-background-color: #eee;" />
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <ScrollPane prefHeight="513.0" prefWidth="888.0">
+                                            <content>
+                                                <FlowPane fx:id="productsFlowPane" prefHeight="515.0" prefWidth="887.0" styleClass="productList" />
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="topTop" prefHeight="90.0" prefWidth="890.0" style="-fx-background-color: #EEE;" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-background-color: #5277ff;" text="Min sida" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Arial Black" size="60.0" />
+                     </font>
+                  </Label>
+               </children>
+                </AnchorPane>
+                <ImageView fitHeight="38.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Line endY="90.0" startX="1080.0" startY="89.99999237060547" AnchorPane.rightAnchor="0.0" />
+            </children>
+        </AnchorPane>
+      <AnchorPane fx:id="personUppgifter" style="-fx-background-color: #EEEEEE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <GridPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="190.0">
+              <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="lastNameContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="firstNameContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="phonenumberContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="mailContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="adressContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="postcodeContainer" prefHeight="27.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label text="Förnamn:">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Efternamn:" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Telefonnummer:" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Mailadress:" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Adress:" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Postnummer:" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+            <Label text="Personliga uppgifter" AnchorPane.leftAnchor="305.0" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="91.0" prefWidth="376.0" text="Här kan du ändra på din personliga information samt vart du vill få varorna levererad." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="55.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="598.0" layoutY="122.0" prefHeight="91.0" prefWidth="210.0" text="1. Börja med att klicka på en ruta för att ändra dess innehåll" textAlignment="CENTER" wrapText="true" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="300.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="598.0" layoutY="128.0" prefHeight="91.0" prefWidth="220.0" text="2. Klicka sedan på Spara för att spara dina ändringar." textAlignment="CENTER" wrapText="true" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="350.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Button maxHeight="60.0" maxWidth="160.0" minHeight="60.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#savePersonalInfo" prefWidth="160.0" styleClass="saveButt" text="Spara" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="75.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="favoritesAnchorPane" layoutX="10.0" layoutY="103.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <Label layoutX="87.0" layoutY="46.0" style="-fx-background-color: #eee;" text="Här ser du dina favoritmarkerade varor. du kan antingen handla bland dem som vanligt eller välja bort de från sidan genom att klicka på stjärnan." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </Label>
+            <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0">
+               <content>
+                  <FlowPane fx:id="favoritesFlowPane" prefHeight="630.0" prefWidth="872.0" style="-fx-background-color: #eee;" />
+               </content>
+            </ScrollPane>
+            <Label layoutX="97.0" layoutY="56.0" style="-fx-background-color: #eee;" text="Ifall du skulle vilja lägga till favoriter i denna lista så gör du det genom att gå tillbaka till butiken och klickar på stjärnan på de produkter som du vill ha hit." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="purchaseHistory" layoutY="93.0" prefHeight="627.0" prefWidth="890.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <Label alignment="CENTER" layoutX="87.0" layoutY="46.0" style="-fx-background-color: #eee;" text="Köphistorik" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="140.0">
+               <content>
+                  <FlowPane fx:id="shoppingHistoryFlowPane" prefHeight="491.0" prefWidth="874.0" style="-fx-background-color: #eee; -fx-padding: 10px;" />
+               </content>
+            </ScrollPane>
+         </children></AnchorPane>
+    </children>
+</fx:root>

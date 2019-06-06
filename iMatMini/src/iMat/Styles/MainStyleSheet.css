@@ -1,0 +1,70 @@
+.productList{
+}
+
+
+#cartCart{
+    -fx-background-color:  #5277ff;
+}
+
+#topTop{
+    -fx-background-color: #5277ff;
+}
+
+.logoButt{
+    -fx-background-color: #5277ff;
+}
+.logoButt:hover{
+    -fx-background-color: #3957ae;
+
+}
+
+
+.sideButt{
+    -fx-background-color: WHITE;
+    -fx-border-bottom: 2px;
+    -fx-border-color: #929292;
+    -fx-font-size: 20px;
+    -fx-font-style: bold;
+}
+
+.sideButt:hover{
+    -fx-background-color: DARKGREY;
+    -fx-border-bottom: 2px;
+    -fx-border-color: #929292;
+}
+
+/*.sideButt:focused{
+    -fx-background-color: DARKGREY;
+}*/
+.nextButton{
+    -fx-background-color:  #1db954;
+    -fx-font-size: 24px;
+}
+.nextButton:hover{
+    -fx-background-color: #1d9148;
+}
+
+.sideButt:pressed{
+    -fx-background-color: GREY;
+    -fx-border-bottom: 2px;
+    -fx-border-color: #929292;
+}
+.categoryButt{
+    -fx-background-color: LIGHTBLUE;
+    -fx-border-bottom: 2px;
+    -fx-border-color: #929292;
+    -fx-font-size: 20px;
+    -fx-font-style: bold;
+}
+.categoryButt:hover{
+    -fx-background-color: #7a94a2;
+    -fx-border-bottom: 2px;
+    -fx-border-color: #929292;
+}
+
+
+
+
+
+
+
