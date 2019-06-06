@@ -77,14 +77,14 @@ public class iMatProduct extends AnchorPane {
     boolean isFavourite = false;
 
 
+    public Model model = Model.getInstance();
 
 
-    public iMatProduct(Product product){
+
 
     List<ShoppingItem> products = new ArrayList<>();
 
 
-     Model model = Model.getInstance();
 
     private final static double kImageWidth = 100.0;
     private final static double kImageRatio = 0.75;
